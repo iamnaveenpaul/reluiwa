@@ -1,10 +1,168 @@
-<div class="container-fluid">
-  <div class="jumbotron text-center">
-    <h1>
-      <img class="logo" src="assets/ngx-rocket-logo.png" alt="angular logo"/>
-      <span translate>Hello world !</span>
-    </h1>
-    <app-loader [isLoading]="isLoading"></app-loader>
-    <q [hidden]="isLoading">{{quote}}</q>
+
+<div>
+  <div class="hero-img-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <h1>sales <span>ai</span></h1>
+          <p>
+            Relatas collates all important information and uses<br> Artificial Intelligence to provide Sales Insights with<br>
+            NO-DATA-ENTRY
+          </p>
+          <div class="btns-grp-wrapper">
+            <button class="orange-btn font-weight-bold">request a demo</button>
+            <button class="orange-invert-btn">download e-book</button>
+          </div>
+        </div>
+      </div>
+      <div class="row e-books-download">
+        <div class="col-2">
+          <img src="assets/website/whitepaper.png">
+          white paper
+        </div>
+        <div class="col-2">
+          <img src="assets/website/casestudies.png">
+          case studies
+        </div>
+        <div class="col-2">
+          <img src="assets/website/usecases.png">
+          use cases
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="box lite-grey-bg">
+  <div class="container">
+    <h2 class="text-uppercase text-center">
+      close more deals
+      <span class="text-blue">predicatably</span>
+    </h2>
+    <p class="text-center">
+      From predictive insights for sales executivrs to deep analytics for sales leaders & CXO.
+      Relatas delivers value to entire<br>sales team with <strong>NO-DATA-ENTRY</strong> and
+      <strong>NO-CHANGE-IN-BEHAVIOR</strong>
+    </p>
+    <div class="btn-group-invert text-center">
+      <button [ngClass]="cxoIsSelected" (click)="openCxo()">cxo/vp sales</button>
+      <button [ngClass]="managerIsSelected" (click)="openManager()">sales manager</button>
+      <button [ngClass]="repIsSelected" (click)="openRep()">sales rep</button>
+    </div>
+    <div>
+      <img src="assets/website/banner6.jpg">
+    </div>
+  </div>
+</div>
+
+<div class="box" style="background: #fcfdff;">
+  <div class="container">
+    <h2 class="text-uppercase text-center">
+      we
+      <span class="text-blue">believe</span>
+    </h2>
+    <p class="text-center">
+      Sales is a relationship driven process
+    </p>
+  </div>
+  <img src="assets/website/banner3.jpg">
+</div>
+
+
+<div class="box lite-grey-bg">
+  <div class="container">
+    <h2 class="text-uppercase text-center">
+      customers who
+      <span class="text-blue">believe</span>
+      in us
+    </h2>
+    <p class="text-center">
+      Professionals from 700+ global organisations use Relatas
+    </p>
+    <img src="assets/website/banner4.jpg">
+  </div>
+</div>
+
+<div class="box">
+  <div class="container">
+    <h2 class="text-uppercase text-center">
+      discover <br>
+      <span class="text-blue">customer - first</span>
+     <br> sales transformation
+    </h2>
+    <div class="text-center">
+      <button class="orange-btn">request a demo</button>
+    </div>
+    <p class="text-center bold box-abs-bottom15">
+      Nothing to install. Go Live in 15 minutes.
+    </p>
+  </div>
+</div>
+
+
+<div class="box">
+  <img src="assets/website/banner5.jpg">
+</div>
+
+
+<div class="footer">
+  <div class="container">
+   <div class="row">
+     <div class="col-8">
+       <div class="row">
+         <div class="col-3">
+           <strong>PRODUCT</strong>
+           <div class="links">
+             <a href="#">Overview</a>
+             <a href="#">Forecast Management</a>
+             <a href="#">Pipeline Inspection</a>
+             <a href="#">Opportunity Management</a>
+             <a href="#">Security</a>
+           </div>
+         </div>
+         <div class="col-3">
+           <strong>ROLE</strong>
+           <div class="links">
+             <a href="#">Overview</a>
+             <a href="#">Forecast Management</a>
+             <a href="#">Pipeline Inspection</a>
+             <a href="#">Opportunity Management</a>
+             <a href="#">Security</a>
+           </div>
+         </div>
+         <div class="col-3">
+           <strong>CUSTOMERS</strong>
+           <div class="links">
+             <a href="#">Overview</a>
+             <a href="#">Forecast Management</a>
+             <a href="#">Pipeline Inspection</a>
+             <a href="#">Opportunity Management</a>
+             <a href="#">Security</a>
+           </div>
+         </div>
+         <div class="col-3">
+           <strong>COMPANY</strong>
+           <div class="links">
+             <a href="#">Overview</a>
+             <a href="#">Forecast Management</a>
+             <a href="#">Pipeline Inspection</a>
+             <a href="#">Opportunity Management</a>
+             <a href="#">Security</a>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="col-4">
+       <label class="text-uppercase">
+         join the elite group of people who have also signed up for the mailing list.
+       </label>
+       <div class="input-field">
+         <input type="text" placeholder="Enter your email">
+         <button class="orange-btn">sign up</button>
+       </div>
+     </div>
+
+   </div>
   </div>
 </div>

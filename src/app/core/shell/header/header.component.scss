@@ -1,9 +1,29 @@
-@import "src/theme/theme-variables";
 
 .navbar {
-  margin-bottom: $spacer;
+  margin-bottom: 1rem;
 }
 
 .nav-link.dropdown-toggle {
   cursor: pointer;
 }
+
+nav {
+  padding: 0;
+}
+
+header {
+  padding: 10px 0 15px 0;
+}
+
+.navbar-nav .nav-item {
+  color: #999;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.navbar-nav .orange-btn,
+.navbar-nav .blue-btn {
+  padding: 2px 15px;
+  border-radius: 2px;
+}
+

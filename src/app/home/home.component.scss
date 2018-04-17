@@ -1,9 +1,92 @@
+
+//@import "../footer/footer.component";
+
 .logo {
   width: 100px;
 }
 
-q {
-  font-style: italic;
-  font-size: 1.2rem;
-  quotes: "« " " »";
+.hero-img-bg {
+  background: url(assets/website/banner2.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 405px;
+  margin-top: -30px;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.hero-img-bg .container {
+  position: relative;
+}
+
+.hero-img-bg h1 {
+  color: #8a8a8a;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  font-weight: 400;
+}
+
+.hero-img-bg h1 span {
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.e-books-download {
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+
+.e-books-download div[class^="col-"] {
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.e-books-download div[class^="col-"]:first-child {
+  padding-left: 8px;
+}
+
+.e-books-download img {
+  width: 40px;
+}
+
+.box {
+  padding-top: 4%;
+  padding-bottom: 5px;
+  position: relative;
+  min-height: 250px;
+}
+
+.box-abs-bottom15 {
+  position: absolute;
+  bottom: 0;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.lite-grey-bg {
+  background: #f7f7f7;
+}
+
+.dark-grey-bg {
+  background: #f7f7f7;
+}
+
+
+img {
+  width: 100%;
 }

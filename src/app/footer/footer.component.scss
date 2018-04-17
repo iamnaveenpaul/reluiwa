@@ -1,0 +1,21 @@
+.footer {
+  background: var(--blue);
+  font-size: 0.75rem;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.footer .links {
+  margin-top: 2px;
+}
+
+.footer .links a {
+  color: #fff;
+  display: block;
+}
+
+.input-field input {
+  padding: 0 5px;
+  border-radius: 2px;
+  border: 2px solid #fff;
+}
