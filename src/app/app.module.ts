@@ -15,6 +15,7 @@ import { LoginModule } from './login/login.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
+import { DemoModule } from './demo/demo.module';
 
 @NgModule({
   imports: [
@@ -27,13 +28,13 @@ import { FooterComponent } from './footer/footer.component';
     CoreModule,
     SharedModule,
     HomeModule,
+    DemoModule,
     AboutModule,
     LoginModule,
     AppRoutingModule
   ],
   declarations: [AppComponent, FooterComponent],
-  providers: [
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,39 @@
+<div class="position-relative">
+  <div class="demo-bg">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-7" [hidden]="demoRequested">
+          <h2>
+            <strong>Powered by Artificial Intelligence</strong>,<br>
+            Relatas eliminates the blind spots, improves predictability<br> and shows
+            the entire sales team where to focus to close<br> more business, faster.
+          </h2>
+          <h2>
+
+            Sell with <strong>NO-INTERACTION-DATA-ENTRY</strong>,
+            and<br> <strong>NO-CHANGE</strong> in behavior.
+          </h2>
+
+          <input type="text" placeholder="Full name">
+          <input type="email" placeholder="Business Email ID">
+          <button class="teal-btn btn-lg font-weight-bold" (click)="submitDemoRequest()">request a demo</button>
+        </div>
+        <div class="col-7" [hidden]="!demoRequestSent">
+          <h3 class="font-weight-bold" style="margin-bottom: 1rem;">
+            Thanks for requesting a Demo!
+          </h3>
+          <h4>
+            To help you provide a customisable demo,<br>
+            please fill out this survey.
+          </h4>
+
+          <button class="teal-btn btn-lg font-weight-bold" routerLink="https://angular.io/guide/ajs-quick-reference">
+            personalise your demo
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

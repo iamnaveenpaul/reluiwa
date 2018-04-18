@@ -1,3 +1,4 @@
+.button,
 button {
   border-radius: 2px;
   padding-left: 15px;
@@ -7,14 +8,21 @@ button {
 
 .orange-btn {
   background: var(--orange);
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   border: 1px solid var(--orange);
 }
 
+.teal-btn {
+  background: var(--teal);
+  color: #fff;
+  text-transform: uppercase;
+  border: 1px solid var(--teal);
+}
+
 .blue-btn {
   background: var(--blue);
-  color: #ffffff;
+  color: #fff;
   text-transform: uppercase;
   border: 1px solid var(--blue);
 }
@@ -43,6 +51,12 @@ button {
   width: 0;
   position: absolute;
   pointer-events: none;
+}
+
+input {
+  border-radius: 2px;
+  border: 1px solid #aaa;
+  padding: 2px 2px 2px 5px;
 }
 
 .arrow_box_bottom:after {

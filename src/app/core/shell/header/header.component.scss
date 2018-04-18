@@ -1,6 +1,6 @@
 
 .navbar {
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
 }
 
 .nav-link.dropdown-toggle {
@@ -12,11 +12,12 @@ nav {
 }
 
 header {
-  padding: 10px 0 15px 0;
+  padding-top: 10px;
+  background: #d3dbe1;
 }
 
 .navbar-nav .nav-item {
-  color: #999;
+  color: #8a8a8a;
   font-size: 14px;
   font-weight: bold;
 }

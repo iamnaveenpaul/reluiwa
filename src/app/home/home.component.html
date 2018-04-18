@@ -1,4 +1,3 @@
-
 <div>
   <div class="hero-img-bg">
     <div class="container">
@@ -10,7 +9,7 @@
             NO-DATA-ENTRY
           </p>
           <div class="btns-grp-wrapper">
-            <button class="orange-btn font-weight-bold">request a demo</button>
+            <button class="orange-btn font-weight-bold" routerLink="/demo">request a demo</button>
             <button class="orange-invert-btn">download e-book</button>
           </div>
         </div>
@@ -38,7 +37,7 @@
   <div class="container">
     <h2 class="text-uppercase text-center">
       close more deals
-      <span class="text-blue">predicatably</span>
+      <span class="text-blue">predictably</span>
     </h2>
     <p class="text-center">
       From predictive insights for sales executivrs to deep analytics for sales leaders & CXO.
@@ -50,8 +49,84 @@
       <button [ngClass]="managerIsSelected" (click)="openManager()">sales manager</button>
       <button [ngClass]="repIsSelected" (click)="openRep()">sales rep</button>
     </div>
-    <div>
-      <img src="assets/website/banner6.jpg">
+    <div class="product-feature-snippets" *ngIf="cxoIsSelected.arrow_box_bottom">
+      <div class="row">
+        <div class="col-2 offset-3 text-center">
+
+          <img src="assets/website/cxo_icon1.png">
+          <p class="text-uppercase">
+            improved effectiveness of <br><strong>forecast management</strong>
+          </p>
+        </div>
+        <div class="col-2 text-center">
+
+          <img src="assets/website/cxo_icon2.png">
+          <p class="text-uppercase">
+            increased crm adoption with <br><strong>no-data-entry</strong>
+          </p>
+        </div>
+        <div class="col-2 text-center">
+
+          <img src="assets/website/cxo_icon3.png">
+          <p class="text-uppercase">
+            improved visibility with <br><strong>org-wide-insights</strong>
+          </p>
+        </div>
+      </div>
+      <img class="bottom" src="assets/website/banner6.jpg">
+    </div>
+    <div class="product-feature-snippets" *ngIf="managerIsSelected.arrow_box_bottom">
+      <div class="row">
+        <div class="col-2 offset-3 text-center">
+
+          <img src="assets/website/manager_icon1.png">
+          <p class="text-uppercase">
+            improved effectiveness of <br><strong>forecast management</strong>
+          </p>
+        </div>
+        <div class="col-2 text-center">
+
+          <img src="assets/website/manager_icon2.png">
+          <p class="text-uppercase">
+            increased crm adoption with <br><strong>no-data-entry</strong>
+          </p>
+        </div>
+        <div class="col-2 text-center">
+
+          <img src="assets/website/manager_icon3.png">
+          <p class="text-uppercase">
+            improved visibility with <br><strong>org-wide-insights</strong>
+          </p>
+        </div>
+      </div>
+      <img class="bottom" src="assets/website/banner6.jpg">
+    </div>
+
+    <div class="product-feature-snippets" *ngIf="repIsSelected.arrow_box_bottom">
+      <div class="row">
+        <div class="col-2 offset-3 text-center">
+
+          <img src="assets/website/manager_icon1.png">
+          <p class="text-uppercase">
+            improved effectiveness of <br><strong>forecast management</strong>
+          </p>
+        </div>
+        <div class="col-2 text-center">
+
+          <img src="assets/website/manager_icon2.png">
+          <p class="text-uppercase">
+            increased crm adoption with <br><strong>no-data-entry</strong>
+          </p>
+        </div>
+        <div class="col-2 text-center">
+
+          <img src="assets/website/manager_icon3.png">
+          <p class="text-uppercase">
+            improved visibility with <br><strong>org-wide-insights</strong>
+          </p>
+        </div>
+      </div>
+      <img class="bottom" src="assets/website/banner6.jpg">
     </div>
   </div>
 </div>
@@ -69,7 +144,6 @@
   <img src="assets/website/banner3.jpg">
 </div>
 
-
 <div class="box lite-grey-bg">
   <div class="container">
     <h2 class="text-uppercase text-center">
@@ -82,6 +156,61 @@
     </p>
     <img src="assets/website/banner4.jpg">
   </div>
+
+  <div class="container">
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+      <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <h3 class="quote">" Relatas makes my meetings smarter by providing insights about my interactions. Love, how the external events automatically show up on my agenda almost daily "</h3>
+          <img src="assets/website/goel.png">
+          <h3 class="light text-center">Alok Goel<br><span class="fs19">Managing Partner, SAIF Partners.</span></h3>
+        </div>
+        <div class="carousel-item">
+          <h3 class="quote">
+            " I like how Relatas seamlessly works with the tools I already use and
+            uses cognitive technology to help me keep on top of what is time critical! "
+          </h3>
+          <img src="assets/website/rajani.jpg">
+          <h3 class="light text-center">Rajani Ramanathan<br><span class="fs19">Former COO(EVP) of Technology & Products, Salesforce</span></h3>
+        </div>
+        <div class="carousel-item">
+
+          <h3 class="quote">
+            "I'm excited about Relatas, <br>because now AI can finally help us be better at the most human of all things - social relationships. "</h3>
+          <img src="assets/website/gaurav.jpg">
+          <h3 class="light text-center">Gaurav Rastogi<br><span class="fs19">President, Nagarro</span></h3>
+        </div>
+        <div class="carousel-item">
+
+          <h3 class="quote">" Relatas enables me to manage my relationships and interactions much more efficiently leading to increased effectiveness in my business operations. "</h3>
+          <img src="assets/website/vasant.jpg">
+          <h3 class="light text-center">Vasant Kumar<br><span class="fs19">Former Sr Director, Oracle</span></h3>
+        </div>
+        <div class="carousel-item">
+
+          <h3 class="quote">
+            " Relatas is a pioneering customer relationship automation suggesting what sales reps should do next to
+            build stronger relationships & thus increase sales.
+            A godsend to sales reps!"</h3>
+          <img src="assets/website/julio.jpg">
+          <h3 class="light text-center">Julio Martinez-Clark<br><span class="fs19">CEO, Interventional Concepts</span></h3>
+        </div>
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+        <i class="fa fa-angle-left"></i>
+      </a>
+      <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+        <i class="fa fa-angle-right"></i>
+      </a>
+
+    </div>
+  </div>
+
 </div>
 
 <div class="box">
@@ -92,7 +221,7 @@
      <br> sales transformation
     </h2>
     <div class="text-center">
-      <button class="orange-btn">request a demo</button>
+      <button class="orange-btn" routerLink="/demo">request a demo</button>
     </div>
     <p class="text-center bold box-abs-bottom15">
       Nothing to install. Go Live in 15 minutes.
@@ -100,11 +229,9 @@
   </div>
 </div>
 
-
 <div class="box">
   <img src="assets/website/banner5.jpg">
 </div>
-
 
 <div class="footer">
   <div class="container">
