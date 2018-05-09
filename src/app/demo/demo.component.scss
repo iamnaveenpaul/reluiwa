@@ -1,29 +1,25 @@
 .demo-bg {
-  border-top: 1px solid #eee;
-  background: #d3dbe1 url(assets/website/img_testimonial.jpg) no-repeat top right;
-  //-webkit-background-size: cover;
-  //-moz-background-size: cover;
-  //-o-background-size: cover;
-  //background-size: cover;
-  //min-height: 535px;
-  padding-top: 5%;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 68px;
+  border-top: 1px solid var(--gray);
+  margin-top: 5%;
+  padding-bottom: 2%;
+  min-height: 535px;
 }
 
 .demo-bg h2 {
   font-size: 1.55rem;
   margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 
 .demo-bg input {
   display: block;
-  margin: .5rem 0;
+  margin: 0.5rem 0 0.5rem 1.5rem;
   width: 45%;
   height: 35px;
+}
+
+.demo-bg button {
+  margin: 0.5rem 0 0.5rem 1.5rem;
 }
 
 .right-fixed-md {
@@ -31,4 +27,36 @@
   right: 0;
   padding: 0;
   text-align: right;
+}
+
+.demo-bg .form-group textarea {
+  display: block;
+  width: 45%;
+}
+
+.demo-bg .form-group label {
+  margin: 0.75rem 0 0 0;
+}
+
+.demo-bg .form-group input {
+  margin: 0 0 0 0;
+}
+
+.right-fix-img {
+  position: fixed;
+  right: 0;
+  z-index: -9;
+}
+
+#relatasNav {
+  border-bottom: 1px solid #ccc;
+}
+
+.demo-bg ul {
+  margin-top: 3.5rem;
+  font-size: 0.9rem;
+}
+
+.demo-bg ul li {
+  margin: 8px 0;
 }

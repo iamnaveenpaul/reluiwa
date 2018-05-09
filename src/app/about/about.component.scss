@@ -1,0 +1,97 @@
+.profile-section .sec-left {
+  float: left;
+}
+
+.profile-section .sec-left h4 {
+  margin: 0 0 0 15px;
+  font-size: 16px;
+}
+
+.profile-section img {
+  width: 16.333%;
+  border-radius: 55%;
+}
+
+.profile-section .sec-left h2 {
+  font-size: 27px;
+  margin: 9px 0 0 15px;
+}
+
+.profile-section .sec-left h3 {
+  font-size: 22px;
+  margin: 2px 0 0 15px;
+  font-style: italic;
+}
+
+.profile-about {
+  padding: 2% 5px;
+  text-align: justify;
+}
+
+.profile-section .sec-left p {
+  margin: 2px 0 0 15px;
+}
+
+.intro-four .row {
+  margin: 45px 0 45px 8.33%;
+  border: 1px solid #bbb;
+  padding: 2% 0;
+}
+
+.intro-three {
+  text-align: center;
+  background: #f8f8f8;
+  padding: 45px 0 45px 0;
+}
+
+.inner-img-v-align {
+  height: 150px;
+  position: relative;
+}
+
+.intro-four .col-md-2 {
+  padding-top: 4%;
+  border-right: 1px solid #bbb;
+}
+
+.inner-img-v-align img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.bg-img-company-3 {
+  background: url(assets/website/bg-signUpStep-3.png) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 475px;
+}
+
+.bg-img-company-3-text {
+  padding: 11.111% 0;
+}
+
+.bg-img-company-3 h1 {
+  color: #fff !important;
+}
+.page-title {
+  font-size: 42px;
+  font-weight: 300;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.margintb25 {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}

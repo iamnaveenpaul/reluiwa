@@ -26,10 +26,38 @@
       $(function(){
         $('#myCarousel').carousel();
       });
-      console.log( "ready!" );
     });
 
   </script>
+
+  <script>
+
+    function ifHeaderLoaded() {
+      var startFromPos = 400;
+      window.onscroll = function() {myFunction()};
+
+        function myFunction() {
+          var header = document.getElementById("relatasNav");
+
+          if(header) {
+            var sticky = header.offsetTop+startFromPos;
+            if (window.pageYOffset > sticky) {
+              header.classList.add("sticky");
+            } else {
+              header.classList.remove("sticky");
+            }
+
+          } else {
+            setTimeout(function () {
+              ifHeaderLoaded();
+            }, 1000);
+          }
+        }
+    }
+
+    ifHeaderLoaded();
+  </script>
+
 </head>
 <body>
   <!--[if lt IE 10]>

@@ -133,6 +133,7 @@ Development, build and quality processes are based on [angular-cli](https://gith
 - npm run generate -- component pageName
 - Create 2 files: pageName.module.ts + pageName-routing.module.ts
 - Update app.module.ts by importing pageName.module and add it to @NgModule:imports
+- Remove these new added components from declaration
 - In pageName.routing.module update the routes
 
 # Licence

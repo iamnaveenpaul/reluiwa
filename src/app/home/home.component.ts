@@ -1,14 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { finalize } from 'rxjs/operators';
+import {HttpClient} from '@angular/common/http';
+import { EbookService } from '../services/ebook.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss', '../footer/footer.component.scss']
+  styleUrls: ['./home.component.scss','../../sass/_hacks.scss'],
+  providers: [EbookService]
 })
 export class HomeComponent implements OnInit {
 
   isLoading: boolean;
+
+  constructor(private ebookService: EbookService) { }
 
   cxoIsSelected = {
     'arrow_box_bottom': true,
@@ -45,6 +50,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading = true;
+    // this.ebookService.registerAndDownloadEbook().subscribe(
+    //   data => { console.log(data); },
+    //   err => console.error(err), () => console.log('done'));
   }
 
 }

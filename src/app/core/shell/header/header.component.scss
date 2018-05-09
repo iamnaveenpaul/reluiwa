@@ -13,7 +13,11 @@ nav {
 
 header {
   padding-top: 10px;
-  background: #d3dbe1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
 }
 
 .navbar-nav .nav-item {
@@ -28,3 +32,16 @@ header {
   border-radius: 2px;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #bbb;
+  z-index: 99;
+  padding-top: 0;
+  -webkit-transition: background 0.3s ease-in, border-bottom 0.3s ease 0.5s;
+  -moz-transition: background 0.3s ease-in, border-bottom 0.3s ease 0.5s;
+  -o-transition: background 0.3s ease-in, border-bottom 0.3s ease 0.5s;
+  transition: background 0.3s ease-in, border-bottom 0.3s ease 0.5s;
+}
