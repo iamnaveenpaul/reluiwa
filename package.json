@@ -1,6 +1,6 @@
 {
-  "name": "ng-x-rocket",
-  "version": "1.0.0",
+  "name": "relatas-static",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "ng": "ng",

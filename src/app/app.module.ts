@@ -21,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ProductModule } from './product/product.module';
 import { FaqModule } from './faq/faq.module';
 import { TermsModule} from './terms/terms.module';
+import { AibooksModule } from './aibooks/aibooks.module';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { TermsModule} from './terms/terms.module';
     ProductModule,
     FaqModule,
     TermsModule,
+    AibooksModule,
     AppRoutingModule // This should always load at the end. If not all the modules after AppRoutingModule will not work
   ],
   declarations: [AppComponent],
