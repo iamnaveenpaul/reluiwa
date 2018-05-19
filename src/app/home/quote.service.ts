@@ -33,7 +33,7 @@ export class QuoteService {
       );
   }
 
-  saveLeadDetails (lead: LeadContext): Observable<object> {
+  saveLeadDetails (lead: Object): Observable<object> {
     return this.httpClient
       .post(routes.leadsSave, lead);
   }

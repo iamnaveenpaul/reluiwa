@@ -9,14 +9,27 @@
 
       <div class="row">
         <div class="col-7">
-          <h2>
-            <strong>Case studies</strong>,<br>
-            Relatas eliminates the blind spots, improves predictability<br> and shows
-          </h2>
 
-          <input type="text" placeholder="Full name">
-          <input type="email" placeholder="Business Email ID">
-          <!--<button class="teal-btn btn-lg font-weight-bold" (click)="submitDemoRequest()">Download</button>-->
+          <ul>
+            <li>Relatas is the AI platform, successful sales teams use for Sales Execution,
+              Account Management and Forecasting.
+              Just having a CRM which is used as a data repository is no longer an option.</li>
+            <li>Imagine being able to capture real-time signals, wherever they occur,
+              from a Lead generation to customer’s support request to a prospect’s tweet.</li>
+            <li>Imagine being able to analyse every data point, pulling together data from CRM,
+              Financial Systems, Support Systems, external sources to create a complete view of every customer.</li>
+            <li>This enables Relatas to predict the best next sales and interaction for each customer,
+              and then automate everything from routine tasks to real-time customer engagement to
+              even automated opportunity creation. It’s a whole new way of connecting to your customers and
+              prospects, with intelligence powering a new era of customer success.</li>
+            <li>Discover the No-Data-Entry powered with AI, Sales Platform today.</li>
+          </ul>
+
+          <input #fullName (keyup.enter)="fullName.value='' " placeholder="Full name">
+          <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Business Email ID">
+          <button class="teal-btn btn-lg font-weight-bold" (click)="addlead(fullName.value,emailId.value)">
+            Download
+          </button>
         </div>
 
       </div>

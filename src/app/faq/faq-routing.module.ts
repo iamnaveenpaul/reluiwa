@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { Route, extract } from '@app/core';
-import { AboutComponent } from './about.component';
+import { FaqComponent } from './faq.component';
 
 const routes: Routes = [
   Route.withShell([
-    { path: 'company', component: AboutComponent, data: { title: extract('Sales Intelligence Company | Relatas') } }
+    { path: '', redirectTo: '/faq', pathMatch: 'full' },
+    { path: 'faq', component: FaqComponent,
+      data: { title: extract('Sales Forecasting and Execution Platform Demo | Relatas') } }
   ])
 ];
 
@@ -15,4 +17,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: []
 })
-export class AboutRoutingModule { }
+export class FaqRoutingModule { }

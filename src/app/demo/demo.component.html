@@ -2,6 +2,10 @@
   <div class="demo-bg">
     <div class="container">
 
+      <div class="right-fix-img">
+        <img src="assets/website/img_testimonial.jpg">
+      </div>
+
       <div class="row">
         <div class="col-7" [hidden]="demoRequested">
           <h2>
@@ -15,9 +19,9 @@
             and<br> <strong>NO-CHANGE</strong> in behavior.
           </h2>
 
-          <input type="text" placeholder="Full name">
-          <input type="email" placeholder="Business Email ID">
-          <button class="teal-btn btn-lg font-weight-bold" (click)="submitDemoRequest()">request a demo</button>
+          <input class="margin-l0" type="text" placeholder="Full name">
+          <input class="margin-l0" type="email" placeholder="Business Email ID">
+          <button class="teal-btn btn-lg font-weight-bold margin-l0" (click)="submitDemoRequest()">request a demo</button>
         </div>
         <div class="col-7" [hidden]="!demoRequestSent">
           <h3 class="font-weight-bold" style="margin-bottom: 1rem;">
@@ -42,7 +46,7 @@
             <label>What problem do you face while selling?</label>
             <textarea></textarea>
           </div>
-          <button class="teal-btn btn-lg font-weight-bold" routerLink="https://angular.io/guide/ajs-quick-reference">
+          <button class="margin-l0 teal-btn btn-lg font-weight-bold" routerLink="https://angular.io/guide/ajs-quick-reference">
             personalise your demo
           </button>
         </div>

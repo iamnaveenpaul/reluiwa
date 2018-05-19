@@ -10,17 +10,25 @@
       </button>
       <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
+          <a class="nav-item nav-link text-uppercase" routerLink="/product" routerLinkActive="active">
             <span>product</span>
           </a>
           <a class="nav-item nav-link text-uppercase" routerLink="/company" routerLinkActive="active">
             <span>company</span>
           </a>
+          <div class="dropdown">
+            <a class="nav-item nav-link text-uppercase dropdown-toggle" data-toggle="dropdown">
+              resources
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item text-uppercase" routerLink="/white-paper">white paper</a>
+              <a class="dropdown-item text-uppercase" routerLink="/case-studies">case studies</a>
+              <a class="dropdown-item text-uppercase" routerLink="/use-cases">use cases</a>
+              <a class="dropdown-item text-uppercase" routerLink="/ai-for-sales">ai for sales</a>
+            </div>
+          </div>
           <a class="nav-item nav-link text-uppercase" routerLink="/login" routerLinkActive="active">
-            <span class="blue-btn">login</span>
-          </a>
-          <a class="nav-item nav-link text-uppercase" routerLink="/demo" routerLinkActive="active">
-            <span class="orange-btn">request a demo</span>
+            <span class="blue-invert-btn">login</span>
           </a>
           <!--<a class="nav-item nav-link text-uppercase" (click)="logout()">-->
             <!--<span>Logout</span>-->

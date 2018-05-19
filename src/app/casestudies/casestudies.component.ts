@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {QuoteService} from '@app/home/quote.service';
 
 @Component({
   selector: 'app-casestudies',
@@ -7,7 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CasestudiesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private quoteService: QuoteService) { }
+
+  addlead(fullName: string, emailId: string) {
+
+    const obj = {
+      fullName: fullName,
+      emailId: emailId,
+      type: 'useCase',
+    };
+
+    this.quoteService.saveLeadDetails(obj)
+      .subscribe(res => console.log('after -', res));
+  }
 
   ngOnInit() {
   }

@@ -10,18 +10,30 @@
         <div class="col-7">
           <ul>
 
-            <li>Relatas is the AI platform, successful sales teams use for Sales Execution, Account Management and Forecasting. Just having a CRM which is used as a data repository is no longer an option.</li>
-            <li>CEO/ CRO/ VP Sales - As the CEO/ CRO/ VP Sales, you have to make sure that the commitments you have made to the markets/ investors are met. Maximise and grow your revenue while delivering best customer experience to your customers.</li>
-            <li>Sales Manager Success - As a sales leader, spot pipeline risk & drive more revenue by analysing right and authentic data. Relatas helps you ask the right questions and provides you the data you need. Move from 1-0-1 weekly status calls (commit calls) to 1-0-1 strategy calls. Make your commit calls more effective.</li>
-            <li>Sales Rep Success - Be more productive & close deals faster by automating data entry into CRM. Relatas Artificial Intelligence Engine understands how you close deals and predicts how likely are you to meet your targets and suggests ways to meet your numbers.</li>
-            <li>Discover the No-Data-Entry powered with AI, Sales Platform today.
+            <li>Relatas is the AI platform, successful sales teams use for Sales Execution, Account Management
+              and Forecasting. Just having a CRM which is used as a data repository is no longer an option.
+            </li>
+            <li>CEO/ CRO/ VP Sales - As the CEO/ CRO/ VP Sales, you have to make sure that the commitments you
+              have made to the markets/ investors are met. Maximise and grow your revenue while delivering best
+              customer experience to your customers.
+            </li>
+            <li>Sales Manager Success - As a sales leader, spot pipeline risk & drive more revenue by analysing
+              right and authentic data. Relatas helps you ask the right questions and provides you the data you need.
+              Move from 1-0-1 weekly status calls (commit calls) to 1-0-1 strategy calls.
+              Make your commit calls more effective.
+            </li>
+            <li>Sales Rep Success - Be more productive & close deals faster by automating data entry into CRM.
+              Relatas Artificial Intelligence Engine understands how you close deals and predicts how likely are
+              you to meet your targets and suggests ways to meet your numbers.
+            </li>
+            <li>Discover the No-Data-Entry powered with AI, Sales Platform today.</li>
           </ul>
-
-          <input type="text"  [(ngModel)]="fullName" placeholder="Full name">
-          <input type="email"  [(ngModel)]="emailId" placeholder="Business Email ID">
-          <button class="teal-btn btn-lg font-weight-bold" (click)="submitDemoRequest()">Download</button>
+          <input #fullName (keyup.enter)="fullName.value='' " placeholder="Full name">
+          <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Business Email ID">
+          <button class="teal-btn btn-lg font-weight-bold" (click)="addlead(fullName.value,emailId.value)">
+            Download
+          </button>
         </div>
-
       </div>
     </div>
   </div>

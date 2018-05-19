@@ -7,7 +7,8 @@ import { DemoComponent } from './demo.component';
 const routes: Routes = [
   Route.withShell([
     { path: '', redirectTo: '/demo', pathMatch: 'full' },
-    { path: 'demo', component: DemoComponent, data: { title: extract('Relatas Demo') } }
+    { path: 'demo', component: DemoComponent,
+      data: { title: extract('Sales Forecasting and Execution Platform Demo | Relatas') } }
   ])
 ];
 

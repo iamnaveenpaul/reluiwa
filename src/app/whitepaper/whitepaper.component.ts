@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {QuoteService} from '@app/home/quote.service';
 
 @Component({
   selector: 'app-whitepaper',
@@ -7,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WhitepaperComponent implements OnInit {
 
-  downloadEbook() {
-  }
+  constructor(private quoteService: QuoteService) { }
 
-  constructor() { }
+  addlead(fullName: string, emailId: string) {
+
+    const obj = {
+      fullName: fullName,
+      emailId: emailId,
+      type: 'useCase',
+    };
+
+    this.quoteService.saveLeadDetails(obj)
+      .subscribe(res => console.log('after -', res));
+  }
 
   ngOnInit() {
   }

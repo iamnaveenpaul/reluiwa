@@ -1,12 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgModule } from '@angular/core';
 import { QuoteService } from '../home/quote.service';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    FormsModule,
-    ReactiveFormsModule
+    FormsModule
   ], declarations: [],
   providers: []
 })
@@ -18,26 +17,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 })
 export class UsecasesComponent implements OnInit {
 
-  @Input() fullName: string;
-  @Input() emailId: string;
-
   constructor(private quoteService: QuoteService) { }
 
-  ngOnInit() {
-  }
+  addlead(fullName: string, emailId: string) {
 
-  submitDemoRequest() {
     const obj = {
-      emailId: 'dev'
+      fullName: fullName,
+      emailId: emailId,
+      type: 'useCase',
     };
 
-    console.log(this.fullName)
-    console.log(this.emailId)
+    this.quoteService.saveLeadDetails(obj)
+      .subscribe(res => console.log('after -', res));
+  }
 
-    console.log(obj);
-
-    // this.quoteService.saveLeadDetails({lead: obj})
-    //   .subscribe(res => console.log('after -', res));
+  ngOnInit() {
   }
 
 }

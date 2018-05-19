@@ -95,3 +95,13 @@
   margin-top: 25px;
   margin-bottom: 25px;
 }
+
+#company {
+  background: url(assets/website/company.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 300px;
+}

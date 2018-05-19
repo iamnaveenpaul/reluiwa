@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TranslateModule } from '@ngx-translate/core';
@@ -18,13 +18,15 @@ import { UsecasesModule } from './usecases/usecases.module';
 import { CasestudiesModule } from './casestudies/casestudies.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ProductModule } from './product/product.module';
+import { FaqModule } from './faq/faq.module';
+import { TermsModule} from './terms/terms.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     FormsModule,
-    ReactiveFormsModule,
     HttpClientModule,
     TranslateModule.forRoot(),
     NgbModule.forRoot(),
@@ -37,6 +39,9 @@ import { AppRoutingModule } from './app-routing.module';
     WhitepaperModule,
     CasestudiesModule,
     UsecasesModule,
+    ProductModule,
+    FaqModule,
+    TermsModule,
     AppRoutingModule // This should always load at the end. If not all the modules after AppRoutingModule will not work
   ],
   declarations: [AppComponent],

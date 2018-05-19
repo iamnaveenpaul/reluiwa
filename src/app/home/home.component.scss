@@ -16,13 +16,37 @@
 .hero-text h1 {
   color: #8a8a8a;
   text-transform: uppercase;
-  font-size: 3.5rem;
+  font-size: 2.65rem;
   font-weight: 400;
 }
 
 .hero-text h1 span {
   color: var(--blue);
   font-weight: bold;
+}
+
+.multi-uls ul {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0;
+  font-size: 0.70rem;
+  text-align: left;
+}
+
+.customer-first {
+  background-image: url(assets/website/customerFirst.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 350px !important;
+  padding-top: 5% !important;
+}
+
+.customer-first .box-abs-bottom15 {
+  bottom: 50px !important;
 }
 
 .e-books-download {
@@ -56,7 +80,7 @@
 
 .box-abs-bottom15 {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   margin: auto;
   left: 0;
   right: 0;
@@ -158,7 +182,7 @@ img {
   margin: 0;
 }
 
-.cb-slideshow li span {
+.cb-slideshow li .span-bg-img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -176,23 +200,8 @@ img {
   -ms-animation: imageAnimation 36s linear infinite 0s;
   animation: imageAnimation 36s linear infinite 0s;
 }
-.cb-slideshow li div {
-  z-index: 1000;
-  position: absolute;
-  bottom: 30px;
-  left: 0px;
-  width: 100%;
-  text-align: center;
-  opacity: 0;
-  color: #fff;
-  -webkit-animation: titleAnimation 36s linear infinite 0s;
-  -moz-animation: titleAnimation 36s linear infinite 0s;
-  -o-animation: titleAnimation 36s linear infinite 0s;
-  -ms-animation: titleAnimation 36s linear infinite 0s;
-  animation: titleAnimation 36s linear infinite 0s;
-}
 
-.cb-slideshow li:nth-child(1) span {
+.cb-slideshow li:nth-child(1) .span-bg-img {
   background-image: url(assets/website/banner2.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -200,7 +209,7 @@ img {
   background-size: cover;
 }
 
-.cb-slideshow li:nth-child(2) span {
+.cb-slideshow li:nth-child(2) .span-bg-img {
   background-image: url(assets/website/banner1.jpg);
    -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -212,7 +221,7 @@ img {
   -ms-animation-delay: 6s;
   animation-delay: 6s;
 }
-.cb-slideshow li:nth-child(3) span {
+.cb-slideshow li:nth-child(3) .span-bg-img {
   background-image: url(assets/website/banner2.jpg);
    -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -224,7 +233,7 @@ img {
   -ms-animation-delay: 12s;
   animation-delay: 12s;
 }
-.cb-slideshow li:nth-child(4) span {
+.cb-slideshow li:nth-child(4) .span-bg-img {
   background-image: url(assets/website/banner1.jpg);
    -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -236,7 +245,7 @@ img {
   -ms-animation-delay: 18s;
   animation-delay: 18s;
 }
-.cb-slideshow li:nth-child(5) span {
+.cb-slideshow li:nth-child(5) .span-bg-img {
   background-image: url(assets/website/banner2.jpg);
    -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -248,7 +257,7 @@ img {
   -ms-animation-delay: 24s;
   animation-delay: 24s;
 }
-.cb-slideshow li:nth-child(6) span {
+.cb-slideshow li:nth-child(6) .span-bg-img {
   background-image: url(assets/website/banner1.jpg);
    -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -260,41 +269,7 @@ img {
   -ms-animation-delay: 30s;
   animation-delay: 30s;
 }
-.cb-slideshow li:nth-child(2) div {
-  -webkit-animation-delay: 6s;
-  -moz-animation-delay: 6s;
-  -o-animation-delay: 6s;
-  -ms-animation-delay: 6s;
-  animation-delay: 6s;
-}
-.cb-slideshow li:nth-child(3) div {
-  -webkit-animation-delay: 12s;
-  -moz-animation-delay: 12s;
-  -o-animation-delay: 12s;
-  -ms-animation-delay: 12s;
-  animation-delay: 12s;
-}
-.cb-slideshow li:nth-child(4) div {
-  -webkit-animation-delay: 18s;
-  -moz-animation-delay: 18s;
-  -o-animation-delay: 18s;
-  -ms-animation-delay: 18s;
-  animation-delay: 18s;
-}
-.cb-slideshow li:nth-child(5) div {
-  -webkit-animation-delay: 24s;
-  -moz-animation-delay: 24s;
-  -o-animation-delay: 24s;
-  -ms-animation-delay: 24s;
-  animation-delay: 24s;
-}
-.cb-slideshow li:nth-child(6) div {
-  -webkit-animation-delay: 30s;
-  -moz-animation-delay: 30s;
-  -o-animation-delay: 30s;
-  -ms-animation-delay: 30s;
-  animation-delay: 30s;
-}
+
 /* Animation for the slideshow images */
 @-webkit-keyframes imageAnimation {
   0% { opacity: 0;
@@ -378,7 +353,7 @@ img {
   100% { opacity: 0 }
 }
 /* Show at least something when animations not supported */
-.no-cssanimations .cb-slideshow li span{
+.no-cssanimations .cb-slideshow li .span-bg-img{
   opacity: 1;
 }
 

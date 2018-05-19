@@ -27,6 +27,13 @@ button {
   border: 1px solid var(--blue);
 }
 
+.blue-invert-btn {
+  background: transparent;
+  color: var(--blue);
+  text-transform: uppercase;
+  border: 1px solid var(--blue);
+}
+
 .orange-invert-btn {
   color: var(--orange);
   background: transparent;
