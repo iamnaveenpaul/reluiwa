@@ -43,8 +43,11 @@
             var sticky = header.offsetTop+startFromPos;
             if (window.pageYOffset > sticky) {
               header.classList.add("sticky");
+              var elements = document.querySelectorAll('.only-on-scroll-down');
+              show(elements);
             } else {
               header.classList.remove("sticky");
+              hide(document.querySelector('.only-on-scroll-down'));
             }
 
           } else {
@@ -53,6 +56,20 @@
             }, 1000);
           }
         }
+    }
+
+    function hide (elements) {
+      elements = elements.length ? elements : [elements];
+      for (var index = 0; index < elements.length; index++) {
+        elements[index].style.display = 'none';
+      }
+    }
+
+    function show (elements, specifiedDisplay) {
+      elements = elements.length ? elements : [elements];
+      for (var index = 0; index < elements.length; index++) {
+        elements[index].style.display = specifiedDisplay || 'block';
+      }
     }
 
     ifHeaderLoaded();

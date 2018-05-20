@@ -46,3 +46,11 @@ header {
   -o-transition: background 0.3s ease-in, border-bottom 0.3s ease 0.5s;
   transition: background 0.3s ease-in, border-bottom 0.3s ease 0.5s;
 }
+
+.only-on-scroll-down {
+  display: none;
+}
+
+.navbar-brand img {
+  width: 180px;
+}
