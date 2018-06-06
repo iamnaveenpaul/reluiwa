@@ -61,6 +61,8 @@
 .e-books-download div[class^="col-"] {
   text-transform: uppercase;
   padding: 0;
+  font-weight: bold;
+  font-size: 0.85rem;
 }
 
 .e-books-download div[class^="col-"]:first-child {
@@ -68,7 +70,7 @@
 }
 
 .e-books-download img {
-  width: 40px;
+  width: 35px;
 }
 
 .box {
@@ -112,6 +114,14 @@ img {
 
 .relative {
   position: relative;
+}
+
+.product-feature-snippets .row:first-child {
+  margin-bottom: 25px;
+}
+
+.product-feature-snippets .row div[class^="col-"]:not(:last-child) {
+  border-right: 1px solid #e5e5e5;
 }
 
 .product-feature-snippets .row div[class^="col-"] img {
@@ -203,18 +213,16 @@ img {
 
 .cb-slideshow li:nth-child(1) .span-bg-img {
   background-image: url(assets/website/banner2.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+ background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
 }
 
 .cb-slideshow li:nth-child(2) .span-bg-img {
   background-image: url(assets/website/banner2.jpg);
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
   -webkit-animation-delay: 6s;
   -moz-animation-delay: 6s;
   -o-animation-delay: 6s;
@@ -223,10 +231,9 @@ img {
 }
 .cb-slideshow li:nth-child(3) .span-bg-img {
   background-image: url(assets/website/banner2.jpg);
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
   -webkit-animation-delay: 12s;
   -moz-animation-delay: 12s;
   -o-animation-delay: 12s;
@@ -235,10 +242,9 @@ img {
 }
 .cb-slideshow li:nth-child(4) .span-bg-img {
   background-image: url(assets/website/banner2.jpg);
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
   -webkit-animation-delay: 18s;
   -moz-animation-delay: 18s;
   -o-animation-delay: 18s;
@@ -247,10 +253,9 @@ img {
 }
 .cb-slideshow li:nth-child(5) .span-bg-img {
   background-image: url(assets/website/banner2.jpg);
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
   -webkit-animation-delay: 24s;
   -moz-animation-delay: 24s;
   -o-animation-delay: 24s;
@@ -259,10 +264,9 @@ img {
 }
 .cb-slideshow li:nth-child(6) .span-bg-img {
   background-image: url(assets/website/banner2.jpg);
-   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: right;
   -webkit-animation-delay: 30s;
   -moz-animation-delay: 30s;
   -o-animation-delay: 30s;
@@ -362,4 +366,12 @@ img {
 }
 @media screen and (max-width: 600px) {
   .cb-slideshow li div h3 { font-size: 80px }
+}
+
+
+.btn-group-invert button {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px;
+  width: 200px;
 }
