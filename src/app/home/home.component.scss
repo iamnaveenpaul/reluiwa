@@ -122,11 +122,13 @@ img {
 
 .product-feature-snippets .row div[class^="col-"]:not(:last-child) {
   border-right: 1px solid #e5e5e5;
+  //height: 115px;
 }
 
 .product-feature-snippets .row div[class^="col-"] img {
   width: 50px;
   margin: 15px 0;
+  margin-top: 20px;
 }
 
 .product-feature-snippets div[class^="col-"] p {
@@ -215,14 +217,14 @@ img {
   background-image: url(assets/website/banner2.jpg);
  background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  //background-position: right;
 }
 
 .cb-slideshow li:nth-child(2) .span-bg-img {
   background-image: url(assets/website/banner2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  //background-position: right;
   -webkit-animation-delay: 6s;
   -moz-animation-delay: 6s;
   -o-animation-delay: 6s;
@@ -233,7 +235,7 @@ img {
   background-image: url(assets/website/banner2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  //background-position: right;
   -webkit-animation-delay: 12s;
   -moz-animation-delay: 12s;
   -o-animation-delay: 12s;
@@ -244,7 +246,7 @@ img {
   background-image: url(assets/website/banner2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  //background-position: right;
   -webkit-animation-delay: 18s;
   -moz-animation-delay: 18s;
   -o-animation-delay: 18s;
@@ -255,7 +257,7 @@ img {
   background-image: url(assets/website/banner2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  //background-position: right;
   -webkit-animation-delay: 24s;
   -moz-animation-delay: 24s;
   -o-animation-delay: 24s;
@@ -266,7 +268,7 @@ img {
   background-image: url(assets/website/banner2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  //background-position: right;
   -webkit-animation-delay: 30s;
   -moz-animation-delay: 30s;
   -o-animation-delay: 30s;
