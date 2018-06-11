@@ -22,11 +22,16 @@
 
 .footer input {
   height: 32px;
-  width: 220px;
+  width: 330px;
 }
 
 .footer .orange-btn {
-  height: 32px;
+  height: 25px;
+  position: absolute;
+  padding-left: 5px;
+  padding-right: 5px;
+  top: 3px;
+  right: 25px;
 }
 
 .social-links ul li {
