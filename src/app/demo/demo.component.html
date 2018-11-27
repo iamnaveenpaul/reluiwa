@@ -2,55 +2,83 @@
   <div class="demo-bg">
     <div class="container">
 
-      <div class="right-fix-img">
-        <img src="assets/website/img_testimonial.jpg">
+      <div class="row">
+        <div class="col-md-7">
+
+          <h3 class="text-uppercase" style="margin: 2.5rem 0 1rem 0;">
+            Request a <span class="text-blue bold">CUSTOMIZED DEMO</span>
+          </h3>
+
+          <div style="margin-bottom: 1rem;font-size: 1.2rem;">
+            <strong>Powered by Artificial Intelligence,
+            Relatas eliminates the blind spots, improves predictability and shows
+            the entire sales team where to focus to close more business, faster.</strong>
+          </div>
+
+          Each sales person is Unique.
+          Using AI, Relatas adapts to each persons unique selling behaviour and
+          predicts insights to make them successful.
+          <br>
+          <br>
+          Using AI and No Data Entry, Relatas makes B2B sales professional:
+          <ul class="list-unstyled">
+            <li><i class="fas fa-angle-right"></i> More productive</li>
+            <li><i class="fas fa-angle-right"></i> Predict better</li>
+            <li><i class="fas fa-angle-right"></i> Sell faster</li>
+          </ul>
+
+          Schedule your customized demo now and see how Relatas impacts Sales Forecasting and Sales Effectiveness.
+
+        </div>
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-1 offset-1">
+
+            </div>
+            <div class="col-10 quote-wrapper">
+              <div class="lite-grey-bg">
+                <div class="relative" style="height: 85px">
+                  <img class="profile" src="assets/website/rajani.jpg">
+                  <img class="logo" src="assets/website/salesforce.png" style="width: 55px;">
+                </div>
+                <h5 class="text">
+                  <span class="text-gray">"</span> I like how Relatas <strong>seamlessly works with the tools</strong> I
+                  already use and uses cognitive technology to help me keep on top of what is time critical! <span class="text-gray">"</span>
+                </h5>
+                <div>
+                  <strong>Rajani Ramanathan</strong>
+                  <p>Former COO, Technology & Products, Salesforce</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lite-grey-bg bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 offset-1">
+            <input #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          </div>
+          <div class="col-md-3">
+            <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          </div>
+          <div class="col-md-3">
+            <button class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
+              request a demo
+            </button>
+            <div class="orange-btn" *ngIf="demoRequestSent" style="text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Sent</div>
+          </div>
+        </div>
       </div>
 
-      <div class="row">
-        <div class="col-7" [hidden]="demoRequested">
-          <h2>
-            <strong>Powered by Artificial Intelligence</strong>,<br>
-            Relatas eliminates the blind spots, improves predictability<br> and shows
-            the entire sales team where to focus to close<br> more business, faster.
-          </h2>
-          <h2>
+      <div class="error-popup" *ngIf="!errorMsg.pass">
+        <div class="message">
+          {{errorMsg.message}}
 
-            Sell with <strong>NO-INTERACTION-DATA-ENTRY</strong>,
-            and<br> <strong>NO-CHANGE</strong> in behavior.
-          </h2>
-
-          <input class="margin-l0" type="text" placeholder="Full name">
-          <input class="margin-l0" type="email" placeholder="Business Email ID">
-          <button class="teal-btn btn-lg font-weight-bold margin-l0" (click)="submitDemoRequest()">request a demo</button>
+          <button (click)="closeError()">OK</button>
         </div>
-        <div class="col-7" [hidden]="!demoRequestSent">
-          <h3 class="font-weight-bold" style="margin-bottom: 1rem;">
-            Thanks for requesting a Demo!
-          </h3>
-          <h4>
-            To help you provide a customisable demo,<br>
-            please fill out this survey.
-          </h4>
-
-          <div class="form-group">
-            <label>Company</label>
-            <input type="text">
-            <label>Company Size</label>
-            <input type="text">
-            <label>Business type</label>
-            <input type="text">
-            <label>Phone number</label>
-            <input type="text">
-            <label>Company Website</label>
-            <input type="text">
-            <label>What problem do you face while selling?</label>
-            <textarea></textarea>
-          </div>
-          <button class="margin-l0 teal-btn btn-lg font-weight-bold" routerLink="https://angular.io/guide/ajs-quick-reference">
-            personalise your demo
-          </button>
-        </div>
-
       </div>
     </div>
   </div>

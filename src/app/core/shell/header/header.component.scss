@@ -1,6 +1,6 @@
 
-.navbar {
-  //margin-bottom: 1rem;
+.navbar .navbar-toggler{
+  background: #fff;
 }
 
 .nav-link.dropdown-toggle {
@@ -42,7 +42,7 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #fff;
+  background: #fff !important;
   border-bottom: 1px solid #eee;
   z-index: 9999;
   padding-top: 0;
@@ -59,3 +59,28 @@ header {
 .navbar-brand img {
   width: 180px;
 }
+
+@media screen and (max-width: 980px) {
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .navbar-nav {
+    background: #fff;
+    padding: 10px;
+    width: 225px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .navbar-nav {
+    width: inherit;
+  }
+
+  .navbar-brand img {
+    width: 145px;
+  }
+}
+

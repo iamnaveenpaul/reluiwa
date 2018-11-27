@@ -1,38 +1,91 @@
 <div class="position-relative">
   <div class="demo-bg">
-
-    <div class="right-fix-img">
-      <img src="assets/website/img_testimonial.jpg">
-    </div>
-
     <div class="container">
       <div class="row">
-        <div class="col-7">
-          <ul>
+        <div class="col-md-7">
+          <h3 class="text-uppercase" style="margin: 2.5rem 0 1rem 0;">
+            Download <span class="text-blue bold">use cases</span>
+          </h3>
 
-            <li>Relatas is the AI platform, successful sales teams use for Sales Execution, Account Management
-              and Forecasting. Just having a CRM which is used as a data repository is no longer an option.
-            </li>
-            <li>CEO/ CRO/ VP Sales - As the CEO/ CRO/ VP Sales, you have to make sure that the commitments you
+          <div style="margin-bottom: 1rem;font-size: 1.2rem;">
+            <strong>Relatas is the AI platform, successful sales teams use for Sales Execution,
+              Account Management and Forecasting.
+            </strong>
+          </div>
+          <p>
+            The biggest challenge that most CEO, CRO, VP Sales, Sales Reps face today are:
+          </p>
+          <ul class="list-unstyled">
+
+            <li><i class="fas fa-angle-right"></i> CEO/ CRO/ VP Sales - As the CEO/ CRO/ VP Sales, you have to make sure that the commitments you
               have made to the markets/ investors are met. Maximise and grow your revenue while delivering best
               customer experience to your customers.
             </li>
-            <li>Sales Manager Success - As a sales leader, spot pipeline risk & drive more revenue by analysing
+            <li><i class="fas fa-angle-right"></i> Sales Manager Success - As a sales leader, spot pipeline risk & drive more revenue by analysing
               right and authentic data. Relatas helps you ask the right questions and provides you the data you need.
               Move from 1-0-1 weekly status calls (commit calls) to 1-0-1 strategy calls.
               Make your commit calls more effective.
             </li>
-            <li>Sales Rep Success - Be more productive & close deals faster by automating data entry into CRM.
+            <li><i class="fas fa-angle-right"></i> Sales Rep Success - Be more productive & close deals faster by automating data entry into CRM.
               Relatas Artificial Intelligence Engine understands how you close deals and predicts how likely are
               you to meet your targets and suggests ways to meet your numbers.
             </li>
-            <li>Discover the No-Data-Entry powered with AI, Sales Platform today.</li>
+            <li><i class="fas fa-angle-right"></i> Discover the No-Data-Entry powered with AI, Sales Platform today.</li>
           </ul>
-          <input #fullName (keyup.enter)="fullName.value='' " placeholder="Full name">
-          <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Business Email ID">
-          <button class="teal-btn btn-lg font-weight-bold" (click)="addlead(fullName.value,emailId.value)">
-            Download
-          </button>
+
+        </div>
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-1 offset-1">
+
+            </div>
+            <div class="col-10 quote-wrapper">
+              <div class="lite-grey-bg">
+                <div class="relative" style="height: 85px">
+                  <img class="profile" src="assets/website/venkat.jpg">
+                  <img class="logo" src="assets/website/22by7.png">
+                </div>
+                <h5 class="text">
+                  <span class="text-gray">"</span>
+                  Relatas has provided a <strong>level of efficiency</strong> and insights that we didn’t have before. Relatas gives our sales
+                  rep and leadership a unique view into the forecast with in-depth visibility into committed bookings,
+                  upside and any risks involved and helps drive actionable insights to <strong>predictably meet revenue targets</strong>
+                  <span class="text-gray">"</span>
+                </h5>
+                <div>
+                  <strong>Venkat Murthy</strong>
+                  <p>CEO, 22by7</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lite-grey-bg bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 offset-1">
+            <input #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          </div>
+          <div class="col-md-3">
+            <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          </div>
+
+          <div class="col-md-3">
+            <button class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
+              Download
+            </button>
+            <div class="orange-btn" *ngIf="demoRequestSent" style="text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Sent</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="error-popup" *ngIf="!errorMsg.pass">
+        <div class="message">
+          {{errorMsg.message}}
+
+          <button (click)="closeError()">OK</button>
         </div>
       </div>
     </div>

@@ -1,8 +1,8 @@
+@import "../../sass/_hacks";
+
 .demo-bg {
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid var(--gray-200);
   margin-top: 5%;
-  padding-bottom: 2%;
-  min-height: 535px;
 }
 
 .demo-bg h2 {
@@ -12,14 +12,9 @@
 }
 
 .demo-bg input {
-  display: block;
-  margin: 0.5rem 0 0.5rem 1.5rem;
-  width: 45%;
   height: 35px;
-}
-
-.demo-bg button {
-  margin: 0.5rem 0 0.5rem 1.5rem;
+  width: 100%;
+  border: 2px solid #fff;
 }
 
 .right-fixed-md {
@@ -52,13 +47,8 @@
   border-bottom: 1px solid #ccc;
 }
 
-.demo-bg ul {
-  margin-top: 3.5rem;
-  font-size: 0.85rem;
-}
-
 .demo-bg ul li {
-  margin: 8px 0;
+  margin: 15px 0;
 }
 
 .margin-l0 {
@@ -68,3 +58,106 @@
 .margin-t75 {
   margin-top: 75px !important;
 }
+
+.fa-angle-right {
+  margin-right: 7px;
+  color: var(--gray550);
+}
+
+.demo-bg .bottom {
+  padding: 25px 0;
+}
+
+.demo-bg .bottom button {
+  width: 160px;
+  height: 100%;
+  font-size: 0.8rem;
+}
+
+.demo-bg .quote-wrapper {
+  padding-top: 75px;
+}
+
+.demo-bg .quote-wrapper .text strong {
+  color: var(--blue);
+  //color: #fff;
+  //padding: 0 5px;
+}
+
+.demo-bg .quote-wrapper .lite-grey-bg {
+  min-height: 350px;
+  padding: 0 25px;
+}
+
+.demo-bg .quote-wrapper .profile {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 55%;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  border: 2px solid #fff;
+}
+
+.demo-bg .quote-wrapper .logo {
+  width: 125px;
+  position: absolute;
+  top: 85px;
+  left: 135px;
+}
+
+.demo-bg .quote-wrapper .text {
+  margin-bottom: 15px;
+  color: var(--mid-gray);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 0.45; /* Firefox */
+}
+
+@media screen and (max-width: 780px) {
+
+  .demo-bg .quote-wrapper .lite-grey-bg {
+    padding: 0 10px;
+    min-height: 240px;
+    margin-bottom: 25px;
+  }
+
+  .demo-bg .quote-wrapper .lite-grey-bg div {
+    height: 55px !important;
+  }
+
+  .demo-bg .quote-wrapper .lite-grey-bg h5 {
+    font-size: 0.9rem;
+  }
+
+  .demo-bg .quote-wrapper .lite-grey-bg .profile {
+    width: 55px;
+    height: 55px;
+    top: 50px;
+    left: 20px;
+  }
+
+  .demo-bg .quote-wrapper .lite-grey-bg .logo {
+    width: 65px;
+    left: 75px;
+  }
+
+  .demo-bg {
+    margin-top: 10%;
+  }
+
+  .demo-bg .offset-1 {
+    margin-left: 0;
+  }
+
+  .demo-bg input {
+    margin-bottom: 8px;
+  }
+
+  .demo-bg .orange-btn {
+    width: 100% !important;
+  }
+}
+

@@ -30,10 +30,48 @@ export class HomeComponent implements OnInit {
     'orange-invert-btn': true
   };
 
+  rajani = true;
+  vasant = false;
+  gaurav = false;
+  venkat = false;
+  sunil = false;
+  julio = false;
+
+  cxo1 = false;
+  cxo2 = false;
+  cxo3 = false;
+  cxo4 = false;
+  cxo5 = false;
+
+  sm1 = false;
+  sm2 = false;
+  sm3 = false;
+  sm4 = false;
+  sm5 = false;
+
+  sr1 = false;
+  sr2 = false;
+  sr3 = false;
+  sr4 = false;
+  sr5 = false;
+
+  mouseHovering(div) {
+    this[div] = true;
+  }
+
+  mouseLeft(div) {
+    this[div] = false;
+  }
+
   openCxo() {
     this.cxoIsSelected.arrow_box_bottom = true;
     this.managerIsSelected.arrow_box_bottom = false;
     this.repIsSelected.arrow_box_bottom = false;
+  }
+
+  openReview(reviewer:string) {
+    resetAll(this);
+   this[reviewer] = true;
   }
 
   openManager() {
@@ -50,9 +88,15 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading = true;
-    // this.ebookService.registerAndDownloadEbook().subscribe(
-    //   data => { console.log(data); },
-    //   err => console.error(err), () => console.log('done'));
   }
 
+}
+
+function resetAll(scope) {
+  scope.rajani = false;
+  scope.vasant = false;
+  scope.gaurav = false;
+  scope.venkat = false;
+  scope.sunil = false;
+  scope.julio = false;
 }

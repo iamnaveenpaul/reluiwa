@@ -2,32 +2,89 @@
   <div class="demo-bg">
     <div class="container">
 
-      <div class="right-fix-img">
-        <img src="assets/website/img_testimonial.jpg">
+      <div class="row">
+        <div class="col-md-7">
+
+          <h3 class="text-uppercase" style="margin: 2.5rem 0 1rem 0;">
+            Download <span class="text-blue bold">Sales AI playbook</span>
+          </h3>
+
+          <div style="margin-bottom: 1rem;font-size: 1.2rem;">
+            <strong>The most powerful application of Artificial Intelligence in Sales</strong>
+          </div>
+          <p>
+            Relatas uses Artificial Intelligence for different roles and activities, to make your salesforce more productive
+            by assigning activities that generates the highest RoI. At Relatas we understand that every
+            sales professional is different and rules based systems seldom work.
+            Relatas Artificial Intelligence Engine adapts itself to each sales professionals
+            selling pattern and predicts the outcome.
+          </p>
+          <p>See how Relatas Sales AI can help you with:</p>
+          <ul class="list-unstyled">
+
+            <li><i class="fas fa-angle-right"></i>
+              How to make AI your Sales admin
+            <li><i class="fas fa-angle-right"></i>AI Based Sales Forecasting</li>
+            <li><i class="fas fa-angle-right"></i>Find Out If It’s a Good Deal — Or Not</li>
+            <li><i class="fas fa-angle-right"></i>See how AI identifies your Revenue at Risk</li>
+            <li><i class="fas fa-angle-right"></i>AI doesn't let Prospect or Leads Go Stale</li>
+            <li><i class="fas fa-angle-right"></i>AI helps in Account Based Selling</li>
+            <li><i class="fas fa-angle-right"></i>Predictive Analytics in Sales</li>
+            <li><i class="fas fa-angle-right"></i>Neural Network in Sales</li>
+            <li><i class="fas fa-angle-right"></i>Sentiment Analysis in Sales</li>
+          </ul>
+        </div>
+
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-1 offset-1">
+
+            </div>
+            <div class="col-10 quote-wrapper">
+              <div class="lite-grey-bg">
+                <div class="relative" style="height: 85px">
+                  <img class="profile" src="assets/website/sunil.jpg">
+                  <img class="logo" src="assets/website/ivalue.png">
+                </div>
+                <h5 class="text">
+                  <span class="text-gray">"</span> By using Relatas, our team members are able to manage their client relationships better which helps
+                  them <strong>close deals faster</strong>. Relatas also gives us the insights we require to be agile and informed
+                  in our decision making <span class="text-gray">"</span>
+                </h5>
+                <div>
+                  <strong>Sunil Pillai</strong>
+                  <p>Co-founder, iValue Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lite-grey-bg bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 offset-1">
+            <input #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          </div>
+          <div class="col-md-3">
+            <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          </div>
+          <div class="col-md-3">
+            <button class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
+              Download
+            </button>
+
+            <div class="orange-btn" *ngIf="demoRequestSent" style="text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Sent</div>
+          </div>
+        </div>
       </div>
 
-      <div class="row">
-        <div class="col-7">
+      <div class="error-popup" *ngIf="!errorMsg.pass">
+        <div class="message">
+          {{errorMsg.message}}
 
-          <strong>Relatas is the AI platform, successful sales teams use for Sales Execution,
-            Account Management and Forecasting.</strong><br>
-          The biggest challenge that most CEO, CRO, VP Sales, Sales Reps face today are:
-          <ul>
-            <li>Pipeline Inspection - Maintain a healthy pipeline, increase win rate and improve sales productivity
-            <li>Sales Forecasting - Relatas transforms forecasting so execs can spot risk in their forecasts
-              and do course correction to get team back on track</li>
-            <li>Limited visibility if the team is exercising efforts on right accounts</li>
-            <li>Availability of real time, contexts based intelligent actionable data
-              and most common, their existing CRM is used as a database with limited or no data entry</li>
-            <li>Discover the No-Data-Entry powered with AI, Sales Platform today.</li>
-          </ul>
-
-
-          <input #fullName (keyup.enter)="fullName.value='' " placeholder="Full name">
-          <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Business Email ID">
-          <button class="teal-btn btn-lg font-weight-bold" (click)="addlead(fullName.value,emailId.value)">
-            Download
-          </button>
+          <button (click)="closeError()">OK</button>
         </div>
       </div>
     </div>

@@ -6,8 +6,8 @@ import { HomeComponent } from './home.component';
 
 const routes: Routes = [
   Route.withShell([
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent,
+    { path: '', redirectTo: '/', pathMatch: 'full' },
+    { path: '', component: HomeComponent,
       data: { title: extract('Sales Forecasting and Execution Platform | Relatas') } }
   ])
 ];

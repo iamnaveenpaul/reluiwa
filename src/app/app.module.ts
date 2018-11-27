@@ -22,6 +22,18 @@ import { ProductModule } from './product/product.module';
 import { FaqModule } from './faq/faq.module';
 import { TermsModule} from './terms/terms.module';
 import { AibooksModule } from './aibooks/aibooks.module';
+import { SalesopsModule } from './salesops/salesops.module';
+import { ForecastModule } from './forecast/forecast.module';
+import { AccountModule } from './account/account.module';
+import { TeamModule } from './team/team.module';
+import { CroModule } from './cro/cro.module';
+import { SalesMgrModule } from './salesMgr/salesMgr.module';
+import { SalesRepModule } from './salesRep/salesRep.module';
+import { PricingModule } from './pricing/pricing.module';
+import { PrivacyModule } from './privacy/privacy.module';
+import { SecurityModule } from './security/security.module';
+import { OpsManagerModule } from './opsManager/opsManager.module';
+import { GoogleVerifyModule } from './googleVerification/googleVerify.module';
 
 @NgModule({
   imports: [
@@ -43,7 +55,19 @@ import { AibooksModule } from './aibooks/aibooks.module';
     ProductModule,
     FaqModule,
     TermsModule,
+    PrivacyModule,
     AibooksModule,
+    SalesopsModule,
+    ForecastModule,
+    AccountModule,
+    TeamModule,
+    CroModule,
+    SalesMgrModule,
+    SalesRepModule,
+    PricingModule,
+    SecurityModule,
+    OpsManagerModule,
+    // GoogleVerifyModule,
     AppRoutingModule // This should always load at the end. If not all the modules after AppRoutingModule will not work
   ],
   declarations: [AppComponent],

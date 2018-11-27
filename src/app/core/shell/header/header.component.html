@@ -6,37 +6,38 @@
       </a>
       <button class="navbar-toggler" type="button" aria-controls="navbar-menu"
               aria-label="Toggle navigation" (click)="toggleMenu()" [attr.aria-expanded]="!menuHidden">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars"></i>
       </button>
       <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link text-uppercase" routerLink="/product" routerLinkActive="active">
+          <a class="nav-item nav-link scroll-top text-uppercase" routerLink="/product" routerLinkActive="active">
             <span>product</span>
           </a>
-          <a class="nav-item nav-link text-uppercase" routerLink="/company" routerLinkActive="active">
-            <span>company</span>
+          <a class="nav-item nav-link scroll-top text-uppercase" routerLink="/pricing" routerLinkActive="active">
+            <span>pricing</span>
           </a>
-          <a class="nav-item nav-link text-uppercase" href="https://blog.relatas.com/">
-            <span>blog</span>
+          <a class="nav-item nav-link scroll-top text-uppercase" routerLink="/company" routerLinkActive="active">
+            <span>company</span>
           </a>
           <div class="dropdown">
             <a class="nav-item nav-link text-uppercase dropdown-toggle" data-toggle="dropdown">
               resources
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" routerLink="/white-paper">White Paper</a>
-              <a class="dropdown-item" routerLink="/case-studies">Case Studies</a>
-              <a class="dropdown-item" routerLink="/use-cases">Use Cases</a>
-              <a class="dropdown-item" routerLink="/ai-for-sales">AI for Sales</a>
+              <a class="dropdown-item scroll-top" routerLink="/sales-ai">Sales AI</a>
+              <a class="dropdown-item scroll-top" routerLink="/white-paper">White Paper</a>
+              <a class="dropdown-item scroll-top" routerLink="/case-studies">Case Studies</a>
+              <a class="dropdown-item scroll-top" routerLink="/use-cases">Use Cases</a>
+              <a class="dropdown-item scroll-top" href="https://blog.relatas.com/" target="_blank">Blog</a>
             </div>
           </div>
-          <a class="nav-item nav-link text-uppercase" href="https://showcase.relatas.com/retail/signup">
+          <a class="nav-item nav-link text-uppercase" target="_blank" (click)="redirectLogin()" href="https://app.relatas.com/">
             <span class="blue-invert-btn">login</span>
           </a>
-          <a class="nav-item nav-link text-uppercase only-on-scroll-down" routerLink="/demo">
+          <a class="nav-item nav-link scroll-top text-uppercase only-on-scroll-down" routerLink="/demo">
             <span class="orange-btn">REQUEST DEMO</span>
           </a>
-          <!--<a class="nav-item nav-link text-uppercase" (click)="logout()">-->
+          <!--<a class="nav-item nav-link scroll-top text-uppercase" (click)="logout()">-->
             <!--<span>Logout</span>-->
           <!--</a>-->
         </div>

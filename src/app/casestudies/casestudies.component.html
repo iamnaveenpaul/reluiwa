@@ -1,37 +1,81 @@
 <div class="position-relative">
   <div class="demo-bg">
-
-    <div class="right-fix-img">
-      <img src="assets/website/img_testimonial.jpg">
-    </div>
-
     <div class="container">
 
       <div class="row">
-        <div class="col-7">
+        <div class="col-md-7">
+          <h3 class="text-uppercase" style="margin: 2.5rem 0 1rem 0;">
+            Download <span class="text-blue bold">Case Studies</span>
+          </h3>
 
-          <ul>
-            <li>Relatas is the AI platform, successful sales teams use for Sales Execution,
-              Account Management and Forecasting.
-              Just having a CRM which is used as a data repository is no longer an option.</li>
-            <li>Imagine being able to capture real-time signals, wherever they occur,
+          <div style="margin-bottom: 1rem;font-size: 1.2rem;">
+            <strong>Relatas is the AI platform, successful sales teams use for Sales Execution,
+              Account Management and Sales Forecasting.
+            </strong>
+          </div>
+
+          <ul class="list-unstyled">
+            <li><i class="fas fa-angle-right"></i> Just having a CRM which is used as a data repository is no longer an option.</li>
+            <li><i class="fas fa-angle-right"></i> Imagine being able to capture real-time signals, wherever they occur,
               from a Lead generation to customer’s support request to a prospect’s tweet.</li>
-            <li>Imagine being able to analyse every data point, pulling together data from CRM,
+            <li><i class="fas fa-angle-right"></i> Imagine being able to analyse every data point, pulling together data from CRM,
               Financial Systems, Support Systems, external sources to create a complete view of every customer.</li>
-            <li>This enables Relatas to predict the best next sales and interaction for each customer,
+            <li><i class="fas fa-angle-right"></i> This enables Relatas to predict the best next sales and interaction for each customer,
               and then automate everything from routine tasks to real-time customer engagement to
               even automated opportunity creation. It’s a whole new way of connecting to your customers and
               prospects, with intelligence powering a new era of customer success.</li>
-            <li>Discover the No-Data-Entry powered with AI, Sales Platform today.</li>
+            <li><i class="fas fa-angle-right"></i> Discover the No-Data-Entry powered with AI, Sales Platform today.</li>
           </ul>
-
-          <input #fullName (keyup.enter)="fullName.value='' " placeholder="Full name">
-          <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Business Email ID">
-          <button class="teal-btn btn-lg font-weight-bold" (click)="addlead(fullName.value,emailId.value)">
-            Download
-          </button>
         </div>
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-1 offset-1">
 
+            </div>
+            <div class="col-10 quote-wrapper">
+              <div class="lite-grey-bg">
+                <div class="relative" style="height: 85px">
+                  <img class="profile" src="assets/website/vasant.jpg">
+                  <img class="logo" src="assets/website/oracle.png">
+                </div>
+                <h5 class="text">
+                  <span class="text-gray">"</span> Relatas enables me to manage my relationships
+                  and interactions much <strong>more efficiently</strong> leading to increased effectiveness in my business operations. <span class="text-gray">"</span>
+                </h5>
+                <div>
+                  <strong>Vasant Kumar</strong>
+                  <p>Former Sr Director, Oracle</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lite-grey-bg bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 offset-1">
+            <input #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          </div>
+          <div class="col-md-3">
+            <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          </div>
+          <div class="col-md-3">
+            <button class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
+              Download
+            </button>
+            <div class="orange-btn" *ngIf="demoRequestSent" style="text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Sent</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="error-popup" *ngIf="!errorMsg.pass">
+        <div class="message">
+          {{errorMsg.message}}
+
+          <button (click)="closeError()">OK</button>
+        </div>
       </div>
     </div>
   </div>

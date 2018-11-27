@@ -21,6 +21,10 @@ export class HeaderComponent implements OnInit {
     this.menuHidden = !this.menuHidden;
   }
 
+  redirectLogin() {
+    window.location.replace("https://app.relatas.com/");
+  }
+
   logout() {
     this.authenticationService.logout()
       .subscribe(() => this.router.navigate(['/login'], { replaceUrl: true }));

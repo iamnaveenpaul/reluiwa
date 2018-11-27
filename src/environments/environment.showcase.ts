@@ -4,7 +4,7 @@ import env from './.env';
 export const environment = {
   production: true,
   version: env.npm_package_version,
-  serverUrl: 'https://showcase.relatas.com//',
+  serverUrl: 'https://relatas.com/retail/signup',
   defaultLanguage: 'en-US',
   supportedLanguages: [
     'en-US',

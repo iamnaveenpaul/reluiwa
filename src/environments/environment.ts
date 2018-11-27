@@ -9,8 +9,8 @@ import env from './.env';
 export const environment = {
   production: false,
   version: env.npm_package_version + '-dev',
-  // serverUrl: 'localhost:7000/',
-  serverUrl: 'http://localhost:7000/',
+  // serverUrl: 'https://showcase.relatas.com/',
+  serverUrl: 'https://app.relatas.com/',
   defaultLanguage: 'en-US',
   supportedLanguages: [
     'en-US',

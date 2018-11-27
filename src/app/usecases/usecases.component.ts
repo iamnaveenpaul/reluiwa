@@ -18,17 +18,40 @@ import { FormsModule } from '@angular/forms';
 export class UsecasesComponent implements OnInit {
 
   constructor(private quoteService: QuoteService) { }
+  demoRequestSent = false;
+  nameErrorExist = false
+
+  errorMsg = {
+    pass:true,errorExist:false
+  };
+
+  closeError() {
+    this.errorMsg.pass = true
+  }
 
   addlead(fullName: string, emailId: string) {
+    this.nameErrorExist = false;
+    this.errorMsg.errorExist = false
+    if(fullName){
+      const obj = {
+        fullName: fullName,
+        emailId: emailId,
+        type: 'useCase',
+      };
 
-    const obj = {
-      fullName: fullName,
-      emailId: emailId,
-      type: 'useCase',
-    };
+      var checkError = this.quoteService.checkValidEmailId(obj.emailId)
+      if(checkError.pass){
+        this.demoRequestSent = !this.demoRequestSent;
+        this.quoteService.saveLeadDetails(obj)
+          .subscribe(res => this.errorMsg.errorExist = false);
+      } else {
+        this.errorMsg = checkError
+      }
+    } else {
 
-    this.quoteService.saveLeadDetails(obj)
-      .subscribe(res => console.log('after -', res));
+      this.nameErrorExist = true
+
+    }
   }
 
   ngOnInit() {

@@ -7,7 +7,7 @@ import { WhitepaperComponent } from './whitepaper.component';
 const routes: Routes = [
   Route.withShell([
     { path: '', redirectTo: '/white-paper', pathMatch: 'full' },
-    { path: 'white-paper', component: WhitepaperComponent, data: { title: extract('White paper') } }
+    { path: 'white-paper', component: WhitepaperComponent, data: { title: extract('Whitepaper | Relatas') } }
   ])
 ];
 

@@ -1,0 +1,86 @@
+<div class="position-relative">
+  <div class="demo-bg">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-7">
+
+          <h3 class="text-uppercase" style="margin: 2.5rem 0 1rem 0;">
+            Request <span class="text-blue bold">Pricing</span>
+          </h3>
+
+          <div style="margin-bottom: 1rem;font-size: 1.2rem;">
+            <strong>
+              Relatas is the AI platform, successful sales
+              teams use for Sales Execution, Account Management and Forecasting.
+            </strong>
+          </div>
+
+          <p>
+            Relatas is being used by professionals from 300+ global cities
+            representing 1000+ companies and analysing over 10m+ interactions daily.
+          </p>
+          <p>
+            At Relatas we believe every company should have a Sales AI platform. We offer packages for every use case.
+            Whether you’re looking for CXO dashboard, AI based actionable insights, improve forecasting, improve sales rep productivity,
+            account based selling or simply AI based sales execution - Relatas is for you.
+            Improve your sales team's performance with no-data-entry Sales AI platform. Contact us today to for your custom quote.
+          </p>
+          <p>
+            Request your custom price quote now.
+          </p>
+
+        </div>
+
+        <div class="col-md-5">
+          <div class="row">
+            <div class="col-1 offset-1">
+
+            </div>
+            <div class="col-10 quote-wrapper">
+              <div class="lite-grey-bg">
+                <div class="relative" style="height: 85px">
+                  <img class="profile" src="assets/website/rajani.jpg">
+                  <img class="logo" src="assets/website/salesforce.png" style="width: 55px;">
+                </div>
+                <h5 class="text">
+                  <span class="text-gray">"</span>  I like how Relatas <strong>seamlessly works with the tools</strong>
+                  I already use and uses cognitive technology to help me keep on top of what is time critical! <span class="text-gray">"</span>
+                </h5>
+                <div>
+                  <strong>Rajani Ramanathan</strong>
+                  <p>Former COO, Technology & Products, Salesforce</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="lite-grey-bg bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 offset-1">
+            <input #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          </div>
+          <div class="col-md-3">
+            <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          </div>
+          <div class="col-md-3">
+            <button class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
+              submit
+            </button>
+            <div class="orange-btn" *ngIf="demoRequestSent" style="text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Sent</div>
+          </div>
+        </div>
+      </div>
+      <div class="error-popup" *ngIf="!errorMsg.pass">
+        <div class="message">
+          {{errorMsg.message}}
+
+          <button (click)="closeError()">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,7 +8,7 @@ const routes: Routes = [
   Route.withShell([
     { path: '', redirectTo: '/terms', pathMatch: 'full' },
     { path: 'terms', component: TermsComponent,
-      data: { title: extract('Sales Forecasting and Execution Platform Demo | Relatas') } }
+      data: { title: extract('Terms & Conditions | Relatas') } }
   ])
 ];
 

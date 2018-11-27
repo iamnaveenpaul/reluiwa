@@ -7,7 +7,7 @@ import {CasestudiesComponent} from './casestudies.component';
 const routes: Routes = [
   Route.withShell([
     // { path: '', redirectTo: '/case-studies', pathMatch: 'full' },
-    { path: 'case-studies', component: CasestudiesComponent, data: { title: extract('Case Studies') } }
+    { path: 'case-studies', component: CasestudiesComponent, data: { title: extract('Case Studies | Relatas') } }
   ])
 ];
 

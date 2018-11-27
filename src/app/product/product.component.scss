@@ -1,0 +1,283 @@
+#product {
+  background: url(assets/website/product.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 400px;
+}
+
+.product-spr {
+  min-height: 220px;
+  margin-top: 20px;
+}
+
+.sales-op {
+  background-position: 0 0;
+  background-size: 1120px;
+}
+
+.fr-mgmt {
+  background-position: -280px 0;
+  background-size: 1120px;
+}
+
+.acc-mgmt {
+  background-position: -560px 0;
+  background-size: 1120px;
+}
+
+.tm-mgmt {
+  background-position: -840px 0;
+  background-size: 1120px;
+}
+
+#accordion .card-header {
+  padding: 0;
+}
+
+#accordion h5 {
+  margin: 0;
+}
+
+#accordion {
+  text-align: left;
+}
+
+#accordion button {
+  background: var(--blue);
+  color: #fff;
+  border: 0;
+}
+
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+}
+
+.flip-container:hover .flipper,
+.flip-container.hover .flipper {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  //display: none;
+}
+
+.flip-container, .front {
+  background: var(--gray100);
+}
+
+.front, .back {
+  min-height: 215px;
+  padding: 12% 5px 0 5px;
+  text-align: center;
+}
+
+.flipper {
+  -webkit-transition: 0.99s;
+  -webkit-transform-style: preserve-3d;
+
+  -moz-transition: 0.99s;
+  -moz-transform-style: preserve-3d;
+
+  -o-transition: 0.99s;
+  -o-transform-style: preserve-3d;
+
+  transition: 0.99s;
+  transform-style: preserve-3d;
+
+  position: relative;
+}
+
+.front, .back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.front {
+  z-index: 2;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  color: #666;
+  width: 97%;
+  margin: auto;
+  min-height: 215px;
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  //display: none;
+  background: var(--blue);
+  color: #fff;
+}
+
+.front .name {
+  font-size: 2em;
+  display: inline-block;
+  background: rgba(33, 33, 33, 0.9);
+  color: #f8f8f8;
+  padding: 5px 10px;
+  border-radius: 5px;
+  bottom: 60px;
+  left: 25%;
+  position: absolute;
+  text-shadow: 0.1em 0.1em 0.05em #333;
+
+  -webkit-transform: rotate(-20deg);
+  -moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+
+.back-logo {
+  position: absolute;
+  top: 40px;
+  left: 90px;
+  width: 160px;
+  height: 117px;
+}
+
+.back-title {
+  font-weight: bold;
+  color: #00304a;
+  position: absolute;
+  top: 180px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+  font-size: 2em;
+}
+
+.back p {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 0 20px;
+  line-height: 2em;
+}
+
+.box-bg {
+  background: #fff;
+  min-height: 225px;
+  padding: 20px 10px;
+  margin-bottom: 25px;
+}
+
+.box-bg img {
+  width: 55px;
+}
+
+.prod-rajani {
+  position: relative;
+}
+
+.prod-rajani .abs {
+  position: absolute;
+  left: 10%;
+}
+
+.prod-rajani img {
+  width: 70px;
+  height: 70px;
+  border-radius: 55%;
+  object-fit: contain;
+}
+
+.prod-silos {
+  width: 72%;
+}
+
+.product-snapshot {
+  min-height: 414px;
+  margin: 30px 0;
+}
+
+.product-snapshot h3 {
+  margin-bottom: 25px;
+}
+
+.product-snapshot img {
+  position: absolute;
+  right: -70px;
+}
+
+@media screen and (max-width: 999px) {
+  .prod-rajani .abs {
+    left: 8%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+
+  .product-spr .flipper img {
+    width: 100%;
+  }
+
+  .product-spr .flipper {
+    font-size: 0.9rem;
+  }
+
+  .box-bg {
+    min-height: inherit;
+  }
+
+  .prod-silos {
+    width: 99%
+  }
+
+  .prod-rajani .abs {
+    left: 5%;
+  }
+
+  .product-snapshot img {
+    position: relative;
+    right: inherit;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .product-spr {
+    height: 600px;
+  }
+
+  .product-spr .flipper img {
+    width: 155px;
+    display: block;
+    margin: auto;
+  }
+
+  .product-spr .flipper .front,
+  .product-spr .flipper .back {
+    min-height: inherit;
+    padding: 5px;
+    border: 1px solid #eee;
+  }
+
+  .prod-rajani {
+    font-size: 0.9rem;
+  }
+
+  .prod-rajani .abs img {
+    width: 45px;
+    height: 45px;
+  }
+
+}

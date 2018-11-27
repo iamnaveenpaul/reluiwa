@@ -8,7 +8,7 @@ const routes: Routes = [
   Route.withShell([
     { path: '', redirectTo: '/faq', pathMatch: 'full' },
     { path: 'faq', component: FaqComponent,
-      data: { title: extract('Sales Forecasting and Execution Platform Demo | Relatas') } }
+      data: { title: extract('FAQ | Relatas') } }
   ])
 ];
 

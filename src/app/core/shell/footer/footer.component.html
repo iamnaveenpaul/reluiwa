@@ -1,64 +1,81 @@
+<div class="footer-mailer" *ngIf="canBedisplayed()">
+  <div class="container text-uppercase">
+
+      <h4 class="text-uppercase">
+        STAY CONNECTED
+      </h4>
+      <div class="input-field position-relative">
+        <input type="email" #emailId (keyup.enter)="emailId.value='' "
+               placeholder="Enter business email Id"
+               [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+        <button class="orange-btn" *ngIf="!demoRequestSent" (click)="submitDemoRequest(emailId.value)">sign up</button>
+        <div class="orange-btn" *ngIf="demoRequestSent" style="background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 3px 10px;"><i class="fas fa-check"></i> Sent</div>
+      </div>
+
+    <div class="error-popup" *ngIf="!errorMsg.pass">
+      <div class="message">
+        {{errorMsg.message}}
+        <button (click)="closeError()">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="footer">
   <div class="container">
     <div class="row">
-      <div class="col-8">
-        <div class="row">
-          <div class="col-3">
-            <strong>PRODUCT</strong>
-            <div class="links">
-              <a href="#">Overview</a>
-              <a href="#">Sales Forecasting</a>
-              <a href="#">Sales Operations</a>
-              <a href="#">Account Management</a>
-              <a href="#">Sales Team Management</a>
-            </div>
-          </div>
-          <div class="col-3">
-            <strong>ROLE</strong>
-            <div class="links">
-              <a href="#">Chief Revenue Officer/ VP Sales</a>
-              <a href="#">Sales Operations</a>
-              <a href="#">Sales Managers</a>
-              <a href="#">Sales Rep</a>
-            </div>
-          </div>
-          <div class="col-3">
-            <strong>RESOURCES</strong>
-            <div class="links">
-              <a href="/white-paper">White Paper</a>
-              <a href="/case-studies">Case Studies</a>
-              <a href="/use-cases">Use Cases</a>
-              <a href="/ai-for-sales">AI for Sales</a>
-            </div>
-          </div>
-          <div class="col-3">
-            <strong>COMPANY</strong>
-            <div class="links">
-              <a routerlink="/company">Relatas Company</a>
-              <a routerlink="/faq">Sales AI Blog</a>
-              <a routerlink="/faq">FAQ</a>
-              <a routerlink="/terms">Terms and Conditions</a>
-              <a routerlink="/faq">Privacy Policy</a>
-            </div>
-          </div>
+      <div class="col-md-2 col-sm-6">
+        <strong>PRODUCT</strong>
+        <div class="links">
+          <a class="for-scroll" routerLink="/product">Overview</a>
+          <a class="for-scroll" routerLink="/sales-forecasting">Sales Forecasting</a>
+          <a class="for-scroll" routerLink="/sales-operations">Sales Operations</a>
+          <a class="for-scroll" routerLink="/account-management">Account Management</a>
+          <a class="for-scroll" routerLink="/team-management">Sales Team Management</a>
+          <a href="/security">Security</a>
+          <a href="https://play.google.com/store/apps/details?id=com.relatas.android&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"
+             alt="Get it on Google Play"><img style="width: 100px;" src="https://app.relatas.com/images/play_badge_new.png"></a>
         </div>
       </div>
-      <div class="col-4">
-        <label class="text-uppercase">
-          join the elite group of people who have also signed up for the mailing list.
-        </label>
-        <div class="input-field position-relative">
-          <input type="text" placeholder="Enter your email">
-          <button class="orange-btn">sign up</button>
+      <div class="col-md-2 col-sm-6">
+        <strong>ROLES</strong>
+        <div class="links">
+          <a class="for-scroll" routerLink="/chief-revenue-officer">Chief Revenue Officer/ VP Sales</a>
+          <a class="for-scroll" routerLink="/sales-operations-manager">Sales Operations Manager</a>
+          <a class="for-scroll" routerLink="/sales-manager">Sales Managers</a>
+          <a class="for-scroll" routerLink="/sales-rep">Sales Rep</a>
         </div>
-        <div class="social-links">
-          <ul class="list-unstyled">
-            <li><a href="https://www.facebook.com/relatasHQ"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/relatasHQ"><i class="fab fa-twitter-square"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/relatas"><i class="fab fa-linkedin"></i></a></li>
-          </ul>
+      </div>
+      <!--<div class="col-md-2 col-sm-6">-->
+        <!--<strong>FEATURES</strong>-->
+        <!--<div class="links">-->
+          <!--<a class="for-scroll" routerLink="/product">Overview</a>-->
+          <!--<a class="for-scroll" routerLink="/sales-forecasting">Sales Forecasting</a>-->
+          <!--<a class="for-scroll" routerLink="/sales-operations">Sales Operations</a>-->
+          <!--<a class="for-scroll" routerLink="/account-management">Account Management</a>-->
+          <!--<a class="for-scroll" routerLink="/team-management">Sales Team Management</a>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="col-md-2 col-sm-6">
+        <strong>COMPANY</strong>
+        <div class="links">
+          <a class="for-scroll" routerLink="/company">Relatas Company</a>
+          <a class="for-scroll" routerLink="/faq">FAQ</a>
+          <a class="for-scroll" routerLink="/terms">Terms and Conditions</a>
+          <a class="for-scroll" routerLink="/privacy">Privacy Policy</a>
+          <a href="https://angel.co/relatas">Jobs</a>
         </div>
-        <br>
+      </div>
+      <div class="col-md-2 col-sm-6">
+        <strong>RESOURCES</strong>
+        <div class="links">
+          <a class="for-scroll" routerLink="/sales-ai">Sales AI</a>
+          <a class="for-scroll" routerLink="/white-paper">White Paper</a>
+          <a class="for-scroll" routerLink="/case-studies">Case Studies</a>
+          <a class="for-scroll" routerLink="/use-cases">Use Cases</a>
+          <a href="https://blog.relatas.com/">Sales AI Blog</a>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6">
         <strong>CONTACT US</strong>
         <p style="margin: 0;" class="text-white">
           Address: 38350 Fremont Blvd, Suite 203, Fremont, CA 94536
@@ -66,8 +83,15 @@
         <p style="margin: 0;" class="text-white">
           Email: <a class="text-white" href="mailto:hello@relatas.com">hello@relatas.com</a>
         </p>
-      </div>
 
+        <div class="social-links">
+          <ul class="list-unstyled">
+            <li><a href="https://www.facebook.com/relatasHQ"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/relatasHQ"><i class="fab fa-twitter-square"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/relatas"><i class="fab fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>

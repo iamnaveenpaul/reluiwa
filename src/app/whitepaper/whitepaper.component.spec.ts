@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WhitepaperComponent } from './whitepaper.component';
 
-describe('WhitepaperComponent', () => {
+describe('GoogleVerifyComponent', () => {
   let component: WhitepaperComponent;
   let fixture: ComponentFixture<WhitepaperComponent>;
 
