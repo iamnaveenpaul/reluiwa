@@ -15,6 +15,13 @@
   height: 35px;
   width: 100%;
   border: 2px solid #fff;
+  background: var(--orange);
+  color:#fff;
+}
+
+
+.demo-bg ::placeholder {
+  color:#fff;
 }
 
 .right-fixed-md {
@@ -72,6 +79,8 @@
   width: 160px;
   height: 100%;
   font-size: 0.8rem;
+  color: var(--orange);
+  background: #fff !important;
 }
 
 .demo-bg .quote-wrapper {
