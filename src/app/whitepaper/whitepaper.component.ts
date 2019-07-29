@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {QuoteService} from '@app/home/quote.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-whitepaper',
@@ -22,7 +23,6 @@ export class WhitepaperComponent implements OnInit {
 
   addlead(fullName: string, emailId: string) {
     this.nameErrorExist = false;
-    this.errorMsg.errorExist = false
     if(fullName){
       const obj = {
         fullName: fullName,
@@ -34,7 +34,7 @@ export class WhitepaperComponent implements OnInit {
       if(checkError.pass){
         this.demoRequestSent = !this.demoRequestSent;
         this.quoteService.saveLeadDetails(obj)
-          .subscribe(res => this.errorMsg.errorExist = false);
+          .subscribe(res => window.location.href='/thank-you?fromDemo=false');
       } else {
         this.errorMsg = checkError
       }

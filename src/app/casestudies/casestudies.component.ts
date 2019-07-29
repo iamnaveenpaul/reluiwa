@@ -22,7 +22,6 @@ export class CasestudiesComponent implements OnInit {
 
   addlead(fullName: string, emailId: string) {
     this.nameErrorExist = false;
-    this.errorMsg.errorExist = false
     if(fullName){
 
       const obj = {
@@ -35,7 +34,7 @@ export class CasestudiesComponent implements OnInit {
       if(checkError.pass){
         this.demoRequestSent = !this.demoRequestSent;
         this.quoteService.saveLeadDetails(obj)
-          .subscribe(res => this.errorMsg.errorExist = false);
+          .subscribe(res => window.location.href='/thank-you?fromDemo=false');
       } else {
         this.errorMsg = checkError
       }

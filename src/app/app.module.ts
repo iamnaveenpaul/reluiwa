@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CookieService } from 'ngx-cookie-service';
 
 import { environment } from '@env/environment';
 import { CoreModule } from '@app/core';
@@ -34,6 +35,7 @@ import { PrivacyModule } from './privacy/privacy.module';
 import { SecurityModule } from './security/security.module';
 import { OpsManagerModule } from './opsManager/opsManager.module';
 import { GoogleVerifyModule } from './googleVerification/googleVerify.module';
+import { ThankYouModule } from './thank-you/thankyou.module';
 
 @NgModule({
   imports: [
@@ -66,12 +68,13 @@ import { GoogleVerifyModule } from './googleVerification/googleVerify.module';
     SalesRepModule,
     PricingModule,
     SecurityModule,
+    ThankYouModule,
     OpsManagerModule,
     // GoogleVerifyModule,
     AppRoutingModule // This should always load at the end. If not all the modules after AppRoutingModule will not work
   ],
   declarations: [AppComponent],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

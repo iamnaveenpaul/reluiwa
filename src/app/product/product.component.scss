@@ -8,6 +8,20 @@
   min-height: 400px;
 }
 
+.customer-first {
+  background-image: url(assets/website/customerFirst.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 205px !important;
+  padding-top: 2% !important;
+}
+
+.customer-first .box-abs-bottom15 {
+  bottom: 50px !important;
+}
+
 .product-spr {
   min-height: 220px;
   margin-top: 20px;

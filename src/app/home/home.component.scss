@@ -21,8 +21,10 @@
 }
 
 .hero-text h1 span {
-  color: var(--blue);
+  background-color: var(--blue);
   font-weight: bold;
+  color: #fff;
+  padding-right: 15px;
 }
 
 .cb-slideshow p {

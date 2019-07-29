@@ -1,0 +1,68 @@
+<div class="position-relative">
+  <div class="demo-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1 *ngIf="fromDemo">
+            Help us make your demo personalised with additional information.
+          </h1>
+          <h1 *ngIf="!fromDemo">
+            Thanks for registering, we need few additional information so that we can serve you better.
+          </h1>
+        </div>
+        <div class="col-md-5">
+          <div class="left-form">
+              <div class="form-group">
+                <label>Email Id</label>
+                <input type="text" class="form-control" id="emailId" #emailId (keyup.enter)="emailId.value='' ">
+              </div>
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" #fullName id="fullName" (keyup.enter)="fullName.value='' ">
+              </div>
+              <div class="form-group">
+                <label>company</label>
+                <input type="text" #company (keyup.enter)="company.value='' ">
+              </div>
+              <div class="form-group">
+                <label>designation</label>
+                <input type="text" #designation (keyup.enter)="designation.value='' ">
+              </div>
+              <div class="form-group">
+                <label>Sales Team Size</label>
+                <input type="text" #salesTeamSize (keyup.enter)="salesTeamSize.value='' ">
+              </div>
+              <div class="form-group">
+                <label>Current CRM</label>
+                <input type="text" #currentCRM (keyup.enter)="currentCRM.value='' ">
+              </div>
+              <div class="form-group">
+                <label>Location</label>
+                <input type="text" #location (keyup.enter)="location.value='' ">
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="text" #phoneNumber (keyup.enter)="phoneNumber.value='' ">
+              </div>
+              <div class="form-group">
+                <label>Current Challenges</label>
+                <textarea #challenges (keyup.enter)="challenges.value='' ">
+                  
+                </textarea>
+              </div>
+              <div style="margin-top: 15px;margin-bottom: 10px;text-align: center;">
+                <button class="orange-btn btn-md font-weight-bold"
+                        (click)="sendMoreDetails(emailId.value,fullName.value,
+                        company.value,designation.value,
+                        salesTeamSize.value,currentCRM.value,
+                        location.value,phoneNumber.value,
+                        challenges.value)">
+                  Submit
+                </button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

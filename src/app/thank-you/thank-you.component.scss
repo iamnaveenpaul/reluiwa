@@ -1,0 +1,40 @@
+@import "../../sass/_hacks";
+
+.demo-bg .col-md-7 {
+  background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9)), url(assets/website/relatasLogo_Google.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  margin-top: 10rem;
+}
+
+.left-form {
+  //background: var(--orange);
+  background: #eee;
+  padding: 5px 15px;
+}
+
+.left-form .form-group {
+  margin-bottom: 0.1rem;
+  font-size: 0.7rem;
+}
+
+.left-form .form-group label {
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+
+.left-form .form-group input {
+  background: #fff;
+  border: 1px solid #ced4da;
+  color: #555;
+  font-size: .9rem;
+}
+
+.left-form .form-group textarea {
+  width: 100%;
+}

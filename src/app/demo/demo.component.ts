@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {QuoteService} from '@app/home/quote.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-demo',
@@ -18,11 +19,12 @@ export class DemoComponent implements OnInit {
   closeError() {
     this.errorMsg.pass = true
   }
+
   constructor(private quoteService: QuoteService) { }
 
   addlead(fullName: string, emailId: string) {
     this.nameErrorExist = false;
-    this.errorMsg.errorExist = false
+
     if(fullName){
 
       const obj = {
@@ -35,7 +37,9 @@ export class DemoComponent implements OnInit {
       if(checkError.pass){
         this.demoRequestSent = !this.demoRequestSent;
         this.quoteService.saveLeadDetails(obj)
-          .subscribe(res => this.errorMsg.errorExist = false);
+          .subscribe(res =>
+            window.location.href='/thank-you?fromDemo=false'
+          );
       } else {
         this.errorMsg = checkError
       }
@@ -46,6 +50,7 @@ export class DemoComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
 }

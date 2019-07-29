@@ -4,14 +4,15 @@ import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { map, catchError } from 'rxjs/operators';
 import * as _ from "lodash";
+import { CookieService } from 'ngx-cookie-service';
 
 const routes = {
   quote: (c: RandomQuoteContext) => `/jokes/random?category=${c.category}`,
-  leadsSave: 'leads/download/ebook'
+  leadsSave: 'leads/download/ebook',
+  saveMoreDetails: 'leads/more/details',
 };
 
 export interface RandomQuoteContext {
-  // The quote's category: 'dev', 'explicit'...
   category: string;
 }
 
@@ -22,7 +23,7 @@ export interface LeadContext {
 @Injectable()
 export class QuoteService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient,private cookieService: CookieService) { }
 
   getRandomQuote(context: RandomQuoteContext): Observable<string> {
     return this.httpClient
@@ -35,8 +36,14 @@ export class QuoteService {
   }
 
   saveLeadDetails (lead: Object): Observable<object> {
+    this.cookieService.set('emailId', JSON.stringify(lead));
     return this.httpClient
       .post(routes.leadsSave, lead);
+  };
+
+  saveMoreDetails (details: Object): Observable<object> {
+    return this.httpClient
+      .post(routes.saveMoreDetails, details);
   };
 
   checkValidEmailId (emailId: String) {

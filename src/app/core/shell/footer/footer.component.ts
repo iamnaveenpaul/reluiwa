@@ -36,7 +36,7 @@ export class FooterComponent implements OnInit {
       this.demoRequestSent = !this.demoRequestSent;
 
       this.quoteService.saveLeadDetails(obj)
-        .subscribe(res => this.errorMsg.errorExist = false);
+        .subscribe(res => window.location.href='/thank-you?fromDemo=true');
     } else {
       this.errorMsg = checkError
     }
@@ -50,6 +50,8 @@ export class FooterComponent implements OnInit {
       && !checkContains(window.location.href,"white")
       && !checkContains(window.location.href,"sales-ai")
       && !checkContains(window.location.href,"google")
+      && !checkContains(window.location.href,"product")
+      && !checkContains(window.location.href,"thank-you")
   }
 
   ngOnInit() {
