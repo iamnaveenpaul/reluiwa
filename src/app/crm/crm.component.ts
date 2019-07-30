@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-salesops',
-  templateUrl: './forecast.component.html',
-  styleUrls: ['./forecast.component.scss','../home/home.component.scss','../../sass/_hacks.scss']
+  templateUrl: './crm.component.html',
+  styleUrls: ['./crm.component.scss','../home/home.component.scss','../../sass/_hacks.scss']
 })
-export class ForecastComponent implements OnInit {
+export class CrmComponent implements OnInit {
 
   constructor() { }
 
@@ -29,12 +29,25 @@ export class ForecastComponent implements OnInit {
   'one' = true;
   'two' = false;
   'three' = false;
-  'four' = false;
+  'four' = true;
   'five' = false;
   'six' = false;
+  'seven' = true;
+  'eight' = false;
+  'nine' = false;
 
   openImage(reviewer:string) {
     resetAllImages(this);
+    this[reviewer] = true;
+  }
+
+  openImageTwo(reviewer:string) {
+    resetAllImagesTwo(this);
+    this[reviewer] = true;
+  }
+
+  openImageThree(reviewer:string) {
+    resetAllImagesThree(this);
     this[reviewer] = true;
   }
 
@@ -53,7 +66,17 @@ function resetAllImages(scope) {
   scope.one = false;
   scope.two = false;
   scope.three = false;
+}
+
+function resetAllImagesTwo(scope) {
   scope.four = false;
   scope.five= false;
   scope.six= false;
+  ;
+}
+
+function resetAllImagesThree(scope) {
+  scope.seven= false;
+  scope.eight= false;
+  scope.nine= false;
 }

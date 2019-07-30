@@ -36,6 +36,8 @@ import { SecurityModule } from './security/security.module';
 import { OpsManagerModule } from './opsManager/opsManager.module';
 import { GoogleVerifyModule } from './googleVerification/googleVerify.module';
 import { ThankYouModule } from './thank-you/thankyou.module';
+import { DocumentsModule } from './documents/documents.module';
+import { CrmModule } from './crm/crm.module';
 
 @NgModule({
   imports: [
@@ -70,6 +72,8 @@ import { ThankYouModule } from './thank-you/thankyou.module';
     SecurityModule,
     ThankYouModule,
     OpsManagerModule,
+    DocumentsModule,
+    CrmModule,
     // GoogleVerifyModule,
     AppRoutingModule // This should always load at the end. If not all the modules after AppRoutingModule will not work
   ],

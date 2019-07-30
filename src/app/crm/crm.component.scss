@@ -10,6 +10,26 @@
   min-height: 400px;
 }
 
+.crm-box .col-md-4 div {
+  background: var(--blue);
+  color: #fff;
+  border-radius: 2px;
+  text-align: center;
+  padding: 45px 15px 0 15px;
+  height: 215px;
+}
+
+.crm-box .col-md-4 div p {
+  //position: absolute;
+  //bottom: bottom;
+  font-size: 0.7rem;
+}
+
+.crm-box .col-md-4 div h1 {
+  font-weight: bold;
+
+}
+
 .roles .bg-grey-litest {
   padding: 20px;
   min-height: 375px;

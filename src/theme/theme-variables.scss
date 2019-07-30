@@ -4,13 +4,6 @@
 
 // Set Font Awesome font path
 $fa-font-path: "~@fortawesome/fontawesome-free-webfonts/webfonts";
-
-// ---------------------------------------------------------------------------
-// Bootstrap variables
-//
-// Override Bootstrap variables here to suite your theme.
-// Copy variables you want to customize from node_modules/bootstrap/scss/_variables.scss
-
 //
 // Color system
 //
@@ -55,6 +48,7 @@ $theme-colors: (
   mid-gray: $gray-700,
   gray550: $gray-550,
   gray100: #f7f7f7,
+  gray200: #e5e5e5,
 );
 
 // Use Bootstrap defaults for other variables, imported here so we can access all app variables in one place when used
