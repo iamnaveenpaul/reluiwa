@@ -20,9 +20,36 @@ header {
   z-index: 99;
 }
 
+.navbar-nav .dropdown-item strong {
+  font-size: 0.75rem;
+}
+
+.navbar-nav .dropdown-item:hover {
+  cursor: pointer;
+  overflow: hidden;
+}
+
 .navbar-nav .dropdown-item {
-  text-transform: capitalize !important;
-  font-size: 0.85rem;
+  font-size: 0.7rem;
+  padding-left: 10px;
+  padding-right: 10px;
+  white-space: inherit;
+  color: #333;
+}
+
+.resources-pos {
+  left: -455px;
+  width: 575px;
+}
+
+.products-pos {
+  left: -425px;
+  height: 200px;
+  width: 575px;
+}
+
+.resources-pos .col-md-4 {
+  padding-right:0;
 }
 
 .navbar-nav .nav-item {

@@ -70,7 +70,6 @@ function getQueryStringValue (key) {
 
 function setEmailIdAndName(emailId,fullName){
   console.log(emailId);
-  console.log($);
-  $("#emailId").val(emailId);
-  $("#fullName").val(fullName);
+  // $("#emailId").val(emailId);
+  // $("#fullName").val(fullName);
 }
