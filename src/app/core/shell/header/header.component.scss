@@ -27,29 +27,27 @@ header {
 .navbar-nav .dropdown-item:hover {
   cursor: pointer;
   overflow: hidden;
+  transition: background 0.33s ease-out;
+  background: var(--gray200);
 }
 
 .navbar-nav .dropdown-item {
   font-size: 0.7rem;
   padding-left: 10px;
-  padding-right: 10px;
+  padding-right: 0;
   white-space: inherit;
   color: #333;
+}
+
+.resources-pos .row {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .resources-pos {
   left: -455px;
   width: 575px;
-}
-
-.products-pos {
-  left: -425px;
-  height: 200px;
-  width: 575px;
-}
-
-.resources-pos .col-md-4 {
-  padding-right:0;
+  box-shadow: 2px 2px 5px #aaa;
 }
 
 .navbar-nav .nav-item {

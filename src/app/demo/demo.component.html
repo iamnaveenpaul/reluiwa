@@ -65,6 +65,10 @@
             <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
           </div>
           <div class="col-md-3">
+<!--            <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms">-->
+            <input type="text" class="form-control" id="firstName"
+                   name="firstName" placeholder="Enter First Name"
+                   value={{user.firstName}} [(ngModel)]="user.firstName">
             <button class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
               request a demo
             </button>

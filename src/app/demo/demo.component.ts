@@ -1,16 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, NgModule } from '@angular/core';
 import {QuoteService} from '@app/home/quote.service';
 import { CookieService } from 'ngx-cookie-service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-demo',
   templateUrl: './demo.component.html',
   styleUrls: ['./demo.component.scss']
 })
+@NgModule({
+  imports: [
+    FormsModule,
+  ],
+
+})
 export class DemoComponent implements OnInit {
 
   demoRequestSent = false;
   nameErrorExist = false;
+  agreeTerms = false;
 
   errorMsg = {
     pass:true,errorExist:false
@@ -24,6 +32,8 @@ export class DemoComponent implements OnInit {
 
   addlead(fullName: string, emailId: string) {
     this.nameErrorExist = false;
+
+    console.log(this.agreeTerms);
 
     if(fullName){
 

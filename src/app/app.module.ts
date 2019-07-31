@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { TranslateModule } from '@ngx-translate/core';
@@ -38,12 +38,14 @@ import { GoogleVerifyModule } from './googleVerification/googleVerify.module';
 import { ThankYouModule } from './thank-you/thankyou.module';
 import { DocumentsModule } from './documents/documents.module';
 import { CrmModule } from './crm/crm.module';
+import { FormsDemoModule } from './forms/formsdemo.module';
 
 @NgModule({
   imports: [
     BrowserModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     TranslateModule.forRoot(),
     NgbModule.forRoot(),
@@ -74,6 +76,7 @@ import { CrmModule } from './crm/crm.module';
     OpsManagerModule,
     DocumentsModule,
     CrmModule,
+    FormsDemoModule,
     // GoogleVerifyModule,
     AppRoutingModule // This should always load at the end. If not all the modules after AppRoutingModule will not work
   ],
