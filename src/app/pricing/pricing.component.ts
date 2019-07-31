@@ -11,7 +11,8 @@ export class PricingComponent implements OnInit {
 
   constructor(private quoteService: QuoteService) { }
 
-  demoRequestSent = false;
+    demoRequestSent = false;agreeTerms = false;
+  showTerms = false;
   nameErrorExist = false;
   errorMsg = {
     pass:true,errorExist:false
@@ -23,7 +24,7 @@ export class PricingComponent implements OnInit {
 
   addlead(fullName: string, emailId: string) {
     this.nameErrorExist = false;
-    if(fullName){
+    if(this.agreeTerms){ if(fullName){
 
       const obj = {
         fullName: fullName,
@@ -41,6 +42,9 @@ export class PricingComponent implements OnInit {
       }
     } else {
       this.nameErrorExist = true
+    }
+  }else {
+      alert("Please agree to the terms to proceed")
     }
   }
 

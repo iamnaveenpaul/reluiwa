@@ -12,7 +12,9 @@ export class AibooksComponent implements OnInit {
   constructor(private quoteService: QuoteService) { }
 
   demoRequestSent = false;
-  nameErrorExist = false
+  agreeTerms = false;
+  showTerms = false;
+  nameErrorExist = false;
 
   errorMsg = {
     pass:true,errorExist:false
@@ -24,28 +26,29 @@ export class AibooksComponent implements OnInit {
 
   addlead(fullName: string, emailId: string) {
     this.nameErrorExist = false;
-    if(fullName){
+    if (this.agreeTerms) {
+      if (fullName) {
+        const obj = {
+          fullName: fullName,
+          emailId: emailId,
+          type: 'aiBook',
+        };
 
-      const obj = {
-        fullName: fullName,
-        emailId: emailId,
-        type: 'aiBook',
-      };
+        var checkError = this.quoteService.checkValidEmailId(obj.emailId)
 
-      var checkError = this.quoteService.checkValidEmailId(obj.emailId)
-
-      if(checkError.pass){
-        this.demoRequestSent = !this.demoRequestSent;
-        this.quoteService.saveLeadDetails(obj)
-          .subscribe(res => window.location.href='/thank-you?fromDemo=false');
+        if (checkError.pass) {
+          this.demoRequestSent = !this.demoRequestSent;
+          this.quoteService.saveLeadDetails(obj)
+            .subscribe(res => window.location.href = '/thank-you?fromDemo=false');
+        } else {
+          this.errorMsg = checkError
+        }
       } else {
-        this.errorMsg = checkError
+        this.nameErrorExist = true
       }
     } else {
-
-      this.nameErrorExist = true
+      alert("Please agree to the terms to proceed")
     }
-
   }
 
   ngOnInit() {

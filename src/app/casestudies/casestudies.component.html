@@ -55,17 +55,29 @@
     <div class="lite-grey-bg bottom">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 offset-1">
-            <input #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+          <div class="col-md-3">
+            <input type="text" #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
           </div>
           <div class="col-md-3">
-            <input type="email" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+            <input type="text" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
           </div>
-          <div class="col-md-3">
-            <button class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
-              Get It
-            </button>
-            <div class="orange-btn" *ngIf="demoRequestSent" style="text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>
+          <div class="col-md-5 clearfix">
+            <div class="float-left">
+              <label>
+                <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms">
+                I agree to the <a (click)="showTerms = !showTerms" style="text-decoration:underline;">terms</a>
+                <p class="show-terms" *ngIf="showTerms">
+                  By registering, you confirm that you agree to the storing and processing
+                  of your personal data by Relatas as described in the Privacy Statement
+                </p>
+              </label>
+            </div>
+            <div class="float-left" style="margin-left: 15px;">
+              <button  style="height: 35px;" class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
+                request a demo
+              </button>
+              <div class="orange-btn" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>
+            </div>
           </div>
         </div>
       </div>

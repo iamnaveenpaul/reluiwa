@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { CoreModule } from '@app/core';
-import { SharedModule } from '@app/shared';
+import { SharedModule } from '@app/shared';import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsecasesRoutingModule } from './usecases-routing.module';
 import {UsecasesComponent} from './usecases.component';
 
@@ -13,6 +13,8 @@ import {UsecasesComponent} from './usecases.component';
     CoreModule,
     SharedModule,
     TranslateModule,
+    ReactiveFormsModule,
+    FormsModule,
     UsecasesRoutingModule
   ],
   declarations: [

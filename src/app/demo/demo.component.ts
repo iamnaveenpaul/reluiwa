@@ -11,14 +11,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   imports: [
     FormsModule,
-  ],
-
+  ]
 })
 export class DemoComponent implements OnInit {
 
   demoRequestSent = false;
-  nameErrorExist = false;
   agreeTerms = false;
+  showTerms = false;
+  nameErrorExist = false;
 
   errorMsg = {
     pass:true,errorExist:false
@@ -33,28 +33,29 @@ export class DemoComponent implements OnInit {
   addlead(fullName: string, emailId: string) {
     this.nameErrorExist = false;
 
-    console.log(this.agreeTerms);
+    if(this.agreeTerms){
+      if(fullName){
+        const obj = {
+          fullName: fullName,
+          emailId: emailId,
+          type: 'requestForDemo',
+        };
 
-    if(fullName){
-
-      const obj = {
-        fullName: fullName,
-        emailId: emailId,
-        type: 'requestForDemo',
-      };
-
-      var checkError = this.quoteService.checkValidEmailId(obj.emailId)
-      if(checkError.pass){
-        this.demoRequestSent = !this.demoRequestSent;
-        this.quoteService.saveLeadDetails(obj)
-          .subscribe(res =>
-            window.location.href='/thank-you?fromDemo=false'
-          );
+        var checkError = this.quoteService.checkValidEmailId(obj.emailId)
+        if(checkError.pass){
+          this.demoRequestSent = !this.demoRequestSent;
+          this.quoteService.saveLeadDetails(obj)
+            .subscribe(res =>
+              window.location.href='/thank-you?fromDemo=false'
+            );
+        } else {
+          this.errorMsg = checkError
+        }
       } else {
-        this.errorMsg = checkError
+        this.nameErrorExist = true
       }
     } else {
-      this.nameErrorExist = true
+      alert("Please agree to the terms to proceed")
     }
 
   }

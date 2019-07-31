@@ -19,7 +19,8 @@ import { CookieService } from 'ngx-cookie-service';
 export class UsecasesComponent implements OnInit {
 
   constructor(private quoteService: QuoteService) { }
-  demoRequestSent = false;
+    demoRequestSent = false;agreeTerms = false;
+  showTerms = false;
   nameErrorExist = false
 
   errorMsg = {
@@ -32,7 +33,7 @@ export class UsecasesComponent implements OnInit {
 
   addlead(fullName: string, emailId: string) {
     this.nameErrorExist = false;
-    if(fullName){
+    if(this.agreeTerms){ if(fullName){
       const obj = {
         fullName: fullName,
         emailId: emailId,
@@ -52,7 +53,10 @@ export class UsecasesComponent implements OnInit {
       this.nameErrorExist = true
 
     }
-  }
+  }else {
+      alert("Please agree to the terms to proceed")
+    }
+    }
 
   ngOnInit() {
   }

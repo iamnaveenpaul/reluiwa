@@ -12,7 +12,8 @@ export class FooterComponent implements OnInit {
 
   constructor(private quoteService: QuoteService) { }
 
-  demoRequestSent = false;
+    demoRequestSent = false;agreeTerms = false;
+  showTerms = false;
   errorMsg = {
     pass:true,errorExist:false
   };
