@@ -5,7 +5,7 @@
 
 .hero-text {
   position: absolute;
-  top: 125px;
+  top: 150px;
   left: 0;
   margin: 0;
   z-index: 999;
@@ -28,8 +28,35 @@
 }
 
 .cb-slideshow p {
-  color: #707070;
   width: 50%;
+}
+
+.make-money img {
+  width: 125px;
+}
+
+.box-cards {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.box-cards h4 {
+  color: #f37c51;
+}
+
+.box-cards i.block {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.make-money strong {
+  margin: 1rem 0;
+  display: block;
+}
+
+.make-money .row {
+  margin-top: 2rem;
 }
 
 .multi-uls ul {
@@ -100,7 +127,7 @@
 }
 
 .lite-grey-bg {
-  background: #f7f7f7;
+  background: #f8f9fd;
 }
 
 .dark-grey-bg {
@@ -261,13 +288,12 @@ img {
 
 .cb-slideshow,
 .cb-slideshow:after {
-  min-height: 475px;
+  min-height: 500px;
   margin: 0;
-  background-color: #dbdddf;
 }
 
 .cb-slideshow .container {
-  min-height: 475px;
+  min-height: 500px;
 }
 
 .cb-slideshow li .span-bg-img {
@@ -276,7 +302,6 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  color: transparent;
   background-size: cover;
   background-repeat: none;
   opacity: 0;
@@ -290,19 +315,19 @@ img {
 }
 
 .cb-slideshow li:nth-child(1) .span-bg-img {
-  background-image: url(assets/website/infinite.png);
-  background-color: #dbdddf;
+  background-image: url(assets/hero/hero_img.png);
+  background-color: #fff;
  background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 66%;
   background-position: right 10px center;
   //background-position: right;
 }
 
 .cb-slideshow li:nth-child(2) .span-bg-img {
-  background-image: url(assets/website/infinite.png);
-  background-color: #dbdddf;
+  background-image: url(assets/hero/hero_img.png);
+  background-color: #fff;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 66%;
   background-position: right 10px center;
   //background-position: right;
   -webkit-animation-delay: 6s;
@@ -312,10 +337,10 @@ img {
   animation-delay: 6s;
 }
 .cb-slideshow li:nth-child(3) .span-bg-img {
-  background-image: url(assets/website/infinite.png);
-  background-color: #dbdddf;
+  background-image: url(assets/hero/hero_img.png);
+  background-color: #fff;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 66%;
   background-position: right 10px center;
   //background-position: right;
   -webkit-animation-delay: 12s;
@@ -325,10 +350,10 @@ img {
   animation-delay: 12s;
 }
 .cb-slideshow li:nth-child(4) .span-bg-img {
-  background-image: url(assets/website/infinite.png);
-  background-color: #dbdddf;
+  background-image: url(assets/hero/hero_img.png);
+  background-color: #fff;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 66%;
   background-position: right 10px center;
   //background-position: right;
   -webkit-animation-delay: 18s;
@@ -338,10 +363,10 @@ img {
   animation-delay: 18s;
 }
 .cb-slideshow li:nth-child(5) .span-bg-img {
-  background-image: url(assets/website/infinite.png);
-  background-color: #dbdddf;
+  background-image: url(assets/hero/hero_img.png);
+  background-color: #fff;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 66%;
   background-position: right 10px center;
   //background-position: right;
   -webkit-animation-delay: 24s;
@@ -351,10 +376,10 @@ img {
   animation-delay: 24s;
 }
 .cb-slideshow li:nth-child(6) .span-bg-img {
-  background-image: url(assets/website/infinite.png);
-  background-color: #dbdddf;
+  background-image: url(assets/hero/hero_img.png);
+  background-color: #fff;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 66%;
   background-position: right 10px center;
   //background-position: right;
   -webkit-animation-delay: 30s;

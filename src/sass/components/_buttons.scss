@@ -41,6 +41,15 @@ button {
   border: 1px solid var(--orange);
 }
 
+
+.btn-primary-text {
+  color: var(--blue);
+  background: transparent;
+  text-transform: uppercase;
+  border: none;
+  font-weight: bold;
+}
+
 .arrow_box_bottom {
   position: relative;
   background: var(--orange);

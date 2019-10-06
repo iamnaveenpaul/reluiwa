@@ -1,281 +1,199 @@
 <div class="position-relative">
-  <ul class="cb-slideshow list-unstyled">
-    <li class="container position-relative">
-      <span class="span-bg-img">
-        <div class="hero-text">
-           <h1 class="text-uppercase">
-            SALES FORECAST, <br> <span>REINVENTED.</span>
-            <!--<span>We makes it easy</span>-->
-          </h1>
-          <p>
-            Successful sales teams rely on Relatas - Sales AI for Accurate Sales Forecasting
-          </p>
-          <div class="btns-grp-wrapper">
-            <button class="orange-btn font-weight-bold" routerLink="/demo">See it in action</button>
-          </div>
-      </div>
-      </span>
-    </li>
-  </ul>
-  <div class="container position-relative">
+<ul class="cb-slideshow list-unstyled">
+  <li class="container position-relative">
+    <span class="span-bg-img">
+      <div class="hero-text">
+         <h1 class="text-uppercase">
+          SALES FORECAST, <br> <span>REINVENTED.</span>
+           <!--<span>We makes it easy</span>-->
+        </h1>
+        <p>
+          Successful sales teams rely on Relatas - Sales AI for Accurate Sales Forecasting
+        </p>
 
-    <div class="row e-books-download">
-      <div class="col-md-3 cursor scroll-top" routerLink="/white-paper">
-        <img src="assets/website/whitepaper.png">
-        White paper
+        <div class="btns-grp-wrapper">
+          <button class="btn btn-primary font-weight-bold" routerLink="/demo">REQUEST DEMO</button>
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
+        </div>
+    </div>
+    </span>
+  </li>
+</ul>
+</div>
+
+<div style="margin-top: -42px;" class="box lite-grey-bg">
+  <div class="container">
+    <h2 class="text-uppercase text-center">
+      EXPERIENCE <span class="text-blue">NEW AGE SALES</span>
+    </h2>
+    <p class="text-center">Professionals from 1000+ companies from 300+ global cities rely on Relatas</p>
+    <img src="assets/website/banner61.jpg">
+  </div>
+</div>
+
+<div class="box">
+  <div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="text-uppercase">
+        drive forecast <br>
+        <span class="text-blue">accuracy</span>
+      </h2>
+      <p class="margin-t25">
+        From actionable insights for Sales Executives to deep analytics for Sales Leaders with NO-DATA-ENTRY and NO-CHANGE-IN-BEHAVIOUR.
+      </p>
+      <button class="btn btn-sm btn-primary-text">
+        SEE ALL FEATURES <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="box">
+  <div class="container text-center make-money">
+    <h2 class="text-uppercase">
+      We make money when
+      <span class="text-blue">you make money</span>
+    </h2>
+    <p>
+      Some of our products are aligned with your outcomes, helping you grow and aligning with your needs.
+    </p>
+    <button class="btn btn-sm btn-primary">ASK HOW</button>
+    <div class="row">
+      <div class="col-md-4">
+        <img src="assets/landingpage/money_logo01.png">
+        <strong>CRM with Opportunity Insights
+        </strong>
+        <p>
+          Relatas Opportunity Insights combines world-class opportunity expertise with algorithms that leverage millions of data points to win customers, all with NO-DATA-ENTRY.
+        </p>
+        <button class="btn btn-sm btn-primary-text">
+          LEARN MORE <i class="fas fa-arrow-right"></i>
+        </button>
       </div>
-      <div class="col-md-3 cursor scroll-top" routerLink="/case-studies">
-        <img src="assets/website/casestudies.png">
-        Case studies
+
+      <div class="col-md-4">
+        <img src="assets/landingpage/money_logo02.png">
+        <strong>
+          Document Insights
+        </strong>
+        <p>
+          Weather for your prospects or customers, create and send business critical documents with confidence and track page level analytics.
+
+        </p>
+        <button class="btn btn-sm btn-primary-text">
+          LEARN MORE <i class="fas fa-arrow-right"></i>
+        </button>
       </div>
-      <div class="col-md-3 cursor scroll-top" routerLink="/use-cases">
-        <img src="assets/website/usecases.png">
-        Use cases
+
+      <div class="col-md-4">
+        <img src="assets/landingpage/money_logo03.png">
+        <strong>
+          Sales Forecast Insights
+
+        </strong>
+        <p>
+          Organizations use Relatas to transform sales organizations into intelligence driven machines. Relatas removes data silos among team members and provides leadership with unified view of the organization.
+
+        </p>
+        <button class="btn btn-sm btn-primary-text">
+          LEARN MORE <i class="fas fa-arrow-right"></i>
+        </button>
       </div>
+
     </div>
   </div>
 </div>
 
 <div class="box">
   <div class="container">
-    <h2 class="text-uppercase text-center">
-      drive forecast
-      <span class="text-blue">accuracy</span>
-    </h2>
-    <p class="text-center lite margin-t25">
-      From predictive insights for sales executives to deep analytics for sales leaders & CXO.
-      Relatas delivers value to entire<br>sales team with <strong>NO-DATA-ENTRY</strong> and
-      <strong>NO-CHANGE-IN-BEHAVIOR</strong>
-    </p>
-    <div class="btn-group-invert text-center">
-      <button class="margin-r25" [ngClass]="cxoIsSelected" (click)="openCxo()">cxo/vp sales</button>
-      <button class="margin-r25" [ngClass]="managerIsSelected" (click)="openManager()">sales manager</button>
-      <button class="margin-r25" [ngClass]="repIsSelected" (click)="openRep()">sales rep</button>
-    </div>
-    <div class="product-feature-snippets multi-uls" *ngIf="cxoIsSelected.arrow_box_bottom">
-      <div class="row">
-        <div class="col-md-2 offset-3 text-center">
-
-          <img src="assets/website/cxo_icon1.png">
-          <p class="text-uppercase">
-            <strong>IMPROVE FORECAST ACCURACY</strong>
-          </p>
-        </div>
-        <div class="col-md-2 text-center">
-
-          <img src="assets/website/cxo_icon2.png">
-
-            <p class="text-uppercase">
-              <strong>HIGHER SALES CONVERSION</strong>
-          </p>
-        </div>
-        <div class="col-md-2 text-center">
-
-          <img src="assets/website/cxo_icon3.png">
-          <p class="text-uppercase">
-            <strong>INCREASE CRM ADOPTION</strong>
-          </p>
-        </div>
+    <div class="row">
+      <div class="col-md-6">
+        <h2 class="text-uppercase">
+          See what
+          <span class="text-blue">Relatas</span>
+          can do for
+          <span class="text-blue">you</span>
+        </h2>
       </div>
+      <div class="col-md-6">
+        <div class="box-cards">
+          <h4>
+            Sales Forecast
+          </h4>
+          <i class="block">Analyze meaningful behaviors, play with 'WHAT-IF' scenarios
+          </i>
+          <div>
+            Identify sales forecast patterns. Play with multiple 'WHAT-IF' scenarios to help you decide the next path. Get actionable insights when important metrics change.
+          </div>
 
-      <div class="relative">
-        <img class="bottom" src="assets/website/isometric_CXO_750.png">
-        <div class="cxo-abs-1" (mouseenter)="mouseHovering('cxo1')" (mouseleave)="mouseLeft('cxo1')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-cxo-abs-1" *ngIf="cxo1">
-          <h5 class="bold">Real time updates</h5>
-          Get real-time updates on stale opps,
-          losing touch opps, renewal opps, upcoming payment for all your team members
-          <div class="connector"></div>
-        </div>
-        <div class="cxo-abs-2" (mouseenter)="mouseHovering('cxo2')" (mouseleave)="mouseLeft('cxo2')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-cxo-abs-2" *ngIf="cxo2">
-          <h5 class="bold">Real time Deal flow</h5>
-
-          Get a quick view of how the deals are flowing across each
-          team members and which team member needs help
-
-          <div class="connector"></div>
-        </div>
-        <div class="cxo-abs-3" (mouseenter)="mouseHovering('cxo3')" (mouseleave)="mouseLeft('cxo3')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-cxo-abs-3" *ngIf="cxo3">
-          <h5 class="bold">Forecast Accuracy</h5>
-          Let Relatas AI Engine take over the rule based Engine
-          and help you understand which team members are likely to meet their Qtr numbers
-          <div class="connector"></div>
-        </div>
-        <div class="cxo-abs-4" (mouseenter)="mouseHovering('cxo4')" (mouseleave)="mouseLeft('cxo4')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-cxo-abs-4" *ngIf="cxo4">
-          <h5 class="bold">Qtr Snapshot</h5>
-          Get a view on how the Qtr is progressing with Avg Sales Cycles, Avg Deals sizes, Avg interactions / deals won, etc
-          <div class="connector"></div>
-        </div>
-        <div class="cxo-abs-5" (mouseenter)="mouseHovering('cxo5')" (mouseleave)="mouseLeft('cxo5')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-cxo-abs-5" *ngIf="cxo5">
-          <h5 class="bold">Enterprise Ready</h5>
-          Relatas Sales AI helps enterprise sales get started from day 0 without any data entry
-          <div class="connector"></div>
+          <button class="btn btn-sm btn-primary-text">
+            LEARN MORE <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
       </div>
     </div>
-    <div class="product-feature-snippets" *ngIf="managerIsSelected.arrow_box_bottom">
-      <div class="row">
-        <div class="col-md-2 offset-3 text-center">
+    <div class="row">
 
-          <img src="assets/website/manager_icon1.png">
-          <p class="text-uppercase">
-            <strong>INCREASE EFFICIENCY OF WEEKLY REVIEWS</strong>
-          </p>
-        </div>
-        <div class="col-md-2 text-center">
+      <div class="col-md-6">
+        <div class="box-cards">
+          <h4>
+            Sales Forecast
+          </h4>
+          <i class="block">Analyze meaningful behaviors, play with 'WHAT-IF' scenarios
+          </i>
+          <div>
+            Identify sales forecast patterns. Play with multiple 'WHAT-IF' scenarios to help you decide the next path. Get actionable insights when important metrics change.
+          </div>
 
-          <img src="assets/website/manager_icon2.png">
-          <p class="text-uppercase">
-            <strong>TEAM PIPELINE VELOCITY WITH DEAL FLOWS</strong>
-          </p>
-        </div>
-        <div class="col-md-2 text-center">
-
-          <img src="assets/website/manager_icon3.png">
-          <p class="text-uppercase"><strong>TEAM COACHING AND REPLICATE TEAM SUCCESS
-          </strong>
-          </p>
+          <button class="btn btn-sm btn-primary-text">
+            LEARN MORE <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
       </div>
-      <div class="relative">
-        <img class="bottom" src="assets/website/isometric_SM_750.png">
-        <div class="sm-abs-1" (mouseenter)="mouseHovering('sm1')" (mouseleave)="mouseLeft('sm1')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-sm-abs-1" *ngIf="sm1">
-          <h5 class="bold">Real time visibility</h5>
-          Get real-time visibility into team members commitments, targets and achievements
-          <div class="connector"></div>
-        </div>
-        <div class="sm-abs-2" (mouseenter)="mouseHovering('sm2')" (mouseleave)="mouseLeft('sm2')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-sm-abs-2" *ngIf="sm2">
-          <h5 class="bold">Better Forecasting</h5>
-          Get insights into each “committed deal” on interactions with customers, deal health, decision maker interactions and comparison to past wins
-          <div class="connector"></div>
-        </div>
-        <div class="sm-abs-3" (mouseenter)="mouseHovering('sm3')" (mouseleave)="mouseLeft('sm3')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-sm-abs-3" *ngIf="sm3">
-          <h5 class="bold">Team Commitments</h5>
-          See if the team members are over-committing and under-achieveing or vice-a-versa
-          <div class="connector"></div>
-        </div>
-        <div class="sm-abs-4" (mouseenter)="mouseHovering('sm4')" (mouseleave)="mouseLeft('sm4')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-sm-abs-4" *ngIf="sm4">
-          <h5 class="bold">AI based Insights</h5>
-          Understand how the past weeks commitments panned out
-          <div class="connector"></div>
-        </div>
-        <div class="sm-abs-5" (mouseenter)="mouseHovering('sm5')" (mouseleave)="mouseLeft('sm5')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-sm-abs-5" *ngIf="sm5">
-          <h5 class="bold">Replicate Team Success</h5>
-          Relatas Sales AI shows you why some team members are doing better than others
-          <div class="connector"></div>
-        </div>
-      </div>
-    </div>
 
-    <div class="product-feature-snippets" *ngIf="repIsSelected.arrow_box_bottom">
-      <div class="row">
-        <div class="col-md-2 offset-3 text-center">
+      <div class="col-md-6">
+        <div class="box-cards">
+          <h4>
+            Sales Forecast
+          </h4>
+          <i class="block">Analyze meaningful behaviors, play with 'WHAT-IF' scenarios
+          </i>
+          <div>
+            Identify sales forecast patterns. Play with multiple 'WHAT-IF' scenarios to help you decide the next path. Get actionable insights when important metrics change.
+          </div>
 
-          <img src="assets/website/manager_icon1.png">
-          <p class="text-uppercase"><strong>NO DATA ENTRY WITH AUTO DATA CAPTURE
-          </strong>
-          </p>
-        </div>
-        <div class="col-md-2 text-center">
-
-          <img src="assets/website/manager_icon2.png">
-          <p class="text-uppercase"><strong>ACTIONABLE INSIGHTS LEADING TO SHORT SALES CYCLES
-          </strong>
-          </p>
-        </div>
-        <div class="col-md-2 text-center">
-
-          <img src="assets/website/manager_icon3.png">
-          <p class="text-uppercase"><strong>DEALS AT RISK WITH DE-RISK SUGGESTIONS</strong>
-          </p>
-        </div>
-      </div>
-      <div class="relative">
-        <img class="bottom" src="assets/website/isometric_SR_750.png">
-        <div class="sr-abs-1" (mouseenter)="mouseHovering('sr1')" (mouseleave)="mouseLeft('sr1')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-sr-abs-1" *ngIf="sr1">
-
-          <h5 class="bold">Real time Achievements</h5>
-          Get a real-time view into your targets vs achievements
-          <div class="connector"></div>
-        </div>
-        <div class="sr-abs-2" (mouseenter)="mouseHovering('sr2')" (mouseleave)="mouseLeft('sr2')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-sr-abs-2" *ngIf="sr2">
-          <h5 class="bold">Actionable Insights</h5>
-          Quick view of all your actionable insights collated for your action
-          <div class="connector"></div>
-        </div>
-        <div class="sr-abs-3" (mouseenter)="mouseHovering('sr3')" (mouseleave)="mouseLeft('sr3')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-sr-abs-3" *ngIf="sr3">
-          <h5 class="bold">Increase Productivity</h5>
-          Pre-drafted customized mails for all your losing touch contacts, so that you can focus on more sales.
-          <div class="connector"></div>
-        </div>
-        <div class="sr-abs-4" (mouseenter)="mouseHovering('sr4')" (mouseleave)="mouseLeft('sr4')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-sr-abs-4" *ngIf="sr4">
-          <h5 class="bold">AI based recommendations</h5>
-          Get started with your day with Relatas recommendations and important activities
-          <div class="connector"></div>
-        </div>
-        <div class="sr-abs-5" (mouseenter)="mouseHovering('sr5')" (mouseleave)="mouseLeft('sr5')">
-          <i class="fas fa-dot-circle"></i>
-        </div>
-        <div class="abs-text-sr-abs-5" *ngIf="sr5">
-          <h5 class="bold">Guided Selling</h5>
-          Relatas Sales AI plans the day out for the sales rep with actionable insights like - deals at risk,
-          losing touch contacts, pending tasks, accounts to focus on, etc
-          <div class="connector"></div>
+          <button class="btn btn-sm btn-primary-text">
+            LEARN MORE <i class="fas fa-arrow-right"></i>
+          </button>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="box lite-grey-bg">
+<div class="box customer-first">
   <div class="container">
     <h2 class="text-uppercase text-center">
-      EXPERIENCE <span class="text-blue">NEW AGE SALES</span>
+      predictably grow your <br>
+      <span class="text-blue">business</span>
     </h2>
-    <p class="text-center">Professionals from 1000+ companies from 300+ global cities rely on Relatas</p>
-    <img src="assets/website/banner4.jpg">
+    <p class="text-center">Nothing to install. Go Live in 15 minutes.</p>
+    <div class="text-center">
+      <button class="orange-btn" routerLink="/demo">see it in action</button>
+    </div>
   </div>
+</div>
+
+<div>
+  <img src="assets/website/banner5.png">
+</div>
+
+<div style="margin-top: -42px;" class="box lite-grey-bg">
 
   <div class="container">
     <div class="reviews-wrapper">
@@ -341,58 +259,85 @@
   </div>
 </div>
 
-<div class="box">
-  <div class="container">
-    <h2 class="text-uppercase text-center">
-      DRIVE <span class="text-blue">SALES SUCCESS</span>
-    </h2>
-    <p class="text-center">Drive Sales Forecast Management and Improve Team Productivity</p>
-  </div>
-  <div id="bg-cricle-landing">
-    <div class="container position-relative">
-      <div class="row">
-        <div class="q1 col-sm-6">
-          <h5 class="bold text-blue text-uppercase">forecast management</h5>
-          <p class="text-uppercase">Forecast - predict - commit</p>
-          <span>Relatas helps spot risks in the forecast and recommends corrective actions</span>
-        </div>
-        <div class="q2 col-sm-6">
-          <h5 class="bold text-blue text-uppercase">pipeline management</h5>
-          <p class="text-uppercase">pipeline velocity - rep activity - deals at risk</p>
-          <span>Relatas gives sales managers instant view into real time pipeline inights. Pipeline velocity
-        customised for each team member</span>
-        </div>
-        <div class="q3 col-sm-6">
-          <h5 class="bold text-blue text-uppercase">team management</h5>
-          <p class="text-uppercase">replicate success - team selling</p>
-          <span>Relatas gives sales leaders visibility into real time rep activities for adequate coverage
-        for right accounts</span>
-        </div>
-        <div class="q4 col-sm-6">
-          <h5 class="bold text-blue text-uppercase">account management</h5>
-          <p class="text-uppercase">neglected accounts - account mapping</p>
-          <span>Leverage org-wide intraction data. Relatas helps understand the account interactions and highlights
-          the risk to take timely actions
-        </span>
-        </div>
-      </div>
-    </div>
+<div class="box customer-first">
+<div class="container">
+  <h2 class="text-uppercase text-center">
+    predictably grow your <br>
+    <span class="text-blue">business</span>
+  </h2>
+  <p class="text-center">Nothing to install. Go Live in 15 minutes.</p>
+  <div class="text-center">
+    <button class="orange-btn" routerLink="/demo">see it in action</button>
   </div>
 </div>
-
-<div class="box customer-first">
-  <div class="container">
-    <h2 class="text-uppercase text-center">
-      predictably grow your <br>
-      <span class="text-blue">business</span>
-    </h2>
-    <p class="text-center">Nothing to install. Go Live in 15 minutes.</p>
-    <div class="text-center">
-      <button class="orange-btn" routerLink="/demo">see it in action</button>
-    </div>
-  </div>
 </div>
 
 <div>
-  <img src="assets/website/banner5.png">
+<img src="assets/website/banner5.png">
+</div>
+
+<div style="margin-top: -42px;" class="box lite-grey-bg">
+
+<div class="container">
+  <div class="reviews-wrapper">
+
+    <div class="reviews">
+      <p class="quote" *ngIf="rajani">
+        " I like how Relatas seamlessly works with the tools I already use and <strong>uses cognitive
+        technology </strong> to help me keep on top of what is time critical! “
+      </p>
+      <p class="quote" *ngIf="julio">
+        " Relatas is a <strong>pioneering customer relationship automation</strong> suggesting what sales reps should do next
+        to build stronger relationships & thus increase sales. A godsend to sales reps! "
+      </p>
+      <p class="quote" *ngIf="sunil">
+        "By using Relatas, our team members are able to manage their client relationships better which
+        helps them <strong>close deals faster</strong>. Relatas also gives us the insights we require to <strong>be agile and
+        informed in our decision making.</strong>"
+      </p>
+      <p class="quote" *ngIf="venkat">
+
+        "Relatas has provided a level of efficiency and insights that we didn’t have before. Relatas gives our sales rep
+        and leadership a <strong>unique view into the forecast</strong> with in-depth visibility into
+        committed bookings, upside and any risks involved and helps drive actionable insights to predictably meet revenue
+        targets "
+      </p>
+      <p class="quote" *ngIf="gaurav">
+        "I'm excited about Relatas, because now AI can finally help us be better at the
+        most human of all things - <strong>social relationships</strong>“
+      </p>
+      <p class="quote" *ngIf="vasant">
+        " Relatas enables me to manage my relationships and interactions much more efficiently
+        leading to <strong>increased effectiveness in my business operations</strong>"
+      </p>
+
+      <ul class="list-unstyled clearfix profiles">
+        <li class="pull-left" (click)="openReview('rajani')">
+          <img src="assets/website/rajani.jpg" [ngStyle]="rajani?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
+          <p class="light text-center" [ngStyle]="rajani?{ 'visibility': 'visible' }:''"><span class="bold">Rajani Ramanathan</span><br>Former COO, Technology & Products, Salesforce</p>
+        </li>
+        <li class="pull-left" (click)="openReview('julio')">
+          <img src="assets/website/julio.jpg" [ngStyle]="julio?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
+          <p class="light text-center" [ngStyle]="julio?{ 'visibility': 'visible' }:''"><span class="bold">Julio Martinez-Clark</span><br>CEO, Interventional Concepts</p>
+        </li>
+        <li class="pull-left" (click)="openReview('sunil')">
+          <img src="assets/website/sunil.jpg" [ngStyle]="sunil?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
+          <p class="light text-center" [ngStyle]="sunil?{ 'visibility': 'visible' }:''"><span class="bold">Sunil Pillai</span><br>Co-founder, iValue</p>
+        </li>
+        <li class="pull-left" (click)="openReview('venkat')">
+          <img src="assets/website/venkat.jpg" [ngStyle]="venkat?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
+          <p class="light text-center" [ngStyle]="venkat?{ 'visibility': 'visible' }:''"><span class="bold">Venkat Murthy</span><br>CEO, 22by7</p>
+        </li>
+        <li class="pull-left" (click)="openReview('gaurav')">
+          <img src="assets/website/gaurav.jpg" [ngStyle]="gaurav?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
+          <p class="light text-center" [ngStyle]="gaurav?{ 'visibility': 'visible' }:''"><span class="bold">Gaurav Rastogi</span><br>Former VP Sales, Infosys</p>
+        </li>
+        <li class="pull-left" (click)="openReview('vasant')">
+          <img src="assets/website/vasant.jpg" [ngStyle]="vasant?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
+          <p class="light text-center" [ngStyle]="vasant?{ 'visibility': 'visible' }:''"><span class="bold">Vasant Kumar</span><br>Former Sr Director, Oracle</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 </div>
