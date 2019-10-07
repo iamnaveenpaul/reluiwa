@@ -1,16 +1,14 @@
 <div class="footer-mailer" *ngIf="canBedisplayed()">
-  <div class="container text-uppercase">
+  <div class="container">
 
-      <h4 class="text-uppercase">
-        STAY CONNECTED
-      </h4>
-      <div class="input-field position-relative">
-        <input type="email" #emailId (keyup.enter)="emailId.value='' "
-               placeholder="Enter business email Id"
-               [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-        <button class="orange-btn" *ngIf="!demoRequestSent" (click)="submitDemoRequest(emailId.value)">sign up</button>
-        <div class="orange-btn" *ngIf="demoRequestSent" style="background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 3px 10px;"><i class="fas fa-check"></i> Done</div>
-      </div>
+    <span>Stay connected</span>
+    <input type="email" #emailId (keyup.enter)="emailId.value='' "
+           placeholder="Enter business email Id"
+           [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+    <button class="btn btn-primary" *ngIf="!demoRequestSent" (click)="submitDemoRequest(emailId.value)">sign up</button>
+    <button class="btn btn-primary" *ngIf="demoRequestSent" style="background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 3px 10px;">
+      <i class="fas fa-check"></i> Done
+    </button>
 
     <div class="error-popup" *ngIf="!errorMsg.pass">
       <div class="message">
@@ -23,11 +21,17 @@
 <div class="footer">
   <div class="container">
     <div class="row">
+      <div class="col-md-2 col-sm-6 icons">
+        <div>
+          <img src="assets/website/relatasLogo_Google.png">
+        </div>
+        All the insights you need to predicatably win your customer
+      </div>
       <div class="col-md-2 col-sm-6">
         <strong>PRODUCT</strong>
         <div class="links">
           <a class="for-scroll" routerLink="/product">Overview</a>
-          <a class="for-scroll" routerLink="/sales-forecasting">Sales Forecasting</a>
+          <a class="for-scroll" routerLink="/sales-forecast">Sales Forecasting</a>
           <a class="for-scroll" routerLink="/sales-operations">Sales Operations</a>
           <a class="for-scroll" routerLink="/account-management">Account Management</a>
           <a class="for-scroll" routerLink="/team-management">Sales Team Management</a>
@@ -50,7 +54,7 @@
         <!--<strong>FEATURES</strong>-->
         <!--<div class="links">-->
           <!--<a class="for-scroll" routerLink="/product">Overview</a>-->
-          <!--<a class="for-scroll" routerLink="/sales-forecasting">Sales Forecasting</a>-->
+          <!--<a class="for-scroll" routerLink="/sales-forecast">Sales Forecasting</a>-->
           <!--<a class="for-scroll" routerLink="/sales-operations">Sales Operations</a>-->
           <!--<a class="for-scroll" routerLink="/account-management">Account Management</a>-->
           <!--<a class="for-scroll" routerLink="/team-management">Sales Team Management</a>-->
@@ -76,22 +80,22 @@
           <a href="https://blog.relatas.com/">Sales AI Blog</a>
         </div>
       </div>
-      <div class="col-md-2 col-sm-6">
+      <div class="col-md-2 col-sm-6 links">
         <strong>CONTACT US</strong>
-        <p style="margin: 0;" class="text-white">
+        <p style="margin: 0;">
           Address: 38350 Fremont Blvd, Suite 203, Fremont, CA 94536
         </p>
-        <p style="margin: 0;" class="text-white">
+        <p style="margin: 0;">
           Email: <a class="text-white" href="mailto:hello@relatas.com">hello@relatas.com</a>
         </p>
 
-        <div class="social-links">
-          <ul class="list-unstyled">
-            <li><a href="https://www.facebook.com/relatasHQ"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://twitter.com/relatasHQ"><i class="fab fa-twitter-square"></i></a></li>
-            <li><a href="https://www.linkedin.com/company/relatas"><i class="fab fa-linkedin"></i></a></li>
-          </ul>
-        </div>
+<!--        <div class="social-links">-->
+<!--          <ul class="list-unstyled">-->
+<!--            <li><a href="https://www.facebook.com/relatasHQ"><i class="fab fa-facebook"></i></a></li>-->
+<!--            <li><a href="https://twitter.com/relatasHQ"><i class="fab fa-twitter-square"></i></a></li>-->
+<!--            <li><a href="https://www.linkedin.com/company/relatas"><i class="fab fa-linkedin"></i></a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
       </div>
     </div>
   </div>

@@ -1,192 +1,96 @@
 
 <div id="sales-ops">
-</div>
-
-<div class="margintb25">
-
-  <div class="container">
-    <h3 class="text-center text-uppercase bold" style="margin: 1.5rem 0 1.75rem 0;">
-      Sales Forecast, <span class="text-blue">Reinvented</span>.
-    </h3>
-
-    <p class="text-center">
-      Relatas helps CROs, CFOs and Sales leaders transform how forecasting is done and leverage AI to more accurately predict sales
-      revenue. Relatas AI recommends new deals which were not in the pipeline, highlights your deals-at-risks and drives team to meet
-      their targets.
-    </p>
-
-    <div>
-      <strong>IMPROVE SALES FORECAST ACCURACY</strong><br>
-      Organizations use Relatas to <strong>transform sales organizations into intelligence-driven machines</strong>. Relatas
-      removes silos among teams responsible for the top line, and provides leadership with a unified view of the entire
-      organization.
-    </div>
-
-    <div class="reviews-wrapper">
-
-      <div class="reviews">
-        <p class="quote" *ngIf="rajani">
-          " I like how Relatas seamlessly works with the tools I already use and <strong>uses cognitive
-          technology </strong> to help me keep on top of what is time critical! “
-        </p>
-        <p class="quote" *ngIf="julio">
-          " Relatas is a <strong>pioneering customer relationship automation</strong> suggesting what sales reps should do next
-          to build stronger relationships & thus increase sales. A godsend to sales reps! "
-        </p>
-        <p class="quote" *ngIf="sunil">
-          "By using Relatas, our team members are able to manage their client relationships better which
-          helps them <strong>close deals faster</strong>. Relatas also gives us the insights we require to <strong>be agile and
-          informed in our decision making.</strong>"
-        </p>
-        <p class="quote" *ngIf="venkat">
-
-          "Relatas has provided a level of efficiency and insights that we didn’t have before. Relatas gives our sales rep
-          and leadership a <strong>unique view into the forecast</strong> with in-depth visibility into
-          committed bookings, upside and any risks involved and helps drive actionable insights to predictably meet revenue
-          targets "
-        </p>
-        <p class="quote" *ngIf="gaurav">
-          "I'm excited about Relatas, because now AI can finally help us be better at the
-          most human of all things - <strong>social relationships</strong>“
-        </p>
-        <p class="quote" *ngIf="vasant">
-          " Relatas enables me to manage my relationships and interactions much more efficiently
-          leading to <strong>increased effectiveness in my business operations</strong>"
-        </p>
-
-        <ul class="list-unstyled clearfix profiles">
-          <li class="pull-left" (click)="openReview('rajani')">
-            <img src="assets/website/rajani.jpg" [ngStyle]="rajani?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="rajani?{ 'visibility': 'visible' }:''"><span class="bold">Rajani Ramanathan</span><br>Former COO, Technology & Products, Salesforce</p>
-          </li>
-          <li class="pull-left" (click)="openReview('julio')">
-            <img src="assets/website/julio.jpg" [ngStyle]="julio?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="julio?{ 'visibility': 'visible' }:''"><span class="bold">Julio Martinez-Clark</span><br>CEO, Interventional Concepts</p>
-          </li>
-          <li class="pull-left" (click)="openReview('sunil')">
-            <img src="assets/website/sunil.jpg" [ngStyle]="sunil?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="sunil?{ 'visibility': 'visible' }:''"><span class="bold">Sunil Pillai</span><br>Co-founder, iValue</p>
-          </li>
-          <li class="pull-left" (click)="openReview('venkat')">
-            <img src="assets/website/venkat.jpg" [ngStyle]="venkat?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="venkat?{ 'visibility': 'visible' }:''"><span class="bold">Venkat Murthy</span><br>CEO, 22by7</p>
-          </li>
-          <li class="pull-left" (click)="openReview('gaurav')">
-            <img src="assets/website/gaurav.jpg" [ngStyle]="gaurav?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="gaurav?{ 'visibility': 'visible' }:''"><span class="bold">Gaurav Rastogi</span><br>Former VP Sales, Infosys</p>
-          </li>
-          <li class="pull-left" (click)="openReview('vasant')">
-            <img src="assets/website/vasant.jpg" [ngStyle]="vasant?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="vasant?{ 'visibility': 'visible' }:''"><span class="bold">Vasant Kumar</span><br>Former Sr Director, Oracle</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="margintb25">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <div [ngClass]="one?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('one')">AI Based Predictive Forecasting</strong>
-          <div *ngIf="one">
-            Each Sales person is different, thus rules based
-            forecasting seldom works. Leverage Relatas AI based
-            sales forecasting for sales teams they can trust. Get
-            insights during weekly deal reviews and forecast calls
-            on anomalies to meet the target. Analyse what
-            changed.
-          </div>
-        </div>
-        <div [ngClass]="two?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('two')">Test Hypothesis with Real Data, Real Time</strong>
-          <div *ngIf="two">
-
-            Relatas allows sales leaders to iterate on complex
-            hypotheses (WHAT - IF) with real historic data before
-            leadership deploys new sales tactics in practice.
-          </div>
-        </div>
-        <div [ngClass]="three?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('three')">Ace Forecast Calls with Deal Rooms</strong>
-          <div *ngIf="three">
-
-            With Relatas AI Insights, analyse each opportunity that
-            the team is committing and discuss the same in the
-            Deal room. Collaborate, assign tasks, take notes and
-            revisit the same during your next Forecast Call.
-          </div>
-        </div>
-        <div [ngClass]="four?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('four')">
-            Uncover New Opportunities
-          </strong>
-          <div *ngIf="four">
-            Lot of time deals don’t get recorded in CRM’s. With
-            access to all data about how a customer has
-            interacted with the company, sales teams have brandnew prospects they couldn't surface before. Relatas
-            Recommendation Engine recommends opportunities
-            to your Sales team that can be moved to the pipeline.
-          </div>
-        </div>
-        <div [ngClass]="five?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('five')">
-            Identify which team members are unlikely to
-            meet Targets
-          </strong>
-          <div *ngIf="five">
-            Relatas AI engine analyses patterns across sales
-            teams to highlight which team member is unlikely to
-            meet targets. Use your art and Relatas
-            recommendation to beat your targets.
-          </div>
-        </div>
-        <div [ngClass]="six?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('six')">
-            Forecast Compliance
-          </strong>
-          <div *ngIf="six">
-            Identify which team members have not committed
-            their numbers, missed their number consistently. Take
-            corrective action in real-time rather than at the end of
-            the Quarter.
-          </div>
-        </div>
+        <h1>
+          Is Sales forecasting challenging you?
+        </h1>
+        <p>
+          See how successful sales team forecast with Relatas.
+        </p>
       </div>
-      <div class="col-md-6">
-        <div class="images">
-          <div *ngIf="one" style="background:blue"></div>
-          <div *ngIf="two" style="background:red"></div>
-          <div *ngIf="three" style="background:green"></div>
-          <div *ngIf="four" style="background:orange"></div>
-          <div *ngIf="five" style="background:violet"></div>
-          <div *ngIf="six" style="background:maroon"></div>
+      <div class="col-md-6 relative">
+        <div class="card first">
+
+        </div>
+        <div class="card second"></div>
+        <div class="card third"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="margintb25 text-center">
+  <p>Professionals from 1000+ companies from 300+ global cities rely on Relatas</p>
+  <img src="assets/website/banner61.jpg">
+</div>
+
+<div class="margintb25 review">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="assets/website/venkat.jpg">
+    </div>
+    <div class="col-md-9">
+      <div class="padding">
+        <h2>
+          "Relatas has provided a level of efficiency and insights that we didn’t have before. It gives our sales team a unique view into the forecast to predictably meet revenue targets"
+        </h2>
+        <strong>Venkat Murthy</strong>
+        <p>CEO, 22by7</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alternative">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 img">
+        <img src="assets/website/forecast/one.jpg">
+      </div>
+      <div class="col-md-5 img-txt">
+        <h1>
+          Fact:
+        </h1>
+        <h4>
+          You can improve your sales forecast
+        </h4>
+        <p>
+          Relatas sales AI tracks multiple parameters to help you understand what is not working and suggest corrective actions. Relatas guides you to meet your target.
+        </p>
+
+        <div class="btns-grp-wrapper">
+          <button class="btn btn-primary font-weight-bold" routerLink="/demo">REQUEST DEMO</button>
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="margintb25 grey-span-bg text-center center">
+<div class="alternative">
   <div class="container">
-    <h4 class="text-uppercase">
-      INTEGRATE RELATAS WITH YOUR EXISTING SYSTEMS
-    </h4>
-    <div class="crm-suite">
+    <div class="row">
+      <div class="col-md-7 img">
+        <h1>
+          Fact:
+        </h1>
+        <h4>
+          You can improve your sales forecast
+        </h4>
+        <p>
+          Relatas sales AI tracks multiple parameters to help you understand what is not working and suggest corrective actions. Relatas guides you to meet your target.
+        </p>
 
+        <div class="btns-grp-wrapper">
+          <button class="btn btn-primary font-weight-bold" routerLink="/demo">REQUEST DEMO</button>
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
+        </div>
+      </div>
+      <div class="col-md-5 img-txt">
+        <img src="assets/website/forecast/one.jpg">
+      </div>
     </div>
-    <p class="text-center center"> and many more</p>
-  </div>
-</div>
-
-<div class="box lite-grey-bg">
-  <div class="container">
-    <h2 class="text-uppercase text-center">
-      EXPERIENCE <span class="text-blue">NEW AGE SALES</span>
-    </h2>
-    <p class="text-center">Professionals from 1000+ companies from 300+ global cities rely on Relatas</p>
-    <img src="assets/website/banner4.jpg">
   </div>
 </div>

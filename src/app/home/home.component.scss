@@ -36,18 +36,41 @@
 }
 
 .box-cards {
-  border: 1px solid #ddd;
+  border: 1px solid #e5e5e5;
   padding: 1rem;
   margin-bottom: 1.5rem;
+  min-height: 250px;
+  position: relative;
 }
 
+.box-cards .col-sm-4 img {
+  width: 95%;
+  margin-top: 15px;
+}
+
+.box-cards .col-sm-8 {
+  position: unset;
+}
+
+.box-cards button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.box-cards h5,
 .box-cards h4 {
   color: #f37c51;
+  font-weight: bold;
+  font-family: Lato;
 }
 
 .box-cards i.block {
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: .4em;
+  font-weight: bold;
+  color: #444444;
+  font-size: 1.25em;
 }
 
 .make-money strong {

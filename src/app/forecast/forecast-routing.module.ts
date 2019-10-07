@@ -6,8 +6,8 @@ import { ForecastComponent } from './forecast.component';
 
 const routes: Routes = [
   Route.withShell([
-    { path: '', redirectTo: '/sales-forecasting', pathMatch: 'full' },
-    { path: 'sales-forecasting', component: ForecastComponent,
+    { path: '', redirectTo: '/sales-forecast', pathMatch: 'full' },
+    { path: 'sales-forecast', component: ForecastComponent,
       data: { title: extract('Sales Forecast Management | Relatas') } }
   ])
 ];
