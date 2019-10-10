@@ -1,14 +1,13 @@
 {
-  "name": "relatas-uiwa",
-  "short_name": "relatas-uiwa",
-  "theme_color": "#488aff",
-  "background_color": "#488aff",
-  "scope": "/",
-  "start_url": "/",
+  "name": "Relatas",
+  "short_name": "Relatas",
+  "start_url": "index.html",
   "display": "standalone",
   "icons": [{
     "src": "assets/logo.png",
-//    "sizes": "512x512",
+    "sizes": "512x512",
     "type": "image/png"
-  }]
+  }],
+  "background_color": "#488aff",
+  "theme_color": "#488aff"
 }

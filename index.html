@@ -1,33 +1,182 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Relatas</title>
-    <base href="https://iamnaveenpaul.github.io/reluiwa/">    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#4e8ef7" />
-    <link rel="manifest" href="manifest.json" />
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>Relatas</title><base href="https://iamnaveenpaul.github.io/reluiwa/"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#4e8ef7"/><link rel="manifest" href="manifest.json"/><link rel="icon" type="image/x-icon" href="favicon.ico"/><link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script><style>/* Make the image fully responsive */
+    .carousel-inner img {
+      width: 100%;
+      height: 100%;
+    }
 
-    <!-- add to homescreen for ios -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-    <link href="https://fonts.googleapis.com/css?family=Lily+Script+One|Quicksand&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-  <link rel="stylesheet" href="styles.dbfe89a0f1546c77c088.css"></head>
-  <body>
-    <!--[if lt IE 10]>
-      <p>
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="http://browsehappy.com/">upgrade your browser</a> to improve
-        your experience.
-      </p>
-    <![endif]-->
-    <noscript>
-      <p>
-        This page requires JavaScript to work properly. Please enable JavaScript
-        in your browser.
-      </p>
-    </noscript>
-    <app-root></app-root>
-  <script type="text/javascript" src="runtime.4e1555385f4164de4228.js"></script><script type="text/javascript" src="polyfills.d27e597f6c04d18a29fc.js"></script><script type="text/javascript" src="main.eedcf8d7413564a83b70.js"></script></body>
-</html>
+    .show-terms {
+      position: absolute;
+      border: 1px solid #aaa;
+      background: #eee;
+      padding: 10px;
+      font-size: 0.8rem;
+      z-index: 9;
+      box-shadow: 1px 1px 4px #999;
+    }
+
+    .error-popup {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background: #ffffffcf;
+      z-index: 9;
+    }
+
+    .error-popup button {
+      background: #fff;
+      border: 0;
+      text-align: center;
+      display: block;
+      margin: 15px auto 15px auto;
+      padding: 2px 10px;
+    }
+
+    .error-popup .message {
+      position: absolute;
+      width: 32%;
+      left: 0;
+      right: 0;
+      top: 160px;
+      margin: auto;
+      min-width: 200px;
+      background: var(--orange);
+      box-shadow: 2px 2px 5px #aaa;
+      padding: 2% 1.5% 0.5% 1.5%;
+      color: #fff;
+      text-transform: initial;
+      border-radius: 2px;
+    }
+
+    .fa-check {
+      margin-right: 5px;
+    }
+
+    .roles-2 img {
+      width: 150px !important;
+      border-right: 1px solid #ddd;
+      padding-right: 10px;
+    }
+
+    .roles-2 .pull-left:first-child {
+      float: left;
+      margin-right: 25px;
+      width: 150px;
+    }
+
+    .roles-2 .pull-left {
+      float: left;
+      margin-right: 10px;
+      width: 78%;
+    }
+
+    @media screen and (max-width: 760px) {
+
+      #sales-ops,
+      #product,
+      #company {
+        min-height: 155px !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+      }
+    }</style><script>$( document ).ready(function() {
+
+          $('.carousel').carousel();
+
+
+          $(".dropdown-item").on('click', function(e) {
+              $(".navbar-toggler").trigger("click")
+          });
+
+          $(".nav-link").on('click', function(e) {
+              e.preventDefault();
+              var $this = $(this);
+
+              if(!$this.hasClass("dropdown-toggle")){
+                  $(".navbar-toggler").trigger("click");
+              }
+          });
+
+          $('.scroll-top').click(function(e){
+              $('html, body').animate({
+                  scrollTop: "10px"
+              }, 600);
+              e.stopPropagation();
+          });
+
+          $('.for-scroll').click(function(e){
+              $('html, body').animate({
+                  scrollTop: "10px"
+              }, 600);
+              e.stopPropagation();
+          });
+
+      });</script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-51230566-1', 'auto');
+      ga('send', 'pageview');</script><script>function ifHeaderLoaded() {
+          var startFromPos = 30;
+          window.onscroll = function() {myFunction()};
+
+          function myFunction() {
+              var header = document.getElementById("relatasNav");
+
+              if(header) {
+                  var sticky = header.offsetTop+startFromPos;
+                  if (window.pageYOffset > sticky) {
+                      header.classList.add("sticky");
+                      var elements = document.querySelectorAll('.only-on-scroll-down');
+                      show(elements);
+                  } else {
+                      header.classList.remove("sticky");
+                      hide(document.querySelector('.only-on-scroll-down'));
+                  }
+
+              } else {
+                  setTimeout(function () {
+                      ifHeaderLoaded();
+                  }, 1000);
+              }
+          }
+      }
+
+      function hide (elements) {
+          elements = elements.length ? elements : [elements];
+          for (var index = 0; index < elements.length; index++) {
+              elements[index].style.display = 'none';
+          }
+      }
+
+      function show (elements, specifiedDisplay) {
+          elements = elements.length ? elements : [elements];
+          for (var index = 0; index < elements.length; index++) {
+              elements[index].style.display = specifiedDisplay || 'block';
+          }
+      }
+
+      ifHeaderLoaded();</script><link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"/><script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){
+          window.cookieconsent.initialise({
+              "palette": {
+                  "popup": {
+                      "background": "#252e39",
+                  },
+                  "button": {
+                      "background": "#14a7d0"
+                  }
+              },
+              "content": {
+                  "message": "Relatas respects your privacy. We use cookies to personalize content, website functionality, improving your experience of our website, analyze our traffic, building integration with social media and helping target our advertising. By using the site you consent to our use of cookies.",
+                  "href": "https://relatas.com/privacy"
+              }
+          })});</script><script>function setEmailIdAndName(emailId,fullName){
+          $("#emailId").val(emailId);
+          $("#fullName").val(fullName);
+      }</script><link href="styles.bf3ce2c889dcf2bc8bb5.bundle.css" rel="stylesheet"/></head><body><!--[if lt IE 10]>
+<p>
+  You are using an <strong>outdated</strong> browser.
+  Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]--><noscript><p>This page requires JavaScript to work properly. Please enable JavaScript in your browser.</p></noscript><app-root></app-root><script type="text/javascript" src="inline.318b50c57b4eba3d437b.bundle.js"></script><script type="text/javascript" src="polyfills.2b87384f5363851efd0a.bundle.js"></script><script type="text/javascript" src="main.25f9cbd1af2fc0ed66bc.bundle.js"></script></body></html>
