@@ -1,13 +1,62 @@
 @import "../../theme/theme-variables";
 
 #sales-ops {
-  background: url(assets/website/forecastmanagement.jpg);
+  background: url(assets/website/forecast/img_doc_insights_64b2cd.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   min-width: 100%;
-  min-height: 400px;
+  min-height: 475px;
+  margin-top: 4.5rem;
+}
+
+#sales-ops h1 {
+  margin-top: 4.75rem;
+}
+
+#sales-ops p {
+  margin-top: 1.75rem;
+}
+
+.review .col-md-3,
+.review .col-md-9 {
+  padding: 0;
+}
+
+.review .col-md-9 {
+  background: $primary;
+  color: #fff;
+}
+
+.review .padding {
+  padding: 2rem 2rem 0 2rem;
+}
+
+.relative {
+  position: relative;
+}
+
+.relative  .card{
+  position: absolute;
+  height: 100px;
+  width: 250px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+
+.first {
+  top: 25px;
+  left: 5em;
+}
+
+.second {
+  top: 155px;
+}
+
+.third {
+  top: 280px;
+  left: 6.5em;
 }
 
 .roles .bg-grey-litest {

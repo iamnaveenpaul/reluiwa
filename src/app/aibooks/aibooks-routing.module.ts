@@ -6,7 +6,7 @@ import { AibooksComponent } from './aibooks.component';
 
 const routes: Routes = [
   Route.withShell([
-    { path: 'sales-ai', component: AibooksComponent, data: { title: extract('Sales AI | Relatas') } }
+    { path: 'sales-ai-ebook', component: AibooksComponent, data: { title: extract('Sales AI | Relatas') } }
   ])
 ];
 

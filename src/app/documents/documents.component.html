@@ -1,175 +1,215 @@
 
 <div id="sales-ops">
-</div>
-
-<div class="margintb25">
-
-  <div class="container">
-    <h3 class="text-center text-uppercase bold" style="margin: 1.5rem 0 1.75rem 0;">
-      Share Business <span class="text-blue">Critical Documents</span>.
-    </h3>
-
-    <p class="text-center">
-      Secure document sharing, tracking and creating for sales, marketing, customer success.
-    </p>
-
-    <div>
-      <strong>Move your business forward faster</strong><br>
-      Organizations use <strong> Relatas Document Management</strong>.  to create business critical documents and securely send
-      and track them.
-    </div>
-
-    <div class="reviews-wrapper">
-
-      <div class="reviews">
-        <p class="quote" *ngIf="rajani">
-          " I like how Relatas seamlessly works with the tools I already use and <strong>uses cognitive
-          technology </strong> to help me keep on top of what is time critical! “
-        </p>
-        <p class="quote" *ngIf="julio">
-          " Relatas is a <strong>pioneering customer relationship automation</strong> suggesting what sales reps should do next
-          to build stronger relationships & thus increase sales. A godsend to sales reps! "
-        </p>
-        <p class="quote" *ngIf="sunil">
-          "By using Relatas, our team members are able to manage their client relationships better which
-          helps them <strong>close deals faster</strong>. Relatas also gives us the insights we require to <strong>be agile and
-          informed in our decision making.</strong>"
-        </p>
-        <p class="quote" *ngIf="venkat">
-
-          "Relatas has provided a level of efficiency and insights that we didn’t have before. Relatas gives our sales rep
-          and leadership a <strong>unique view into the forecast</strong> with in-depth visibility into
-          committed bookings, upside and any risks involved and helps drive actionable insights to predictably meet revenue
-          targets "
-        </p>
-        <p class="quote" *ngIf="gaurav">
-          "I'm excited about Relatas, because now AI can finally help us be better at the
-          most human of all things - <strong>social relationships</strong>“
-        </p>
-        <p class="quote" *ngIf="vasant">
-          " Relatas enables me to manage my relationships and interactions much more efficiently
-          leading to <strong>increased effectiveness in my business operations</strong>"
-        </p>
-
-        <ul class="list-unstyled clearfix profiles">
-          <li class="pull-left" (click)="openReview('rajani')">
-            <img src="assets/website/rajani.jpg" [ngStyle]="rajani?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="rajani?{ 'visibility': 'visible' }:''"><span class="bold">Rajani Ramanathan</span><br>Former COO, Technology & Products, Salesforce</p>
-          </li>
-          <li class="pull-left" (click)="openReview('julio')">
-            <img src="assets/website/julio.jpg" [ngStyle]="julio?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="julio?{ 'visibility': 'visible' }:''"><span class="bold">Julio Martinez-Clark</span><br>CEO, Interventional Concepts</p>
-          </li>
-          <li class="pull-left" (click)="openReview('sunil')">
-            <img src="assets/website/sunil.jpg" [ngStyle]="sunil?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="sunil?{ 'visibility': 'visible' }:''"><span class="bold">Sunil Pillai</span><br>Co-founder, iValue</p>
-          </li>
-          <li class="pull-left" (click)="openReview('venkat')">
-            <img src="assets/website/venkat.jpg" [ngStyle]="venkat?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="venkat?{ 'visibility': 'visible' }:''"><span class="bold">Venkat Murthy</span><br>CEO, 22by7</p>
-          </li>
-          <li class="pull-left" (click)="openReview('gaurav')">
-            <img src="assets/website/gaurav.jpg" [ngStyle]="gaurav?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="gaurav?{ 'visibility': 'visible' }:''"><span class="bold">Gaurav Rastogi</span><br>Former VP Sales, Infosys</p>
-          </li>
-          <li class="pull-left" (click)="openReview('vasant')">
-            <img src="assets/website/vasant.jpg" [ngStyle]="vasant?{ 'width': '75px','height': '75px','opacity':'1', 'margin-top': '-35px' }:''">
-            <p class="light text-center" [ngStyle]="vasant?{ 'visibility': 'visible' }:''"><span class="bold">Vasant Kumar</span><br>Former Sr Director, Oracle</p>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="margintb25">
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <div [ngClass]="one?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('one')">No More Email Attachments </strong>
-          <div *ngIf="one">
-            Securely share documents with your contacts. No more
-            email attachments. No more clogging inboxes.
-          </div>
-        </div>
-        <div [ngClass]="two?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('two')">
-            Control Access
-          </strong>
-          <div *ngIf="two">
-            Set expiry dates for each document. Password protect the
-            documents to prevent un-authorized access.
-          </div>
-        </div>
-        <div [ngClass]="three?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('three')">
-            Instant Feedback
-          </strong>
-          <div *ngIf="three">
-            Get real-time feedback on the document analytics. Prepare
-            well for your next call/ meeting with the client.
-          </div>
-        </div>
-        <div [ngClass]="four?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('four')">
-            Branded Experience
-          </strong>
-          <div *ngIf="four">
-            Show your clients, who you are with Branded experience.
-          </div>
-        </div>
-        <div [ngClass]="five?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('five')">
-            Clients don’t need to download any software
-          </strong>
-          <div *ngIf="five">
-            Confidently share PDF’s with your prospects. They don’t
-            need to download any software for the same. Mobile and
-            Browser compatible.
-          </div>
-        </div>
-        <div [ngClass]="six?'active':'non-active'">
-          <strong class="cursor" (click)="openImage('six')">
-            Create Documents
-          </strong>
-          <div *ngIf="six">
-            Create multiple templates and edit them as you wish. Create
-            multiple Quotations, Proposals, Invoices from these
-            templates and then send them directly from Relatas
-            Document Management.
-          </div>
-        </div>
+        <h1>
+          Transform your sales team into a closing machine.
+        </h1>
+        <p>
+          Create and share business critical documents confidently. Create/ share/ track invoices, quotations, proposals, marketing material with your prospects and get page level analytics.
+        </p>
       </div>
-      <div class="col-md-6">
-        <div class="images">
-          <div *ngIf="one" style="background:blue"></div>
-          <div *ngIf="two" style="background:red"></div>
-          <div *ngIf="three" style="background:green"></div>
-          <div *ngIf="four" style="background:orange"></div>
-          <div *ngIf="five" style="background:violet"></div>
-          <div *ngIf="six" style="background:maroon"></div>
+      <div class="col-md-6 relative">
+        <div class="card first">
+
+        </div>
+        <div class="card second"></div>
+        <div class="card third"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="margintb25 text-center">
+  <p>Professionals from 1000+ companies from 300+ global cities rely on Relatas</p>
+  <img src="assets/website/banner61.jpg">
+</div>
+
+<div class="margintb25 review">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="assets/website/sunil.jpg">
+    </div>
+    <div class="col-md-9">
+      <div class="padding">
+        <h2>
+          "By using Relatas, our team members are able to manage their client relationships better which
+          helps them close deals faster. Relatas also gives us the insights we require to be agile and
+          informed in our decision making."
+        </h2>
+        <strong>Sunil Pillai</strong>
+        <p>Chairman, iValue</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="margintb25 text-center case-studies">
+  <img src="assets/landingpage/icon_casestudies.png">
+  <strong class="text-uppercase">case studies</strong>
+</div>
+
+<div class="alternative">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 img">
+        <img src="assets/hero/hero_img_docinsights.png">
+      </div>
+      <div class="col-md-5 img-txt">
+        <h1>
+          Fact:
+        </h1>
+        <h4>
+          You can get page level analytics for your business documents
+        </h4>
+        <p>
+          Relatas helps you get 100% page level analytics for documents shared through Relatas. Share marketing materials, invoices, quotations.
+        </p>
+
+        <div class="btns-grp-wrapper">
+
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="margintb25 grey-span-bg text-center center">
+<div class="alternative">
   <div class="container">
-    <h4 class="text-uppercase">
-      INTEGRATE RELATAS DOCUMENT MANAGEMENT WITH RELATAS CRM
-    </h4>
-    <p class="text-center center">Get additional intelligence with Out-of-the-box integration with Relatas CRM</p>
+    <div class="row">
+      <div class="col-md-7 img">
+        <h4>
+          No More Email Attachments
+        </h4>
+        <p>
+          Securely share documents with your contacts. No more email attachments. No more clogging inboxes.
+        </p>
+
+        <div class="btns-grp-wrapper">
+
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
+        </div>
+      </div>
+      <div class="col-md-5 img-txt">
+        <img src="assets/website/forecast/img_performance.png">
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="box lite-grey-bg">
+<div class="alternative">
   <div class="container">
-    <h2 class="text-uppercase text-center">
-      EXPERIENCE <span class="text-blue">NEW AGE SALES</span>
-    </h2>
-    <p class="text-center">Professionals from 1000+ companies from 300+ global cities rely on Relatas</p>
-    <img src="assets/website/banner4.jpg">
+    <div class="row">
+      <div class="col-md-7 img">
+        <img src="assets/website/forecast/img_performance.png">
+      </div>
+      <div class="col-md-5 img-txt">
+        <h4>
+          Branded Experience and team organization.
+        </h4>
+        <p>
+          Show your clients, who you are with Branded experience. Bring control and consistency to your proposal process. Relatas keeps everything organized and in one place so your team can easily access whatever they need to create and send a proposal quickly.
+        </p>
+
+        <div class="btns-grp-wrapper">
+
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alternative">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 img">
+        <h4>
+          Instant Feedback with analytics
+        </h4>
+        <p>
+          Waiting to hear back after you send a proposal can be agony. We notify each sales reps as soon as their lead reads the proposal with page level analytics. Our snapshot delivers details about how clients are interacting with your sales team’s proposals. We tell you which sections they looked at and for how long, plus the amount of time they spent viewing the proposal overall.
+        </p>
+
+        <div class="btns-grp-wrapper">
+
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
+        </div>
+      </div>
+      <div class="col-md-5 img-txt">
+        <img src="assets/website/forecast/img_performance.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alternative">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 img">
+        <img src="assets/website/forecast/img_performance.png">
+      </div>
+      <div class="col-md-5 img-txt">
+        <h4>
+          Control Access
+        </h4>
+        <p>
+          Set expiry dates for each document. Password protect the documents to prevent un-authorized access.
+        </p>
+
+        <div class="btns-grp-wrapper">
+
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alternative">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 img">
+        <h4>
+          Your contacts don’t need to download any software
+        </h4>
+        <p>
+          Confidently share PDF’s with your prospects. They don’t need to download any software for the same. Mobile and Browser compatible.
+        </p>
+
+        <div class="btns-grp-wrapper">
+
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
+        </div>
+      </div>
+      <div class="col-md-5 img-txt">
+        <img src="assets/website/forecast/img_performance.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="alternative">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7 img">
+        <img src="assets/website/forecast/img_performance.png">
+      </div>
+      <div class="col-md-5 img-txt">
+        <h4>
+          Create Documents
+        </h4>
+        <p>
+          Create multiple templates and edit them as you wish. Create multiple Quotations, Proposals, Invoices from these templates and then send them directly from Relatas Document Management.
+        </p>
+
+        <div class="btns-grp-wrapper">
+
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

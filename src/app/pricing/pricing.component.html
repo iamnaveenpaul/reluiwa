@@ -3,97 +3,115 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-md-7">
-
-          <h3 class="text-uppercase" style="margin: 2.5rem 0 1rem 0;">
-            Request <span class="text-blue bold">Pricing</span>
-          </h3>
-
-          <div style="margin-bottom: 1rem;font-size: 1.2rem;">
-            <strong>
-              Relatas is the AI platform, successful sales
-              teams use for Sales Execution, Account Management and Forecasting.
-            </strong>
-          </div>
-
-          <p>
-            Relatas is being used by professionals from 300+ global cities
-            representing 1000+ companies and analysing over 10m+ interactions daily.
-          </p>
-          <p>
-            At Relatas we believe every company should have a Sales AI platform. We offer packages for every use case.
-            Whether you’re looking for CXO dashboard, AI based actionable insights, improve forecasting, improve sales rep productivity,
-            account based selling or simply AI based sales execution - Relatas is for you.
-            Improve your sales team's performance with no-data-entry Sales AI platform. Contact us today to for your custom quote.
-          </p>
-          <p>
-            Request your custom price quote now.
-          </p>
-
-        </div>
-
         <div class="col-md-5">
-          <div class="row">
-            <div class="col-1 offset-1">
+          <h1 style="margin-top: 5.5rem">We make money when you make money
+          </h1>
+          <h3>
+            Yes, we are serious. Some of our products are aligned with your outcomes, helping you grow and aligning with your needs.
+          </h3>
+        </div>
+        <div class="col-md-7">
+          <img src="assets/hero/img_pricing.png">
+        </div>
+      </div>
 
-            </div>
+      <p>
+        At Relatas, we believe every company should have a Sales AI platform.
+        <br><br>
+        We offer a very competitive pricing to match your business needs. We grow with you. Get in touch and we will reach back to create your custom pricing plan.
+        <br><br>
+        We offer packages for every use case. Whether you’re looking for CXO dashboard, AI based actionable insights, improve forecasting, improve sales rep productivity, account based selling or AI based sales forecasting, Document Insights, Opportunity Management and Insights - Relatas is for you.
+        <br><br>
+        Improve your sales team's performance with no-data-entry Sales AI platform.
+        <br><br>
+        Contact us today to for your custom quote.
+
+      </p>
+      <div class="row" style="margin-top: 2.5rem">
+        <div class="col-md-6">
+          <div class="row">
             <div class="col-10 quote-wrapper">
               <div class="lite-grey-bg">
                 <div class="relative" style="height: 85px">
-                  <img class="profile" src="assets/website/rajani.jpg">
-                  <img class="logo" src="assets/website/salesforce.png" style="width: 55px;">
+                  <img class="profile" src="assets/website/vasant.jpg">
+                  <img class="logo" src="assets/website/oracle.png">
                 </div>
                 <h5 class="text">
-                  <span class="text-gray">"</span>  I like how Relatas <strong>seamlessly works with the tools</strong>
-                  I already use and uses cognitive technology to help me keep on top of what is time critical! <span class="text-gray">"</span>
+                  <span class="text-gray">"</span> Relatas enables me to manage my relationships
+                  and interactions much <strong>more efficiently</strong> leading to increased effectiveness in my business operations. <span class="text-gray">"</span>
                 </h5>
                 <div>
-                  <strong>Rajani Ramanathan</strong>
-                  <p>Former COO, Technology & Products, Salesforce</p>
+                  <strong>Vasant Kumar</strong>
+                  <p>Former Sr Director, Oracle</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="set-width">
+            <h3 class="text-uppercase" style="margin: 4.5rem 0 1rem 0;">
+              Request <span class="text-blue bold">Price</span>
+            </h3>
+            <div>
+              <div>
+                <input type="text" #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="margintb25">
+                <input type="text" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="margintb25">
+                <input type="text" #phoneNumber (keyup.enter)="phoneNumber.value='' " placeholder="Enter phone number" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="margintb25">
+                <input type="text" #website (keyup.enter)="website.value='' " placeholder="Enter website address" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="margintb25">
+                <input type="text" #designation (keyup.enter)="designation.value='' " placeholder="Enter designation" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="clearfix">
+                <div>
+                  <button  style="height: 35px;" class="btn btn-primary btn-md" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value,phoneNumber.value,website.value,designation.value)">
+                    REQUEST YOUR CUSTOM PRICE QUOTE
+                  </button>
+                  <div class="btn btn-primary" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="error-popup" *ngIf="!errorMsg.pass">
+              <div class="message">
+                {{errorMsg.message}}
+
+                <button (click)="closeError()">OK</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="lite-grey-bg bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <input type="text" #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-          </div>
-          <div class="col-md-3">
-            <input type="text" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-          </div>
-          <div class="col-md-5 clearfix">
-            <div class="float-left">
-              <label>
-                <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms">
-                I agree to the <a (click)="showTerms = !showTerms" style="text-decoration:underline;">terms</a>
-                <p class="show-terms" *ngIf="showTerms">
-                  By registering, you confirm that you agree to the storing and processing
-                  of your personal data by Relatas as described in the Privacy Statement
-                </p>
-              </label>
-            </div>
-            <div class="float-left" style="margin-left: 15px;">
-              <button  style="height: 35px;" class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
-                request a demo
-              </button>
-              <div class="orange-btn" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>
-            </div>
-          </div>
-        </div>
-      </div>
+  </div>
+</div>
 
-      <div class="error-popup" *ngIf="!errorMsg.pass">
-        <div class="message">
-          {{errorMsg.message}}
+<div class="about" style="margin-top: 2.5rem">
+  <div class="container">
+    <h1>ABOUT, <strong>Relatas</strong>
+    </h1>
+    <p>
+      Relatas is an award winning Sales Intelligence product.
+      <br>
+      <br>
 
-          <button (click)="closeError()">OK</button>
-        </div>
-      </div>
-    </div>
+      Relatas is built by sales professionals for sales professionals. We apply Artificial Intelligence to solve some of the
+      biggest challenges faced by most CRO, VP Sales, Sales Managers & Sales Reps. We know sales and are obsessed
+      with making the sales professionals more successful by applying Artificial Intelligence to solve their problems.
+      Relatas makes sense of the data thats readily available and using cognitive technology helps sales professionals sell
+      better and faster.
+      <br>
+      <br>
+      We are on a mission to make sales professionals successful by transforming the way they view data, sell, make
+      decisions, and grow.
+    </p>
   </div>
 </div>

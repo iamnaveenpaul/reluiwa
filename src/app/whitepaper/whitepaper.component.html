@@ -1,96 +1,95 @@
+
 <div class="position-relative">
   <div class="demo-bg">
     <div class="container">
+
       <div class="row">
-        <div class="col-md-7">
-          <h3 class="text-uppercase" style="margin: 2.5rem 0 1rem 0;">
-            Download <span class="text-blue bold">Whitepaper</span>
-          </h3>
-
-          <div style="margin-bottom: 1rem;font-size: 1.2rem;">
-            <strong>Relatas is the AI platform, successful sales teams use for Sales Execution,
-              Account Management and Sales Forecasting.
-            </strong>
-          </div>
-          <p>
-            The biggest challenge that most CEO, CRO, VP Sales, Sales Reps face today are:
-          </p>
-
-          <ul class="list-unstyled">
-            <li><i class="fas fa-angle-right"></i>Pipeline Inspection - Maintain a healthy pipeline, increase win rate and improve sales productivity
-            <li><i class="fas fa-angle-right"></i>Sales Forecasting - Relatas transforms forecasting so execs can spot risk in their forecasts
-            and do course correction to get team back on track</li>
-            <li><i class="fas fa-angle-right"></i>Limited visibility if the team is exercising efforts on right accounts</li>
-            <li><i class="fas fa-angle-right"></i>Availability of real time, contexts based intelligent actionable data
-            and most common, their existing CRM is used as a database with limited or no data entry</li>
-            <li><i class="fas fa-angle-right"></i>Discover the No-Data-Entry powered with AI, Sales Platform today.</li>
-          </ul>
-        </div>
-
-        <div class="col-md-5">
+        <div class="col-md-6">
           <div class="row">
-            <div class="col-1 offset-1">
-
-            </div>
             <div class="col-10 quote-wrapper">
               <div class="lite-grey-bg">
                 <div class="relative" style="height: 85px">
-                  <img class="profile" src="assets/website/gaurav.jpg">
-                  <img class="logo" src="assets/website/infinote.png">
+                  <img class="profile" src="assets/website/vasant.jpg">
+                  <img class="logo" src="assets/website/oracle.png">
                 </div>
                 <h5 class="text">
-                  <span class="text-gray">"</span>
-                  I'm excited about Relatas, because now AI
-                  can finally help us be better at the most human of all things - <strong>social relationships</strong>
-                  <span class="text-gray">"</span>
+                  <span class="text-gray">"</span> Relatas enables me to manage my relationships
+                  and interactions much <strong>more efficiently</strong> leading to increased effectiveness in my business operations. <span class="text-gray">"</span>
                 </h5>
                 <div>
-                  <strong>Gaurav Rastogi</strong>
-                  <p>Former VP Sales, Infosys</p>
+                  <strong>Vasant Kumar</strong>
+                  <p>Former Sr Director, Oracle</p>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="set-width">
+            <h3 class="text-uppercase" style="margin: 4.5rem 0 1rem 0;">
+              Download <span class="text-blue bold">Whitepaper</span>
+            </h3>
+            <div>
+              <div>
+                <input type="text" #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="margintb25">
+                <input type="text" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="clearfix">
+
+                <div>
+                  <label>
+                    <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms">
+                    I agree to the <a (click)="showTerms = !showTerms" style="text-decoration:underline;">terms</a>
+                    <p class="show-terms" *ngIf="showTerms">
+                      By registering, you confirm that you agree to the storing and processing
+                      of your personal data by Relatas as described in the Privacy Statement
+                    </p>
+                  </label>
+                </div>
+                <div>
+                  <button  style="height: 35px;" class="btn btn-primary btn-md" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
+                    DOWNLOAD
+                  </button>
+                  <div class="btn btn-primary" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="error-popup" *ngIf="!errorMsg.pass">
+              <div class="message">
+                {{errorMsg.message}}
+
+                <button (click)="closeError()">OK</button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="lite-grey-bg bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <input type="text" #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-          </div>
-          <div class="col-md-3">
-            <input type="text" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-          </div>
-          <div class="col-md-5 clearfix">
-            <div class="float-left">
-              <label>
-                <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms">
-                I agree to the <a (click)="showTerms = !showTerms" style="text-decoration:underline;">terms</a>
-                <p class="show-terms" *ngIf="showTerms">
-                  By registering, you confirm that you agree to the storing and processing
-                  of your personal data by Relatas as described in the Privacy Statement
-                </p>
-              </label>
-            </div>
-            <div class="float-left" style="margin-left: 15px;">
-              <button  style="height: 35px;" class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
-                request a demo
-              </button>
-              <div class="orange-btn" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="error-popup" *ngIf="!errorMsg.pass">
-        <div class="message">
-          {{errorMsg.message}}
-
-          <button (click)="closeError()">OK</button>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
+
+<div class="about">
+  <div class="container">
+    <h1>ABOUT, <strong>Relatas</strong>
+    </h1>
+    <p>
+      Relatas is an award winning Sales Intelligence product.
+      <br>
+      <br>
+
+      Relatas is built by sales professionals for sales professionals. We apply Artificial Intelligence to solve some of the
+      biggest challenges faced by most CRO, VP Sales, Sales Managers & Sales Reps. We know sales and are obsessed
+      with making the sales professionals more successful by applying Artificial Intelligence to solve their problems.
+      Relatas makes sense of the data thats readily available and using cognitive technology helps sales professionals sell
+      better and faster.
+      <br>
+      <br>
+      We are on a mission to make sales professionals successful by transforming the way they view data, sell, make
+      decisions, and grow.
+    </p>
+  </div>
+</div>
+

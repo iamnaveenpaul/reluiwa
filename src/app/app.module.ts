@@ -38,6 +38,13 @@ import { GoogleVerifyModule } from './googleVerification/googleVerify.module';
 import { ThankYouModule } from './thank-you/thankyou.module';
 import { DocumentsModule } from './documents/documents.module';
 import { CrmModule } from './crm/crm.module';
+import { CrmForDistributorsModule } from './crm-for-distributors/crm-for-distributors.module';
+import { OpportunityModule } from './opportunity/opportunity.module';
+import { SalesAnalyticsModule } from './sales-analytics/sales-analytics.module';
+import { SalesAiModule } from './sales-ai/sales-ai.module';
+import { ResourcesModule } from './resources/resources.module';
+import { DealroomModule } from './dealroom/dealroom.module';
+import { OverviewModule } from './overview/overview.module';
 import { FormsDemoModule } from './forms/formsdemo.module';
 
 @NgModule({
@@ -67,8 +74,10 @@ import { FormsDemoModule } from './forms/formsdemo.module';
     ForecastModule,
     AccountModule,
     TeamModule,
+    SalesAnalyticsModule,
     CroModule,
     SalesMgrModule,
+    CrmForDistributorsModule,
     SalesRepModule,
     PricingModule,
     SecurityModule,
@@ -76,7 +85,12 @@ import { FormsDemoModule } from './forms/formsdemo.module';
     OpsManagerModule,
     DocumentsModule,
     CrmModule,
+    OpportunityModule,
     FormsDemoModule,
+    SalesAiModule,
+    DealroomModule,
+    ResourcesModule,
+    OverviewModule,
     // GoogleVerifyModule,
     AppRoutingModule // This should always load at the end. If not all the modules after AppRoutingModule will not work
   ],

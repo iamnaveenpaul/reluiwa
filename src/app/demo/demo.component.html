@@ -1,40 +1,34 @@
-<div class="position-relative">
+
+<div class="position-relative" style="padding-bottom: 10rem;">
   <div class="demo-bg">
     <div class="container">
+      <div>
+        <h1 style="margin-top:6rem;margin-bottom:4rem;text-align: center">
+          You are about to take the first step to predictably grow your business.
+        </h1>
+        <p>
+          Points that we will cover in the Relatas Personalized Demo:
+
+        </p>
+        <ol>
+          <li>
+            How does Relatas No-Data-Entry CRM work?</li>
+          <li>
+            How does Relatas AI engine forecast</li>
+          <li>
+            How does Relatas - Sales AI auto-creates opportunities</li>
+          <li>
+            How to create Quotations/ Proposal and track with page level analytics
+          </li>
+
+        </ol>
+        We’ll Also answer any questions you may have and show you how Relatas works for your unique business.
+
+      </div>
 
       <div class="row">
-        <div class="col-md-7">
-
-          <h3 class="text-uppercase" style="margin: 2.5rem 0 1rem 0;">
-            Request a <span class="text-blue bold">CUSTOMIZED DEMO</span>
-          </h3>
-
-          <div style="margin-bottom: 1rem;font-size: 1.2rem;">
-            <strong>Powered by Artificial Intelligence,
-            Relatas eliminates the blind spots, improves predictability and shows
-            the entire sales team where to focus to close more business, faster.</strong>
-          </div>
-
-          Each sales person is Unique.
-          Using AI, Relatas adapts to each persons unique selling behaviour and
-          predicts insights to make them successful.
-          <br>
-          <br>
-          Using AI and No Data Entry, Relatas makes B2B sales professional:
-          <ul class="list-unstyled">
-            <li><i class="fas fa-angle-right"></i> More productive</li>
-            <li><i class="fas fa-angle-right"></i> Predict better</li>
-            <li><i class="fas fa-angle-right"></i> Sell faster</li>
-          </ul>
-
-          Schedule your customized demo now and see how Relatas impacts Sales Forecasting and Sales Effectiveness.
-
-        </div>
         <div class="col-md-5">
           <div class="row">
-            <div class="col-1 offset-1">
-
-            </div>
             <div class="col-10 quote-wrapper">
               <div class="lite-grey-bg">
                 <div class="relative" style="height: 85px">
@@ -53,43 +47,57 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="lite-grey-bg bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <input type="text" #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-          </div>
-          <div class="col-md-3">
-            <input type="text" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-          </div>
-          <div class="col-md-5 clearfix">
-            <div class="float-left">
-              <label>
-                <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms">
-                I agree to the <a (click)="showTerms = !showTerms" style="text-decoration:underline;">terms</a>
-                <p class="show-terms" *ngIf="showTerms">
-                  By registering, you confirm that you agree to the storing and processing
-                  of your personal data by Relatas as described in the Privacy Statement
-                </p>
-              </label>
-            </div>
-            <div class="float-left" style="margin-left: 15px;">
-              <button  style="height: 35px;" class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
-                request a demo
-              </button>
-              <div class="orange-btn" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="col-md-7">
+          <div class="set-width">
 
-      <div class="error-popup" *ngIf="!errorMsg.pass">
-        <div class="message">
-          {{errorMsg.message}}
+            <h3 class="text-uppercase" style="margin: 2.5rem 0 1rem 0;">
+              Request a <span class="text-blue bold">CUSTOMIZED DEMO</span>
+            </h3>
 
-          <button (click)="closeError()">OK</button>
+            <div>
+              <div>
+                <input type="text" #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="margintb25">
+                <input type="text" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="margintb25">
+                <input type="text" #phoneNumber (keyup.enter)="phoneNumber.value='' " placeholder="Enter phone number" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="margintb25">
+                <input type="text" #website (keyup.enter)="website.value='' " placeholder="Enter website address" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="margintb25">
+                <input type="text" #designation (keyup.enter)="designation.value='' " placeholder="Enter designation" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="clearfix">
+                <div>
+                  <label>
+                    <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms">
+                    I agree to the <a (click)="showTerms = !showTerms" style="text-decoration:underline;">terms</a>
+                    <p class="show-terms" *ngIf="showTerms">
+                      By registering, you confirm that you agree to the storing and processing
+                      of your personal data by Relatas as described in the Privacy Statement
+                    </p>
+                  </label>
+                </div>
+                <div>
+                  <button  style="height: 35px;" class="btn btn-primary btn-md" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value,phoneNumber.value,website.value,designation.value)">
+                    REQUEST FOR DEMO
+                  </button>
+                  <div class="btn btn-primary" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="error-popup" *ngIf="!errorMsg.pass">
+              <div class="message">
+                {{errorMsg.message}}
+
+                <button (click)="closeError()">OK</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

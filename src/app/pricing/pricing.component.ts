@@ -22,7 +22,7 @@ export class PricingComponent implements OnInit {
     this.errorMsg.pass = true
   }
 
-  addlead(fullName: string, emailId: string) {
+  addlead(fullName: string, emailId: string,phoneNumber:string,website:string,designation:string) {
     this.nameErrorExist = false;
     if(this.agreeTerms){ if(fullName){
 

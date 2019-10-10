@@ -1,0 +1,50 @@
+<div id="sales-ops">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <h1>
+          Sales Resources
+        </h1>
+        <p>
+          Powered by artificial Intelligence, Relatas provides a complete picture of your entire organization to help you meet your numbers.
+        </p>
+      </div>
+      <div class="col-md-7">
+        <img src="assets/hero/hero_img_SalesAnalytics.png">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="margintb25 text-center">
+  <p>Professionals from 1000+ companies from 300+ global cities rely on Relatas</p>
+  <img src="assets/website/banner61.jpg">
+</div>
+
+<div class="margintb25">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <strong>Filter by resource type</strong>
+
+        <div *ngFor="let enum of enum_details">
+          <label for="enum_answer_{{enum.val}}" (change)='radioFun()'>
+            <input id="enum_answer_{{enum.val}}" [value]='enum.val' type="radio" name="enums" [(ngModel)]="radioSelected">
+            {{enum.name}}
+          </label>
+        </div>
+      </div>
+      <div class="col-md-9 items">
+        <div class="row">
+          <div class="cards col-md-5" *ngFor="let el of resources">
+            <div class="" routerLink="{{el.link}}">
+              <img src="{{el.img}}">
+              <h4>{{el.header}}</h4>
+              <p>{{el.sub}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

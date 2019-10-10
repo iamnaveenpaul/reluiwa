@@ -1,44 +1,10 @@
 <div class="position-relative">
   <div class="demo-bg">
     <div class="container">
+
       <div class="row">
-        <div class="col-md-7">
-          <h3 class="text-uppercase" style="margin: 2.5rem 0 1rem 0;">
-            Download <span class="text-blue bold">use cases</span>
-          </h3>
-
-          <div style="margin-bottom: 1rem;font-size: 1.2rem;">
-            <strong>Relatas is the AI platform, successful sales teams use for Sales Execution,
-              Account Management and Forecasting.
-            </strong>
-          </div>
-          <p>
-            The biggest challenge that most CEO, CRO, VP Sales, Sales Reps face today are:
-          </p>
-          <ul class="list-unstyled">
-
-            <li><i class="fas fa-angle-right"></i> CEO/ CRO/ VP Sales - As the CEO/ CRO/ VP Sales, you have to make sure that the commitments you
-              have made to the markets/ investors are met. Maximise and grow your revenue while delivering best
-              customer experience to your customers.
-            </li>
-            <li><i class="fas fa-angle-right"></i> Sales Manager Success - As a sales leader, spot pipeline risk & drive more revenue by analysing
-              right and authentic data. Relatas helps you ask the right questions and provides you the data you need.
-              Move from 1-0-1 weekly status calls (commit calls) to 1-0-1 strategy calls.
-              Make your commit calls more effective.
-            </li>
-            <li><i class="fas fa-angle-right"></i> Sales Rep Success - Be more productive & close deals faster by automating data entry into CRM.
-              Relatas Artificial Intelligence Engine understands how you close deals and predicts how likely are
-              you to meet your targets and suggests ways to meet your numbers.
-            </li>
-            <li><i class="fas fa-angle-right"></i> Discover the No-Data-Entry powered with AI, Sales Platform today.</li>
-          </ul>
-
-        </div>
-        <div class="col-md-5">
+        <div class="col-md-6">
           <div class="row">
-            <div class="col-1 offset-1">
-
-            </div>
             <div class="col-10 quote-wrapper">
               <div class="lite-grey-bg">
                 <div class="relative" style="height: 85px">
@@ -60,45 +26,72 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="lite-grey-bg bottom">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-3">
-            <input type="text" #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-          </div>
-          <div class="col-md-3">
-            <input type="text" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-          </div>
-          <div class="col-md-5 clearfix">
-            <div class="float-left">
-              <label>
-                <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms">
-                I agree to the <a (click)="showTerms = !showTerms" style="text-decoration:underline;">terms</a>
-                <p class="show-terms" *ngIf="showTerms">
-                  By registering, you confirm that you agree to the storing and processing
-                  of your personal data by Relatas as described in the Privacy Statement
-                </p>
-              </label>
-            </div>
-            <div class="float-left" style="margin-left: 15px;">
-              <button  style="height: 35px;" class="orange-btn btn-md font-weight-bold" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
-                request a demo
-              </button>
-              <div class="orange-btn" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div class="col-md-6">
+          <div class="set-width">
+            <h3 class="text-uppercase" style="margin: 4.5rem 0 1rem 0;">
+              Download <span class="text-blue bold">use cases</span>
+            </h3>
+            <div>
+              <div>
+                <input type="text" #fullName (keyup.enter)="fullName.value='' " placeholder="Enter full name" [ngStyle]="nameErrorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="margintb25">
+                <input type="text" #emailId (keyup.enter)="emailId.value='' " placeholder="Enter business email Id" [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
+              </div>
+              <div class="clearfix">
 
-      <div class="error-popup" *ngIf="!errorMsg.pass">
-        <div class="message">
-          {{errorMsg.message}}
+                <div>
+                  <label>
+                    <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms">
+                    I agree to the <a (click)="showTerms = !showTerms" style="text-decoration:underline;">terms</a>
+                    <p class="show-terms" *ngIf="showTerms">
+                      By registering, you confirm that you agree to the storing and processing
+                      of your personal data by Relatas as described in the Privacy Statement
+                    </p>
+                  </label>
+                </div>
+                <div>
+                  <button  style="height: 35px;" class="btn btn-primary btn-md" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
+                    DOWNLOAD
+                  </button>
+                  <div class="btn btn-primary" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>
+                </div>
+              </div>
+            </div>
 
-          <button (click)="closeError()">OK</button>
+            <div class="error-popup" *ngIf="!errorMsg.pass">
+              <div class="message">
+                {{errorMsg.message}}
+
+                <button (click)="closeError()">OK</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="about">
+  <div class="container">
+    <h1>ABOUT, <strong>Relatas</strong>
+    </h1>
+    <p>
+      Relatas is an award winning Sales Intelligence product.
+      <br>
+      <br>
+
+      Relatas is built by sales professionals for sales professionals. We apply Artificial Intelligence to solve some of the
+      biggest challenges faced by most CRO, VP Sales, Sales Managers & Sales Reps. We know sales and are obsessed
+      with making the sales professionals more successful by applying Artificial Intelligence to solve their problems.
+      Relatas makes sense of the data thats readily available and using cognitive technology helps sales professionals sell
+      better and faster.
+      <br>
+      <br>
+      We are on a mission to make sales professionals successful by transforming the way they view data, sell, make
+      decisions, and grow.
+    </p>
+  </div>
+</div>
+

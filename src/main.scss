@@ -19,21 +19,41 @@
 @import "sass/_fonts";
 @import "sass/components/buttons";
 
+
+.review {
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.review img {
+  height: 300px;
+  object-fit: cover;
+}
+
+.case-studies {
+  cursor: pointer;
+}
+
+.case-studies img {
+  width: 25px !important;
+  margin: 5px;
+}
+
 .alternative {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
 
-.alternative .img-txt h4,
-.alternative .img-txt h1 {
+.alternative h4,
+.alternative h1 {
   font-weight: bold;
 }
 
-.alternative .img-txt {
+.alternative {
   margin-top: 3rem;
 }
 
-.alternative .img-txt p {
+.alternative p {
   margin-top: 2.5rem;
   color: #666;
 }

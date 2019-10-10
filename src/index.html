@@ -100,131 +100,136 @@
   </style>
 
   <script>
-    $( document ).ready(function() {
 
-      $(".dropdown-item").on('click', function(e) {
-        $(".navbar-toggler").trigger("click")
+      $( document ).ready(function() {
+
+          $('.carousel').carousel();
+
+
+          $(".dropdown-item").on('click', function(e) {
+              $(".navbar-toggler").trigger("click")
+          });
+
+          $(".nav-link").on('click', function(e) {
+              e.preventDefault();
+              var $this = $(this);
+
+              if(!$this.hasClass("dropdown-toggle")){
+                  $(".navbar-toggler").trigger("click");
+              }
+          });
+
+          $('.scroll-top').click(function(e){
+              $('html, body').animate({
+                  scrollTop: "10px"
+              }, 600);
+              e.stopPropagation();
+          });
+
+          $('.for-scroll').click(function(e){
+              $('html, body').animate({
+                  scrollTop: "10px"
+              }, 600);
+              e.stopPropagation();
+          });
+
       });
-
-      $(".nav-link").on('click', function(e) {
-        e.preventDefault();
-        var $this = $(this);
-
-        if(!$this.hasClass("dropdown-toggle")){
-          $(".navbar-toggler").trigger("click");
-        }
-      });
-
-      $('.scroll-top').click(function(e){
-        $('html, body').animate({
-          scrollTop: "10px"
-        }, 600);
-        e.stopPropagation();
-      });
-
-      $('.for-scroll').click(function(e){
-        $('html, body').animate({
-          scrollTop: "10px"
-        }, 600);
-        e.stopPropagation();
-      });
-
-    });
 
   </script>
 
   <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-51230566-1', 'auto');
-    ga('send', 'pageview');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-51230566-1', 'auto');
+      ga('send', 'pageview');
   </script>
 
   <script>
 
-    function ifHeaderLoaded() {
-      var startFromPos = 30;
-      window.onscroll = function() {myFunction()};
+      function ifHeaderLoaded() {
+          var startFromPos = 30;
+          window.onscroll = function() {myFunction()};
 
-        function myFunction() {
-          var header = document.getElementById("relatasNav");
+          function myFunction() {
+              var header = document.getElementById("relatasNav");
 
-          if(header) {
-            var sticky = header.offsetTop+startFromPos;
-            if (window.pageYOffset > sticky) {
-              header.classList.add("sticky");
-              var elements = document.querySelectorAll('.only-on-scroll-down');
-              show(elements);
-            } else {
-              header.classList.remove("sticky");
-              hide(document.querySelector('.only-on-scroll-down'));
-            }
+              if(header) {
+                  var sticky = header.offsetTop+startFromPos;
+                  if (window.pageYOffset > sticky) {
+                      header.classList.add("sticky");
+                      var elements = document.querySelectorAll('.only-on-scroll-down');
+                      show(elements);
+                  } else {
+                      header.classList.remove("sticky");
+                      hide(document.querySelector('.only-on-scroll-down'));
+                  }
 
-          } else {
-            setTimeout(function () {
-              ifHeaderLoaded();
-            }, 1000);
+              } else {
+                  setTimeout(function () {
+                      ifHeaderLoaded();
+                  }, 1000);
+              }
           }
-        }
-    }
-
-    function hide (elements) {
-      elements = elements.length ? elements : [elements];
-      for (var index = 0; index < elements.length; index++) {
-        elements[index].style.display = 'none';
       }
-    }
 
-    function show (elements, specifiedDisplay) {
-      elements = elements.length ? elements : [elements];
-      for (var index = 0; index < elements.length; index++) {
-        elements[index].style.display = specifiedDisplay || 'block';
+      function hide (elements) {
+          elements = elements.length ? elements : [elements];
+          for (var index = 0; index < elements.length; index++) {
+              elements[index].style.display = 'none';
+          }
       }
-    }
 
-    ifHeaderLoaded();
+      function show (elements, specifiedDisplay) {
+          elements = elements.length ? elements : [elements];
+          for (var index = 0; index < elements.length; index++) {
+              elements[index].style.display = specifiedDisplay || 'block';
+          }
+      }
+
+      ifHeaderLoaded();
   </script>
 
   <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
   <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
   <script>
-    window.addEventListener("load", function(){
-      window.cookieconsent.initialise({
-        "palette": {
-          "popup": {
-            "background": "#252e39",
-          },
-          "button": {
-            "background": "#14a7d0"
-          }
-        },
-        "content": {
-          "message": "Relatas respects your privacy. We use cookies to personalize content, website functionality, improving your experience of our website, analyze our traffic, building integration with social media and helping target our advertising. By using the site you consent to our use of cookies.",
-          "href": "https://relatas.com/privacy"
-        }
-      })});
+      window.addEventListener("load", function(){
+          window.cookieconsent.initialise({
+              "palette": {
+                  "popup": {
+                      "background": "#252e39",
+                  },
+                  "button": {
+                      "background": "#14a7d0"
+                  }
+              },
+              "content": {
+                  "message": "Relatas respects your privacy. We use cookies to personalize content, website functionality, improving your experience of our website, analyze our traffic, building integration with social media and helping target our advertising. By using the site you consent to our use of cookies.",
+                  "href": "https://relatas.com/privacy"
+              }
+          })});
   </script>
   <script>
-    function setEmailIdAndName(emailId,fullName){
-      $("#emailId").val(emailId);
-      $("#fullName").val(fullName);
-    }
+      function setEmailIdAndName(emailId,fullName){
+          $("#emailId").val(emailId);
+          $("#fullName").val(fullName);
+      }
   </script>
+
 </head>
 <body>
-  <!--[if lt IE 10]>
+<!--[if lt IE 10]>
+<p>
+  You are using an <strong>outdated</strong> browser.
+  Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+</p>
+<![endif]-->
+<noscript>
   <p>
-    You are using an <strong>outdated</strong> browser.
-    Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+    This page requires JavaScript to work properly. Please enable JavaScript in your browser.
   </p>
-  <![endif]-->
-  <noscript>
-    <p>
-      This page requires JavaScript to work properly. Please enable JavaScript in your browser.
-    </p>
-  </noscript>
-  <app-root></app-root>
+</noscript>
+<app-root></app-root>
 </body>
 </html>

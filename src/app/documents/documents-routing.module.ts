@@ -6,8 +6,8 @@ import { DocumentsComponent } from './documents.component';
 
 const routes: Routes = [
   Route.withShell([
-    { path: '', redirectTo: '/documents-tracking', pathMatch: 'full' },
-    { path: 'documents-tracking', component: DocumentsComponent,
+    { path: '', redirectTo: '/document-sharing-and-analytics', pathMatch: 'full' },
+    { path: 'document-sharing-and-analytics', component: DocumentsComponent,
       data: { title: extract('Track your Documents | Relatas') } }
   ])
 ];

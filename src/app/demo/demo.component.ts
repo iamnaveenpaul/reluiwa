@@ -30,7 +30,7 @@ export class DemoComponent implements OnInit {
 
   constructor(private quoteService: QuoteService) { }
 
-  addlead(fullName: string, emailId: string) {
+  addlead(fullName: string, emailId: string,phoneNumber:string,website:string,designation:string) {
     this.nameErrorExist = false;
 
     if(this.agreeTerms){
@@ -38,6 +38,9 @@ export class DemoComponent implements OnInit {
         const obj = {
           fullName: fullName,
           emailId: emailId,
+          phoneNumber: phoneNumber,
+          designation: designation,
+          website: website,
           type: 'requestForDemo',
         };
 

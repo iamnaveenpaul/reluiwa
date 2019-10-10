@@ -3,6 +3,55 @@
   width: 100px;
 }
 
+.carousel-control-prev, .carousel-control-next {
+  color: #999;
+}
+
+.carousel-bg {
+  background: #f8f9fc;
+  min-height: 300px;
+  text-align: center;
+  padding-top: 4%;
+  padding-bottom: 5px;
+}
+
+.carousel-bg .float-left {
+  width: 33%;
+  margin-left: 1rem;
+}
+
+.text-block h4 {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+.text-block {
+  text-align: left;
+  width: 60% !important;
+  padding: 6rem 3rem;
+  font-size: 1.5rem;
+}
+
+.fa-chevron-right,
+.fa-chevron-left {
+  font-size: 2.5rem;
+}
+
+.carousel-bg .carousel {
+  min-height: 300px;
+}
+
+.carousel-indicators li.active {
+  background: var(--blue);
+}
+
+.carousel-indicators li {
+  border: 1px solid var(--blue);
+  height: 15px;
+  width: 15px;
+  border-radius: 55%;
+}
+
 .hero-text {
   position: absolute;
   top: 150px;
@@ -68,9 +117,8 @@
 .box-cards i.block {
   display: block;
   margin-bottom: .4em;
-  font-weight: bold;
-  color: #444444;
-  font-size: 1.25em;
+  color: #666;
+  font-size: 1.15em;
 }
 
 .make-money strong {

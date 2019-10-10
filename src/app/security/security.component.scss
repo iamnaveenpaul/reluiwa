@@ -1,11 +1,5 @@
 #sales-ops {
-  background: url(assets/website/security.jpg);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  min-width: 100%;
-  min-height: 400px;
+  margin-top: 8rem;
 }
 
 .roles .bg-grey-litest {
@@ -20,3 +14,28 @@
 .roles .bg-grey-litest li {
   margin: 15px 0;
 }
+
+.protection {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.protection img {
+  width: 40px;
+  margin-bottom: 0.5rem;
+}
+
+.protection .row {
+  margin-bottom: 2rem;
+}
+
+.protection .aws-img {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.protection .aws-img img {
+  width: 200px;
+}
+
+

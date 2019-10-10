@@ -6,9 +6,9 @@ import { CrmComponent } from './crm.component';
 
 const routes: Routes = [
   Route.withShell([
-    { path: '', redirectTo: '/crm-for-distributors', pathMatch: 'full' },
-    { path: 'crm-for-distributors', component: CrmComponent,
-      data: { title: extract('CRM for Distributors | Relatas') } }
+    { path: '', redirectTo: '/crm', pathMatch: 'full' },
+    { path: 'crm', component: CrmComponent,
+      data: { title: extract('CRM | Relatas') } }
   ])
 ];
 

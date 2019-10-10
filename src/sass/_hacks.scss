@@ -65,10 +65,15 @@
 
 .text-blue {
   color: var(--blue);
+  font-weight: bold;
 }
 
 img {
   width: 100%;
+}
+
+.btn {
+  font-family: 'Montserrat', sans-serif !important;
 }
 
 @-webkit-keyframes pulse {

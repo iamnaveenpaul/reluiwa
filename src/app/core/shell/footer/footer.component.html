@@ -5,7 +5,7 @@
     <input type="email" #emailId (keyup.enter)="emailId.value='' "
            placeholder="Enter business email Id"
            [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-    <button class="btn btn-primary" *ngIf="!demoRequestSent" (click)="submitDemoRequest(emailId.value)">sign up</button>
+    <button class="btn btn-primary" *ngIf="!demoRequestSent" (click)="submitDemoRequest(emailId.value)">SIGN UP</button>
     <button class="btn btn-primary" *ngIf="demoRequestSent" style="background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 3px 10px;">
       <i class="fas fa-check"></i> Done
     </button>
@@ -30,7 +30,7 @@
       <div class="col-md-2 col-sm-6">
         <strong>PRODUCT</strong>
         <div class="links">
-          <a class="for-scroll" routerLink="/product">Overview</a>
+          <a class="for-scroll" routerLink="/sales-tools">Overview</a>
           <a class="for-scroll" routerLink="/sales-forecast">Sales Forecasting</a>
           <a class="for-scroll" routerLink="/sales-operations">Sales Operations</a>
           <a class="for-scroll" routerLink="/account-management">Account Management</a>
@@ -50,16 +50,7 @@
           <a class="for-scroll" routerLink="/sales-rep">Sales Rep</a>
         </div>
       </div>
-      <!--<div class="col-md-2 col-sm-6">-->
-        <!--<strong>FEATURES</strong>-->
-        <!--<div class="links">-->
-          <!--<a class="for-scroll" routerLink="/product">Overview</a>-->
-          <!--<a class="for-scroll" routerLink="/sales-forecast">Sales Forecasting</a>-->
-          <!--<a class="for-scroll" routerLink="/sales-operations">Sales Operations</a>-->
-          <!--<a class="for-scroll" routerLink="/account-management">Account Management</a>-->
-          <!--<a class="for-scroll" routerLink="/team-management">Sales Team Management</a>-->
-        <!--</div>-->
-      <!--</div>-->
+
       <div class="col-md-2 col-sm-6">
         <strong>COMPANY</strong>
         <div class="links">
@@ -73,7 +64,7 @@
       <div class="col-md-2 col-sm-6">
         <strong>RESOURCES</strong>
         <div class="links">
-          <a class="for-scroll" routerLink="/sales-ai">Sales AI</a>
+          <a class="for-scroll" routerLink="/sales-ai-ebook">Sales AI</a>
           <a class="for-scroll" routerLink="/white-paper">White Paper</a>
           <a class="for-scroll" routerLink="/case-studies">Case Studies</a>
           <a class="for-scroll" routerLink="/use-cases">Use Cases</a>

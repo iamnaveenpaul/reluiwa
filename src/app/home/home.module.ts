@@ -7,7 +7,7 @@ import { SharedModule } from '@app/shared';import { FormsModule, ReactiveFormsMo
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { QuoteService } from './quote.service';
-
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
   imports: [
@@ -15,6 +15,7 @@ import { QuoteService } from './quote.service';
     TranslateModule,
     CoreModule,
     SharedModule,
+    SlickCarouselModule,
     HomeRoutingModule
   ],
   declarations: [

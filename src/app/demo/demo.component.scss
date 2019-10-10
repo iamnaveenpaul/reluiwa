@@ -14,13 +14,17 @@
 .demo-bg input[type="text"] {
   height: 35px;
   width: 100%;
-  border: 2px solid #fff;
-  background: var(--orange);
-  color:#fff;
+  border: 1px solid var(--blue);
 }
 
-.demo-bg ::placeholder {
-  color:#fff;
+.set-width {
+  width: 75%;
+  text-align: center;
+  margin: auto;
+
+  button {
+    width: 100%;
+  }
 }
 
 .right-fixed-md {
@@ -47,6 +51,12 @@
   position: absolute;
   right: 0;
   z-index: -9;
+}
+
+.about {
+  background: var(--blue);
+  color: #fff;
+  padding: 25px;
 }
 
 #relatasNav {
