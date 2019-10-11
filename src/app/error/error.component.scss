@@ -1,0 +1,236 @@
+header {
+  background: #f7f7f7cf;
+}
+
+.profile-section .sec-left {
+  float: left;
+  margin-top: -20px;
+  max-width: 75%;
+  margin-left: 3px;
+}
+
+.profile-section .sec-left h4 {
+  margin: 0 0 0 15px;
+  font-size: 16px;
+}
+
+.profile-section img {
+  width: 16.333%;
+  border-radius: 55%;
+}
+
+.profile-section .sec-left h2 {
+  font-size: 18px;
+  margin: 9px 0 0 15px;
+  font-weight: 600;
+}
+
+.profile-section .sec-left h3 {
+  font-size: 14px;
+  margin: 2px 0 0 15px;
+}
+
+.profile-about {
+  text-align: justify;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+
+.profile-section .sec-left p {
+  margin: 2px 0 0 15px;
+  font-size: 0.8rem;
+}
+
+.intro-four .row {
+}
+
+.intro-three {
+  text-align: center;
+  background: #f8f8f8;
+  padding: 45px 0 45px 0;
+}
+
+.inner-img-v-align {
+  height: 150px;
+  position: relative;
+}
+
+.inner-img-v-align img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.bg-img-company-3 {
+  background: url(assets/website/bg-signUpStep-3.png) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 475px;
+}
+
+.bg-img-company-3-text {
+  padding: 11.111% 0;
+}
+
+.bg-img-company-3 h1 {
+  color: #fff !important;
+}
+.page-title {
+  font-size: 42px;
+  font-weight: 300;
+  margin: 25px 0;
+  text-align: center;
+}
+
+#company {
+  background: url(assets/website/company.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 400px;
+}
+
+#mission {
+  background: url(assets/website/mission.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-width: 100%;
+  min-height: 225px;
+  color: #fff;
+  padding: 35px 0;
+}
+
+.col-box {
+  background: #fff;
+  padding: 20px;
+  min-height: 265px;
+}
+
+.pos-abs-company {
+  width: 16.333%;
+  border-radius: 55%;
+  position: absolute;
+  top: -40px;
+}
+
+#team .col-box {
+  min-height: 350px;
+  margin-bottom: 75px;
+}
+
+.customer-first {
+  background-image: url(assets/website/customerFirst.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 200px !important;
+  padding-top: 2% !important;
+  position: relative;
+}
+
+.customer-first .box-abs-bottom15 {
+  bottom: 50px !important;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+#awards .row {
+  margin-top: 25px;
+}
+
+#awards img {
+  width: 155px;
+  margin-bottom: 15px;
+}
+
+#awards .col-md-2 {
+  padding: 0;
+}
+
+.believe {
+  margin: 15px 0;
+}
+
+.believe .col-md-4 div {
+  background: #48485e;
+  text-align: center;
+  padding: 5% 0;
+  color: #fff;
+  min-height: 155px;
+}
+
+.believe .col-md-4 div p {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 780px) {
+  .col-box {
+    font-size: 0.85rem;
+    min-height: inherit;
+    padding: 15px 5px;
+    border-bottom: 1px solid #ccc;
+    margin-right: 15px;
+  }
+
+  .believe .col-md-4 div {
+    margin-bottom: 10px;
+    padding: 5%;
+  }
+
+  #team .col-box {
+    min-height: inherit;
+  }
+
+  .inner-img-v-align {
+    height: 80px;
+  }
+
+  .inner-img-v-align img {
+    width: 125px;
+  }
+
+  .profile-section .sec-left {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+}
