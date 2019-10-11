@@ -45,6 +45,7 @@ import { SalesAiModule } from './sales-ai/sales-ai.module';
 import { ResourcesModule } from './resources/resources.module';
 import { DealroomModule } from './dealroom/dealroom.module';
 import { OverviewModule } from './overview/overview.module';
+import { ErrorModule } from './error/error.module';
 import { FormsDemoModule } from './forms/formsdemo.module';
 
 @NgModule({
@@ -91,6 +92,7 @@ import { FormsDemoModule } from './forms/formsdemo.module';
     DealroomModule,
     ResourcesModule,
     OverviewModule,
+    ErrorModule,
     // GoogleVerifyModule,
     AppRoutingModule // This should always load at the end. If not all the modules after AppRoutingModule will not work
   ],

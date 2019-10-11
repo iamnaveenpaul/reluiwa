@@ -12,7 +12,7 @@ export class FooterComponent implements OnInit {
 
   constructor(private quoteService: QuoteService) { }
 
-    demoRequestSent = false;agreeTerms = false;
+  demoRequestSent = false;agreeTerms = false;
   showTerms = false;
   errorMsg = {
     pass:true,errorExist:false
@@ -53,6 +53,7 @@ export class FooterComponent implements OnInit {
       && !checkContains(window.location.href,"google")
       && !checkContains(window.location.href,"product")
       && !checkContains(window.location.href,"thank-you")
+      && !checkContains(window.location.href,"404")
   }
 
   ngOnInit() {
