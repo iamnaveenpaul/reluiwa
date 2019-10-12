@@ -144,16 +144,21 @@
       }
 
       function hide (elements) {
-          elements = elements.length ? elements : [elements];
-          for (var index = 0; index < elements.length; index++) {
-              elements[index].style.display = 'none';
+
+          if(elements && elements.length>0){
+              elements = elements.length ? elements : [elements];
+              for (var index = 0; index < elements.length; index++) {
+                  elements[index].style.display = 'none';
+              }
           }
       }
 
       function show (elements, specifiedDisplay) {
-          elements = elements.length ? elements : [elements];
-          for (var index = 0; index < elements.length; index++) {
-              elements[index].style.display = specifiedDisplay || 'block';
+          if(elements && elements.length>0){
+              elements = elements.length ? elements : [elements];
+              for (var index = 0; index < elements.length; index++) {
+                  elements[index].style.display = specifiedDisplay || 'block';
+              }
           }
       }
 
@@ -179,4 +184,4 @@
   You are using an <strong>outdated</strong> browser.
   Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
 </p>
-<![endif]--><noscript><p>This page requires JavaScript to work properly. Please enable JavaScript in your browser.</p></noscript><app-root></app-root><script type="text/javascript" src="inline.318b50c57b4eba3d437b.bundle.js"></script><script type="text/javascript" src="polyfills.2b87384f5363851efd0a.bundle.js"></script><script type="text/javascript" src="main.d2fc2e97014a7008432d.bundle.js"></script></body></html>
+<![endif]--><noscript><p>This page requires JavaScript to work properly. Please enable JavaScript in your browser.</p></noscript><app-root></app-root><script type="text/javascript" src="inline.318b50c57b4eba3d437b.bundle.js"></script><script type="text/javascript" src="polyfills.2b87384f5363851efd0a.bundle.js"></script><script type="text/javascript" src="main.201e021cfa655872054d.bundle.js"></script></body></html>
