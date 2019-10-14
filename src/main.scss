@@ -19,6 +19,15 @@
 @import "sass/_fonts";
 @import "sass/components/buttons";
 
+.demo-bg .col-md-7,
+#sales-ops .col-md-7 {
+  text-align: right;
+}
+
+.demo-bg .col-md-6 img,
+#sales-ops .col-md-6 img {
+  width: 80%;
+}
 
 .review {
   min-height: 300px;
@@ -40,8 +49,8 @@
 }
 
 .alternative {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 
 .alternative h4,
@@ -49,11 +58,27 @@
   font-weight: bold;
 }
 
-.alternative {
-  margin-top: 3rem;
-}
-
 .alternative p {
   margin-top: 2.5rem;
   color: #666;
+}
+
+.alternative .col-md-6 img {
+  width: 85%;
+}
+
+@media screen and (max-width: 780px) {
+  #sales-ops h1 {
+    margin-top: 0 !important;
+  }
+
+  .alternative {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+
+  .alternative p {
+    margin-top: 0.5rem;
+  }
+
 }

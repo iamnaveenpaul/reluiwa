@@ -27,7 +27,7 @@
         <div class="col-md-6">
           <div class="set-width">
             <h3 class="text-uppercase" style="margin: 4.5rem 0 1rem 0;">
-              Download <span class="text-blue bold">Sales AI playbook</span>
+              Download <span class="text-blue bold">{{title}} playbook</span>
             </h3>
             <div>
               <div>
@@ -49,7 +49,7 @@
                   </label>
                 </div>
                 <div>
-                  <button  style="height: 35px;" class="btn btn-primary btn-md" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
+                  <button class="btn btn-primary" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value)">
                     DOWNLOAD
                   </button>
                   <div class="btn btn-primary" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>

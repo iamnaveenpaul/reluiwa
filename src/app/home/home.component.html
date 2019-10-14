@@ -13,7 +13,7 @@
 
         <div class="btns-grp-wrapper">
 <!--          <button class="btn btn-primary font-weight-bold" routerLink="/demo">REQUEST DEMO</button>-->
-          <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
+          <button class="btn btn-outline-primary font-weight-bold text-uppercase for-scroll" routerLink="/demo">See it in action</button>
         </div>
     </div>
     </span>
@@ -27,7 +27,7 @@
       Experience <span class="text-blue">New-age Sales Forecasting</span>
     </h2>
     <p class="text-center">Professionals from 1000+ companies from 300+ global cities rely on Relatas</p>
-    <img src="assets/website/banner61.jpg">
+    <img src="assets/website/banner61.png">
   </div>
 </div>
 
@@ -48,7 +48,7 @@
 
     </div>
     <div class="col-md-6">
-      <img src="assets/landingpage/browser_img01.png">
+      <img src="assets/landingpage/forecast_landing.png">
     </div>
   </div>
 </div>
@@ -63,7 +63,7 @@
     <p>
       Some of our products are aligned with your outcomes, helping you grow and aligning with your needs.
     </p>
-    <button class="btn btn-sm btn-primary">ASK HOW</button>
+    <button class="btn btn-sm btn-primary for-scroll" routerLink="/demo">ASK HOW</button>
     <div class="row btn-fixes">
       <div class="col-md-4">
         <img src="assets/landingpage/money_logo01.png">
@@ -72,7 +72,7 @@
         <p>
           Relatas Opportunity Insights combines world-class opportunity expertise with algorithms that leverage millions of data points to win customers, all with NO-DATA-ENTRY.
         </p>
-        <button class="btn btn-sm btn-primary-text">
+        <button class="btn btn-sm btn-primary-text for-scroll" routerLink="/crm">
           LEARN MORE <i class="fas fa-arrow-right"></i>
         </button>
       </div>
@@ -86,7 +86,7 @@
           Weather for your prospects or customers, create and send business critical documents with confidence and track page level analytics.
 
         </p>
-        <button class="btn btn-sm btn-primary-text">
+        <button class="btn btn-sm btn-primary-text for-scroll" routerLink="/document-sharing-and-analytics">
           LEARN MORE <i class="fas fa-arrow-right"></i>
         </button>
       </div>
@@ -101,7 +101,7 @@
           Organizations use Relatas to transform sales organizations into intelligence driven machines. Relatas removes data silos among team members and provides leadership with unified view of the organization.
 
         </p>
-        <button class="btn btn-sm btn-primary-text">
+        <button class="btn btn-sm btn-primary-text for-scroll" routerLink="/sales-forecast">
           LEARN MORE <i class="fas fa-arrow-right"></i>
         </button>
       </div>
@@ -110,10 +110,10 @@
   </div>
 </div>
 
-
 <div class="carousel-bg">
   <div class="container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+    <div id="carouselExampleIndicators" data-interval="false" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -140,7 +140,7 @@
         <div class="carousel-item">
           <div classs="row">
             <div class="float-left">
-              <img src="assets/landingpage/test_img01.png" alt="First slide">
+              <img src="assets/landingpage/img_sunil.png" alt="First slide">
             </div>
             <div class="float-left text-block">
               "By using Relatas, our team members are able to manage their client relationships better which
@@ -156,14 +156,16 @@
         <div class="carousel-item">
           <div classs="row">
             <div class="float-left">
-              <img src="assets/landingpage/test_img01.png" alt="First slide">
+              <img src="assets/landingpage/img_venkat.png" alt="First slide">
             </div>
             <div class="float-left text-block">
 
               "Relatas has provided a level of efficiency and insights that we didn’t have before. Relatas gives our sales rep
-              and leadership a <strong>unique view into the forecast</strong> with in-depth visibility into
-              committed bookings, upside and any risks involved and helps drive actionable insights to predictably meet revenue
-              targets "
+              and leadership a <strong>unique view into the forecast</strong>
+<!--              with in-depth visibility into-->
+<!--              committed bookings, upside and any risks involved and helps drive actionable insights to predictably meet revenue-->
+<!--              targets -->vasant
+              "
 
               <h4>
                 <span class="bold">Venkat Murthy</span><br>CEO<br> 22by7
@@ -174,7 +176,7 @@
         <div class="carousel-item">
           <div classs="row">
             <div class="float-left">
-              <img src="assets/landingpage/test_img01.png" alt="First slide">
+              <img src="assets/landingpage/img_gaurav.png" alt="First slide">
             </div>
             <div class="float-left text-block">
               "I'm excited about Relatas, because now AI can finally help us be better at the
@@ -189,7 +191,7 @@
         <div class="carousel-item">
           <div classs="row">
             <div class="float-left">
-              <img src="assets/landingpage/test_img01.png" alt="First slide">
+              <img src="assets/landingpage/img_vasant.png" alt="First slide">
             </div>
             <div class="float-left text-block">
               " Relatas enables me to manage my relationships and interactions much more efficiently
@@ -209,6 +211,24 @@
 <!--        <i class="fas fa-chevron-right"></i>-->
 <!--        <span class="sr-only">Next</span>-->
 <!--      </a>-->
+    </div>
+  </div>
+
+  <div style="margin-top: 3.5rem;">
+    <div class="links-resources">
+      <div [routerLink]="['/sales-resources']" [queryParams]="{type: 'whitepaper'}" class="block for-scroll">
+
+        <img src="assets/landingpage/icon_whitepaper.png">
+        <strong class="text-blue">WHITE PAPER</strong>
+      </div>
+      <div [routerLink]="['/sales-resources']" [queryParams]="{type: 'casestudies'}" class="block for-scroll">
+        <img src="assets/landingpage/icon_casestudies.png">
+        <strong class="text-blue">CASE STUDIES</strong>
+      </div>
+      <div [routerLink]="['/sales-resources']" [queryParams]="{type: 'usecases'}" class="block for-scroll">
+        <img src="assets/landingpage/icon_usecases.png">
+        <strong class="text-blue">USE CASES</strong>
+      </div>
     </div>
   </div>
 </div>
@@ -237,13 +257,12 @@
                 Identify sales forecast patterns. Play with multiple 'WHAT-IF' scenarios to help you decide the next path. Get actionable insights when important metrics change.
               </div>
 
-              <button class="btn btn-sm btn-primary-text">
+              <button class="btn btn-sm btn-primary-text for-scroll" routerLink="/sales-forecast">
                 LEARN MORE <i class="fas fa-arrow-right"></i>
               </button>
             </div>
             <div class="col-sm-4">
               <img src="assets/landingpage/see_rel_img01.png">
-
             </div>
           </div>
         </div>
@@ -264,7 +283,7 @@
                 Predict Sales Forecast patterns, on 'why' sales happen. Get actionable insights when important metrics change.
               </div>
 
-              <button class="btn btn-sm btn-primary-text">
+              <button class="btn btn-sm btn-primary-text for-scroll" routerLink="/sales-ai">
                 LEARN MORE <i class="fas fa-arrow-right"></i>
               </button>
             </div>
@@ -291,7 +310,7 @@
 
               </div>
 
-              <button class="btn btn-sm btn-primary-text">
+              <button class="btn btn-sm btn-primary-text for-scroll" routerLink="/sales-analytics">
                 LEARN MORE <i class="fas fa-arrow-right"></i>
               </button>
             </div>
@@ -319,7 +338,7 @@
 
               </div>
 
-              <button class="btn btn-sm btn-primary-text">
+              <button class="btn btn-sm btn-primary-text for-scroll" routerLink="/crm">
                 LEARN MORE <i class="fas fa-arrow-right"></i>
               </button>
             </div>
@@ -336,7 +355,6 @@
             <div class="col-sm-8">
               <h5>
                 Enterprise Ready
-
               </h5>
               <i class="block">
                 Tap into the platform built for speed, security and scale
@@ -347,7 +365,7 @@
 
               </div>
 
-              <button class="btn btn-sm btn-primary-text">
+              <button class="btn btn-sm btn-primary-text for-scroll" routerLink="/security">
                 LEARN MORE <i class="fas fa-arrow-right"></i>
               </button>
             </div>
@@ -371,7 +389,7 @@
     <p class="text-center">Use data to stop guessing and start selling. Nothing to install. Go live in 15 minutes.
     </p>
     <div class="btns-grp-wrapper">
-      <button class="btn btn-outline-primary font-weight-bold text-uppercase" routerLink="/demo">See it in action</button>
+      <button class="btn btn-outline-primary font-weight-bold text-uppercase for-scroll" routerLink="/demo">See it in action</button>
     </div>
   </div>
 </div>

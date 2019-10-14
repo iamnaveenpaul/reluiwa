@@ -82,7 +82,7 @@
                   </label>
                 </div>
                 <div>
-                  <button  style="height: 35px;" class="btn btn-primary btn-md" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value,phoneNumber.value,website.value,designation.value)">
+                  <button class="btn btn-primary" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value,phoneNumber.value,website.value,designation.value)">
                     REQUEST FOR DEMO
                   </button>
                   <div class="btn btn-primary" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>

@@ -46,6 +46,11 @@ export class QuoteService {
       .post(routes.saveMoreDetails, details);
   };
 
+  getQueryParameter(key: string): string {
+    const parameters = new URLSearchParams(window.location.search);
+    return parameters.get(key);
+  }
+
   checkValidEmailId (emailId: String) {
 
     if(fetchCompanyFromEmail(emailId)){

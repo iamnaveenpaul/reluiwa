@@ -11,7 +11,7 @@ export class PricingComponent implements OnInit {
 
   constructor(private quoteService: QuoteService) { }
 
-    demoRequestSent = false;agreeTerms = false;
+  demoRequestSent = false;agreeTerms = false;
   showTerms = false;
   nameErrorExist = false;
   errorMsg = {
@@ -24,26 +24,27 @@ export class PricingComponent implements OnInit {
 
   addlead(fullName: string, emailId: string,phoneNumber:string,website:string,designation:string) {
     this.nameErrorExist = false;
-    if(this.agreeTerms){ if(fullName){
+    if(this.agreeTerms){
+      if(fullName && emailId && phoneNumber && website && designation){
 
-      const obj = {
-        fullName: fullName,
-        emailId: emailId,
-        type: 'pricing',
-      };
+        const obj = {
+          fullName: fullName,
+          emailId: emailId,
+          type: 'pricing',
+        };
 
-      var checkError = this.quoteService.checkValidEmailId(obj.emailId)
-      if(checkError.pass){
-        this.demoRequestSent = !this.demoRequestSent;
-        this.quoteService.saveLeadDetails(obj)
-          .subscribe(res => window.location.href='/thank-you?fromDemo=false');
+        var checkError = this.quoteService.checkValidEmailId(obj.emailId)
+        if(checkError.pass){
+          this.demoRequestSent = !this.demoRequestSent;
+          this.quoteService.saveLeadDetails(obj)
+            .subscribe(res => window.location.href='/thank-you?fromDemo=false');
+        } else {
+          this.errorMsg = checkError
+        }
       } else {
-        this.errorMsg = checkError
+        alert("Please fill all fields to help us serve you better.")
       }
-    } else {
-      this.nameErrorExist = true
-    }
-  }else {
+    }else {
       alert("Please agree to the terms to proceed")
     }
   }

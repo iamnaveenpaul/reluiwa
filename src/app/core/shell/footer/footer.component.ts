@@ -27,7 +27,7 @@ export class FooterComponent implements OnInit {
     const obj = {
       fullName: "",
       emailId: emailId,
-      type: 'subscribe',
+      type: 'newsLetterRequest',
     };
 
     var checkError = this.quoteService.checkValidEmailId(obj.emailId)
@@ -37,7 +37,8 @@ export class FooterComponent implements OnInit {
       this.demoRequestSent = !this.demoRequestSent;
 
       this.quoteService.saveLeadDetails(obj)
-        .subscribe(res => window.location.href='/thank-you?fromDemo=true');
+        // .subscribe(res => window.location.href='/thank-you?fromDemo=true');
+        .subscribe();
     } else {
       this.errorMsg = checkError
     }
@@ -49,7 +50,6 @@ export class FooterComponent implements OnInit {
       && !checkContains(window.location.href,"use")
       && !checkContains(window.location.href,"case")
       && !checkContains(window.location.href,"white")
-      && !checkContains(window.location.href,"sales-ai")
       && !checkContains(window.location.href,"google")
       && !checkContains(window.location.href,"product")
       && !checkContains(window.location.href,"thank-you")

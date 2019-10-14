@@ -10,7 +10,7 @@ export class CasestudiesComponent implements OnInit {
 
   constructor(private quoteService: QuoteService) { }
 
-    demoRequestSent = false;agreeTerms = false;
+  demoRequestSent = false;agreeTerms = false;
   showTerms = false;
   nameErrorExist = false
   errorMsg = {
@@ -20,6 +20,7 @@ export class CasestudiesComponent implements OnInit {
   closeError() {
     this.errorMsg.pass = true
   }
+
 
   addlead(fullName: string, emailId: string) {
     this.nameErrorExist = false;
@@ -46,7 +47,14 @@ export class CasestudiesComponent implements OnInit {
     }
   }
 
+  title:string = "";
+
   ngOnInit() {
+
+    this.title = this.quoteService.getQueryParameter('type').replace(/[^a-zA-Z ]/g, " ")
+
+    console.log(this.title);
+
   }
 
 }

@@ -34,7 +34,7 @@ export class DemoComponent implements OnInit {
     this.nameErrorExist = false;
 
     if(this.agreeTerms){
-      if(fullName){
+      if(fullName && emailId && phoneNumber && website && designation){
         const obj = {
           fullName: fullName,
           emailId: emailId,
@@ -55,7 +55,8 @@ export class DemoComponent implements OnInit {
           this.errorMsg = checkError
         }
       } else {
-        this.nameErrorExist = true
+        // this.nameErrorExist = true
+        alert("Please fill all fields to help us serve you better.")
       }
     } else {
       alert("Please agree to the terms to proceed")

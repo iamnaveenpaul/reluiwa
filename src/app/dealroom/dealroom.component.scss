@@ -15,11 +15,24 @@
 }
 
 .card-box {
-  box-shadow: 1px 1px 5px 1px #ddd;
+  //box-shadow: 1px 1px 5px 1px #ddd;
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 15px;
-  min-height: 225px;
+  min-height: 200px;
+  border: 1px solid #ddd;
+}
+
+.card-box img {
+  width: 95%;
+  margin-top: 15px;
+}
+
+.card-box h4,
+.card-box h5 {
+  color: #f37c51;
+  font-weight: bold;
+  font-family: Lato;
 }
 
 .review .col-md-3,
@@ -177,5 +190,14 @@
 @media screen and (max-width: 780px) {
   .roles .bg-grey-litest {
     min-height: 305px;
+  }
+
+  .card-box .col-md-4 {
+    text-align: center;
+  }
+
+  .card-box img {
+    width: 50%;
+    margin-top: 15px;
   }
 }

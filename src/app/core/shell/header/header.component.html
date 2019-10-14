@@ -51,7 +51,7 @@
                           <img src="assets/landingpage/1.Product_Navigation/ic_sales_nav_docmanage.png">
                         </div>
                         <div class="float-left text">
-                          <strong>Document Management</strong>
+                          <strong>Document Insights</strong>
                           Securely share and track business documents
                         </div>
                       </div>
@@ -64,7 +64,7 @@
                           <img src="assets/landingpage/1.Product_Navigation/ic_sales_nav_oppmanage.png">
                         </div>
                         <div class="float-left text">
-                          <strong>Opportunity Management</strong>
+                          <strong>Opportunity Insights</strong>
                           No-Data-Entry CRM
                         </div>
                       </div>
@@ -87,11 +87,11 @@
                 <div class="col-md-4 dark">
                   <p>MORE</p>
                   <ul class="list-unstyled">
-                    <li routerLink="/dealroom">Deal Room <span class="new">NEW</span></li>
-                    <li routerLink="/sales-ai">Sales AI</li>
-                    <li routerLink="/sales-analytics">Sales Analytics</li>
-                    <li routerLink="/team-management">Sales Team Management</li>
-                    <li routerLink="/crm-for-distributors-and-partners">Partners</li>
+                    <li class="for-scroll dropdown-item" routerLink="/dealroom">Deal Room <span class="new">NEW</span></li>
+                    <li class="for-scroll dropdown-item" routerLink="/sales-ai">Sales AI</li>
+                    <li class="for-scroll dropdown-item" routerLink="/sales-analytics">Sales Analytics</li>
+                    <li class="for-scroll dropdown-item" routerLink="/team-management">Sales Team Management</li>
+<!--                    <li routerLink="/crm-for-distributors-and-partners">Partners</li>-->
                   </ul>
                 </div>
               </div>
@@ -169,10 +169,10 @@
 
 <!--            </div>-->
 <!--          </div>-->
-          <a class="nav-item nav-link text-uppercase" target="_blank" (click)="redirectLogin()" href="https://app.relatas.com/">
+          <a class="nav-item nav-link text-uppercase" *ngIf="canBedisplayed()" target="_blank" (click)="redirectLogin()" href="https://app.relatas.com/">
             <span class="blue-invert-btn">login</span>
           </a>
-          <a class="nav-item nav-link scroll-top text-uppercase only-on-scroll-down" routerLink="/demo">
+          <a class="nav-item nav-link scroll-top text-uppercase" routerLink="/demo">
             <span class="blue-btn">REQUEST DEMO</span>
           </a>
           <!--<a class="nav-item nav-link scroll-top text-uppercase" (click)="logout()">-->

@@ -13,6 +13,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  <script>(function () {window['_cbl_clientId'] = '48407096';window['_cbl_libs'] = ["detect", "recorder", "compression"];var d=document;var a = d.getElementsByTagName('head')[0];var r = d.createElement('script'); r.async = 1;r.src = "https://labs.collatebox.com/release/helper.js";a.appendChild(r);})()</script>
+
+  <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:1525847,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+
   <style>
     /* Make the image fully responsive */
     .carousel-inner img {
@@ -105,7 +119,6 @@
 
           // $('.carousel').carousel();
 
-
           $(".dropdown-item").on('click', function(e) {
               $(".navbar-toggler").trigger("click")
           });
@@ -175,16 +188,21 @@
       }
 
       function hide (elements) {
-          elements = elements.length ? elements : [elements];
-          for (var index = 0; index < elements.length; index++) {
-              elements[index].style.display = 'none';
+
+          if(elements && elements.length>0){
+              elements = elements.length ? elements : [elements];
+              for (var index = 0; index < elements.length; index++) {
+                  elements[index].style.display = 'none';
+              }
           }
       }
 
       function show (elements, specifiedDisplay) {
-          elements = elements.length ? elements : [elements];
-          for (var index = 0; index < elements.length; index++) {
-              elements[index].style.display = specifiedDisplay || 'block';
+          if(elements && elements.length>0){
+              elements = elements.length ? elements : [elements];
+              for (var index = 0; index < elements.length; index++) {
+                  elements[index].style.display = specifiedDisplay || 'block';
+              }
           }
       }
 

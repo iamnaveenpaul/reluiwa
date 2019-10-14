@@ -8,7 +8,7 @@ const routes: Routes = [
   Route.withShell([
     { path: '', redirectTo: '/sales-ai', pathMatch: 'full' },
     { path: 'sales-ai', component: SalesAiComponent,
-      data: { title: extract('CRM | Relatas') } }
+      data: { title: extract('Sales AI CRM | Relatas') } }
   ])
 ];
 

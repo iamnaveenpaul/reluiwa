@@ -30,9 +30,17 @@ export class HeaderComponent implements OnInit {
       .subscribe(() => this.router.navigate(['/login'], { replaceUrl: true }));
   }
 
+  canBedisplayed(){
+    return window.location.pathname == "/";
+  }
+
   get username(): string | null {
     const credentials = this.authenticationService.credentials;
     return credentials ? credentials.username : null;
   }
 
+}
+
+function checkContains(string,substring) {
+  return string.indexOf(substring) !== -1
 }

@@ -2,20 +2,17 @@
   <div class="demo-bg">
     <div class="container">
 
-      <div class="row">
-        <div class="col-md-5">
-          <h1 style="margin-top: 5.5rem">We make money when you make money
-          </h1>
-          <h3>
-            Yes, we are serious. Some of our products are aligned with your outcomes, helping you grow and aligning with your needs.
-          </h3>
-        </div>
-        <div class="col-md-7">
-          <img src="assets/hero/img_pricing.png">
-        </div>
+      <div class="text-center">
+        <img style="width: 50%;" src="assets/hero/img_pricing.png">
+        <h1 style="margin-top: 1.5rem">We make money when you make money
+        </h1>
+        <p>
+          Yes, we are serious. Some of our products are aligned with your outcomes, helping you grow and aligning with your needs.
+        </p>
       </div>
 
-      <p>
+
+      <p style="margin-top: 4.5rem">
         At Relatas, we believe every company should have a Sales AI platform.
         <br><br>
         We offer a very competitive pricing to match your business needs. We grow with you. Get in touch and we will reach back to create your custom pricing plan.
@@ -72,7 +69,18 @@
               </div>
               <div class="clearfix">
                 <div>
-                  <button  style="height: 35px;" class="btn btn-primary btn-md" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value,phoneNumber.value,website.value,designation.value)">
+                  <label>
+                    <input type="checkbox" [(ngModel)]="agreeTerms" name="agreeTerms">
+                    I agree to the <a (click)="showTerms = !showTerms" style="text-decoration:underline;">terms</a>
+                    <p class="show-terms" *ngIf="showTerms">
+                      By registering, you confirm that you agree to the storing and processing
+                      of your personal data by Relatas as described in the Privacy Statement
+                    </p>
+                  </label>
+                </div>
+
+                <div>
+                  <button class="btn btn-primary" *ngIf="!demoRequestSent" (click)="addlead(fullName.value,emailId.value,phoneNumber.value,website.value,designation.value)">
                     REQUEST YOUR CUSTOM PRICE QUOTE
                   </button>
                   <div class="btn btn-primary" *ngIf="demoRequestSent" style="height: 35px;text-align: center;background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 7px 10px;"><i class="fas fa-check"></i> Done</div>

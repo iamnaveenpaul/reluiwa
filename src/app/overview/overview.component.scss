@@ -7,14 +7,17 @@
 }
 
 .why-relatas {
-  background: url(assets/hero/img_whybuildrel.png);
-  background-size: 50%;
-  min-height: 500px;
-  background-position: right;
-  background-repeat: no-repeat;
   margin-top: -1.5rem !important;
   padding-top: 4rem !important;
   background-color: #fafafa;
+}
+
+.why-relatas .col-md-5 {
+  text-align: right;
+}
+
+.why-relatas img {
+  width: 90%;
 }
 
 #sales-ops h1 {
@@ -25,7 +28,7 @@
 }
 
 .card-box {
-  box-shadow: 1px 1px 5px 1px #ddd;
+  border: 1px solid #ddd;
   margin-top: 15px;
   margin-bottom: 15px;
   padding: 15px;

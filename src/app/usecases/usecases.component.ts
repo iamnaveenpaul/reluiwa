@@ -58,7 +58,14 @@ export class UsecasesComponent implements OnInit {
     }
     }
 
+  title:string = "";
+
   ngOnInit() {
+
+    this.title = this.quoteService.getQueryParameter('type').replace(/[^a-zA-Z ]/g, " ")
+
+    console.log(this.title);
+
   }
 
 }
