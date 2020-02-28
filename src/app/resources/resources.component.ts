@@ -163,6 +163,9 @@ export class SalesAiComponent implements OnInit {
     } else if(checkContains(window.location.href,"use")){
       this.radioSelected = 'use'
       this.radioFun();
+    } else if(checkContains(window.location.href,"playbook")){
+      this.radioSelected = 'playbook'
+      this.radioFun();
     } else {
       this.radioSelected = 'all'
       this.loadResources(null);

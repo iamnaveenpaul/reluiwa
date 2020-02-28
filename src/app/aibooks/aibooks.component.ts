@@ -29,7 +29,7 @@ export class AibooksComponent implements OnInit {
     if (this.agreeTerms) {
       if (fullName) {
         const obj = {
-          fullName: fullName,
+          fullName: fullName,title:this.title,
           emailId: emailId,
           type: 'aiBook',
         };

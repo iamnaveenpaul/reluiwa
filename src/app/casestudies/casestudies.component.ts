@@ -28,7 +28,7 @@ export class CasestudiesComponent implements OnInit {
       if (fullName) {
 
         const obj = {
-          fullName: fullName,
+          fullName: fullName,title:this.title,
           emailId: emailId,
           type: 'caseStudy',
         };
@@ -44,15 +44,15 @@ export class CasestudiesComponent implements OnInit {
       } else {
         this.nameErrorExist = true
       }
+    } else {
+      alert("Please agree to the terms to proceed")
     }
   }
 
   title:string = "";
 
   ngOnInit() {
-
-    this.title = this.quoteService.getQueryParameter('type').replace(/[^a-zA-Z ]/g, " ")
-
+    this.title = this.quoteService.getQueryParameter('type').replace(/\W/g, ' ');
     console.log(this.title);
 
   }

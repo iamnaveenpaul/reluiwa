@@ -35,7 +35,7 @@ export class UsecasesComponent implements OnInit {
     this.nameErrorExist = false;
     if(this.agreeTerms){ if(fullName){
       const obj = {
-        fullName: fullName,
+        fullName: fullName,title:this.title,
         emailId: emailId,
         type: 'useCase',
       };

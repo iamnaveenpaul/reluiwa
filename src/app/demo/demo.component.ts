@@ -49,7 +49,7 @@ export class DemoComponent implements OnInit {
           this.demoRequestSent = !this.demoRequestSent;
           this.quoteService.saveLeadDetails(obj)
             .subscribe(res =>
-              window.location.href='/thank-you?fromDemo=false'
+              window.location.href='/thank-you?fromDemo=true'
             );
         } else {
           this.errorMsg = checkError

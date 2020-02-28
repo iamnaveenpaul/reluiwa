@@ -5,7 +5,7 @@
     <input type="email" #emailId (keyup.enter)="emailId.value='' "
            placeholder="Enter business email Id"
            [ngStyle]="errorMsg.errorExist?{'box-shadow': '0px 0px 3px orangered','border': '1px solid orange'}:''">
-    <button class="btn btn-primary" style="margin-top: -8px;" *ngIf="!demoRequestSent" (click)="submitDemoRequest(emailId.value)">SIGN UP</button>
+    <button class="btn btn-primary" *ngIf="!demoRequestSent" (click)="submitDemoRequest(emailId.value)">SIGN UP</button>
     <button class="btn btn-primary" *ngIf="demoRequestSent" style="background: transparent;color: var(--blue);border-color: var(--blue);font-size: 0.8rem;padding: 3px 10px;">
       <i class="fas fa-check"></i> Done
     </button>
@@ -32,12 +32,12 @@
         <div class="links">
           <a class="for-scroll" routerLink="/sales-tools">Overview</a>
           <a class="for-scroll" routerLink="/sales-forecast">Sales Forecasting</a>
-          <a routerLink="/document-sharing-and-analytics">Documents Insights</a>
+          <a class="for-scroll" routerLink="/document-sharing-and-analytics">Documents Insights</a>
           <a class="for-scroll" routerLink="/crm">Opportunity Insights</a>
           <a class="for-scroll" routerLink="/dealroom">Deal Room</a>
           <a class="for-scroll" routerLink="/sales-ai">Sales AI</a>
           <a class="for-scroll" routerLink="/sales-analytics">Sales Analytics</a>
-          <a routerLink="/security">Security</a>
+          <a class="for-scroll" routerLink="/security">Security</a>
         </div>
 
       </div>
@@ -66,8 +66,8 @@
         <div class="links">
           <a class="for-scroll" href="/sales-resources?type=casestudies">Case Studies</a>
           <a class="for-scroll" href="/sales-resources?type=usecases">Use Cases</a>
-          <a class="for-scroll" href="/sales-resources?type=whitepaper">White Paper</a>
-          <a class="for-scroll" href="/sales-resources?type=sales-aiebook">Sales AI</a>
+          <a class="for-scroll" href="/sales-resources?type=whitepaper">White Papers</a>
+          <a class="for-scroll" href="/sales-resources?type=playbook">Playbooks</a>
           <a href="https://blog.relatas.com/">Blog Articles</a>
         </div>
       </div>
@@ -96,3 +96,5 @@
     </div>
   </div>
 </div>
+
+<!--ghost restart-->
